@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>José Rosario Pavón</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+        <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-white text-gray-800">
+    <!-- Header -->
+    <header class="fixed top-0 w-full bg-white shadow-md z-10">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="javascript:void(0)" class="text-2xl font-bold text-navy">
+                <h1 class="font-serif text-navy"><span class="text-[#0B1F3A]">José</span> <span class="text-[#C62828]">Rosario</span> <span class="text-[#0B1F3A]">Pavón</span></h1>
+            </a>
+            
+            <!-- Desktop Navigation -->
+           <!-- Desktop Navigation -->
+            <nav class="hidden md:flex space-x-8">
+                <a href="http://127.0.0.1:5500/index.html" class="nav-link active">Inicio</a>
+                <a href="http://127.0.0.1:5500/index.html#fundacion" class="nav-link">Fundación y Orígenes</a>
+                <a href="http://127.0.0.1:5500/index.html#mision" class="nav-link">Misión y Valores</a>
+                <a href="http://127.0.0.1:5500/lineadetiempo.html" class="nav-link">Línea de Tiempo</a>
+                <a href="http://127.0.0.1:5500/directorio.html" class="nav-link">Directorio</a>
+            </nav>
+            
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden mobile-menu-button">
+                <i class="fas fa-bars text-2xl text-[#0B1F3A]"></i>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div class="mobile-menu">
+                <a href="#inicio" class="block text-white py-3 nav-link">Inicio</a>
+                <a href="#fundacion" class="block text-white py-3 nav-link">Fundación y Orígenes</a>
+                <a href="#mision" class="block text-white py-3 nav-link">Misión y Valores</a>
+                <a href="#galeria" class="block text-white py-3 nav-link">Galería Histórica</a>
+                <a href="#timeline" class="block text-white py-3 nav-link">Línea de Tiempo</a>
+                <a href="#directorio" class="block text-white py-3 nav-link">Directorio</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero flex items-center justify-center px-4">
+        <div class="text-center text-white" data-aos="fade-up">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">José Rosario Pavón</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">Honrando el legado y promoviendo los valores que nos definen</p>
+            <a href="#fundacion" class="btn-primary px-8 py-3 rounded-lg font-semibold inline-block">Conocer más</a>
+        </div>
+    </section>
+
+    <!-- Fundación y Orígenes Section -->
+    
+
+    <!-- Misión y Valores Section -->
+    
+    <!-- Galería Histórica Section -->
+    <section id="galeria" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-[#0B1F3A]">Galería Histórica</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md" data-aos="fade-up">
+                    <img src="https://cdn.pixabay.com/photo/2019/06/13/09/41/city-4271903_1280.jpg" alt="Imagen histórica 1" class="w-full h-64 object-cover">
+                    <div class="like-button" data-id="1">
+                        <i class="far fa-heart text-xl"></i>
+                    </div>
+                    <div class="p-4">
+                        <h4 class="font-bold text-lg mb-2">Sede Central (1980)</h4>
+                        <p class="text-gray-600">Primera sede de nuestra organización</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://cdn.pixabay.com/photo/2015/07/10/17/24/portugal-839817_1280.jpg" alt="Imagen histórica 2" class="w-full h-64 object-cover">
+                    <div class="like-button" data-id="2">
+                        <i class="far fa-heart text-xl"></i>
+                    </div>
+                    <div class="p-4">
+                        <h4 class="font-bold text-lg mb-2">Primer Congreso (1985)</h4>
+                        <p class="text-gray-600">Reunión fundacional con los primeros miembros</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://cdn.pixabay.com/photo/2017/11/07/00/07/fantasy-2925250_1280.jpg" alt="Imagen histórica 3" class="w-full h-64 object-cover">
+                    <div class="like-button" data-id="3">
+                        <i class="far fa-heart text-xl"></i>
+                    </div>
+                    <div class="p-4">
+                        <h4 class="font-bold text-lg mb-2">Celebración del Aniversario (1998)</h4>
+                        <p class="text-gray-600">20 años preservando nuestra historia</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md" data-aos="fade-up" data-aos-delay="300">
+                    <img src="https://cdn.pixabay.com/photo/2017/05/19/15/16/countryside-2326787_1280.jpg" alt="Imagen histórica 4" class="w-full h-64 object-cover">
+                    <div class="like-button" data-id="4">
+                        <i class="far fa-heart text-xl"></i>
+                    </div>
+                    <div class="p-4">
+                        <h4 class="font-bold text-lg mb-2">Reconocimiento Nacional (2002)</h4>
+                        <p class="text-gray-600">Premio a la labor cultural</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md" data-aos="fade-up" data-aos-delay="400">
+                    <img src="https://cdn.pixabay.com/photo/2016/01/22/20/42/man-1156619_1280.jpg" alt="Imagen histórica 5" class="w-full h-64 object-cover">
+                    <div class="like-button" data-id="5">
+                        <i class="far fa-heart text-xl"></i>
+                    </div>
+                    <div class="p-4">
+                        <h4 class="font-bold text-lg mb-2">Expansión Internacional (2010)</h4>
+                        <p class="text-gray-600">Primera delegación en el extranjero</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md" data-aos="fade-up" data-aos-delay="500">
+                    <img src="https://cdn.pixabay.com/photo/2018/08/09/10/46/phone-3594206_1280.jpg" alt="Imagen histórica 6" class="w-full h-64 object-cover">
+                    <div class="like-button" data-id="6">
+                        <i class="far fa-heart text-xl"></i>
+                    </div>
+                    <div class="p-4">
+                        <h4 class="font-bold text-lg mb-2">Era Digital (2018)</h4>
+                        <p class="text-gray-600">Lanzamiento de la plataforma online</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+     <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>José Rosario Pavón</h3>
+                    <p>Un legado de excelencia educativa y compromiso con nuestra comunidad desde 1850.</p>
+                    <div class="social-links">
+                        <a href="javascript:void(0)" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="javascript:void(0)" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="javascript:void(0)" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="javascript:void(0)" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#fundacion">Fundación y Orígenes</a></li>
+                        <li><a href="#mision">Misión y Valores</a></li>
+                        <li><a href="#galeria">Galería Histórica</a></li>
+                        <li><a href="#linea-tiempo">Línea de Tiempo</a></li>
+                        <li><a href="#directorio">Directorio</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contacto</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Av. Principal #123, Ciudad</p>
+                    <p><i class="fas fa-phone"></i> (123) 456-7890</p>
+                    <p><i class="fas fa-envelope"></i> info@jrpavon.org</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 José Rosario Pavón. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script id="app-script">
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            offset: 100
+        });
+        
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('open');
+            
+            // Toggle icon
+            const icon = mobileMenuButton.querySelector('i');
+            if (mobileMenu.classList.contains('open')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+        
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('open');
+                
+                // Reset icon
+                const icon = mobileMenuButton.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            });
+        });
+        
+        // Active nav link on scroll
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+        
+        window.addEventListener('scroll', () => {
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if (pageYOffset >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').substring(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+        
+        // Gallery like buttons
+        const likeButtons = document.querySelectorAll('.like-button');
+        
+        // Initialize likes from localStorage
+        const initializeLikes = () => {
+            likeButtons.forEach(button => {
+                const id = button.getAttribute('data-id');
+                const isLiked = localStorage.getItem(`liked-${id}`) === 'true';
+                
+                if (isLiked) {
+                    button.classList.add('active');
+                    button.querySelector('i').classList.remove('far');
+                    button.querySelector('i').classList.add('fas');
+                }
+            });
+        };
+        
+        // Toggle like
+        likeButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const id = button.getAttribute('data-id');
+                const isLiked = button.classList.contains('active');
+                
+                if (isLiked) {
+                    button.classList.remove('active');
+                    button.querySelector('i').classList.remove('fas');
+                    button.querySelector('i').classList.add('far');
+                    localStorage.setItem(`liked-${id}`, 'false');
+                } else {
+                    button.classList.add('active');
+                    button.querySelector('i').classList.remove('far');
+                    button.querySelector('i').classList.add('fas');
+                    localStorage.setItem(`liked-${id}`, 'true');
+                }
+            });
+        });
+        
+        // Initialize on load
+        document.addEventListener('DOMContentLoaded', () => {
+            initializeLikes();
+            
+            // Set initial active nav link
+            const currentSection = window.location.hash ? window.location.hash.substring(1) : 'inicio';
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${currentSection}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
