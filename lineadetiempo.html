@@ -19,7 +19,7 @@
                 <h1 class="font-serif text-navy"><span class="text-[#0B1F3A]">José</span> <span class="text-[#C62828]">Rosario</span> <span class="text-[#0B1F3A]">Pavón</span></h1>
             </a>
             
-            <!-- Desktop Navigation -->
+            <!-- Pc Navigation -->
             <nav class="hidden md:flex space-x-8">
                 <a href="http://127.0.0.1:5500/index.html" class="nav-link active">Inicio</a>
                 <a href="http://127.0.0.1:5500/index.html#fundacion" class="nav-link">Fundación y Orígenes</a>
@@ -29,12 +29,12 @@
                
             </nav>
             
-            <!-- Mobile Menu Button -->
+            <!-- cel Menu Button -->
             <div class="md:hidden mobile-menu-button">
                 <i class="fas fa-bars text-2xl text-[#0B1F3A]"></i>
             </div>
             
-            <!-- Mobile Menu -->
+            <!-- cel Menu -->
             <div class="mobile-menu">
                 <a href="https://th-2007.github.io/pagina.github.io/" class="block text-white py-3 nav-link">Inicio</a>
                 <a href="https://th-2007.github.io/pagina.github.io/index.html#fundacion" class="block text-white py-3 nav-link">Fundación y Orígenes</a>
@@ -45,7 +45,7 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- encabezado Section -->
     <section id="inicio" class="hero flex items-center justify-center px-4">
         <div class="text-center text-white" data-aos="fade-up">
             <h1 class="text-4xl md:text-6xl font-bold mb-4">José Rosario Pavón</h1>
@@ -59,7 +59,7 @@
         <div class="container mx-auto px-4">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-[#0B1F3A]">Línea de Tiempo</h2>
             
-            <!-- Mobile Timeline (Vertical) -->
+            <!-- celular Timeline (Vertical) -->
             <div class="md:hidden">
                 <div class="timeline-item pl-12 pb-12 relative" data-aos="fade-up">
                     <div class="timeline-connector"></div>
@@ -231,7 +231,7 @@
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script id="app-script">
-        // Initialize AOS
+        // Iniciar AOS - libreria :)
         AOS.init({
             duration: 800,
             easing: 'ease-in-out',
@@ -239,14 +239,14 @@
             offset: 100
         });
         
-        // Mobile Menu Toggle
+        // celular menu Toggle
         const mobileMenuButton = document.querySelector('.mobile-menu-button');
         const mobileMenu = document.querySelector('.mobile-menu');
         
         mobileMenuButton.addEventListener('click', () => {
             mobileMenu.classList.toggle('open');
             
-            // Toggle icon
+            // Toggle icon boton
             const icon = mobileMenuButton.querySelector('i');
             if (mobileMenu.classList.contains('open')) {
                 icon.classList.remove('fa-bars');
@@ -257,12 +257,11 @@
             }
         });
         
-        // Close mobile menu when clicking on a link
         document.querySelectorAll('.mobile-menu a').forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenu.classList.remove('open');
                 
-                // Reset icon
+                // Reset icon - reiniciar
                 const icon = mobileMenuButton.querySelector('i');
                 icon.classList.remove('fa-times');
                 icon.classList.add('fa-bars');
