@@ -21,12 +21,12 @@
             
             <!-- Desktop Navigation -->
             <nav class="hidden md:flex space-x-8">
-                <a href="#" class="nav-link">Inicio</a>
                 <a href="#fundacion" class="nav-link">Fundación y Orígenes</a>
                 <a href="#mision" class="nav-link">Misión y Valores</a>
                 <a href="http://127.0.0.1:5500/galleria.html" class="nav-link">Galería Histórica</a>
                 <a href="http://127.0.0.1:5500/lineadetiempo.html" class="nav-link">Línea de Tiempo</a>
                 <a href="http://127.0.0.1:5500/directorio.html" class="nav-link">Directorio</a>
+                <a href="http://127.0.0.1:5500/noticia.html" class="nav-link">Noticias</a>
             </nav>
             
             <!-- Mobile Menu Button -->
@@ -38,8 +38,10 @@
                 <a href="https://th-2007.github.io/pagina.github.io/index.html#fundacion" class="block text-white py-3 nav-link">Fundación y Orígenes</a>
                 <a href="https://th-2007.github.io/pagina.github.io/index.html#mision" class="block text-white py-3 nav-link">Misión y Valores</a>
                 <a href="https://th-2007.github.io/pagina.github.io/galleria.html" class="block text-white py-3 nav-link">Galería Histórica</a>
-                 <a href="https://th-2007.github.io/pagina.github.io/lineadetiempo.html" class="block text-white py-3 nav-link">Línea de Tiempo</a>
+                <a href="https://th-2007.github.io/pagina.github.io/lineadetiempo.html" class="block text-white py-3 nav-link">Línea de Tiempo</a>
                 <a href="https://th-2007.github.io/pagina.github.io/directorio.html" class="block text-white py-3 nav-link">Directorio</a>
+                <a href="https://th-2007.github.io/pagina.github.io/noticia.html" class="nav-link">Noticias</a>
+                
             </div>
         </div>
     </header>
@@ -269,42 +271,7 @@
             });
         });
         
-        // Gallery like buttons
-        const likeButtons = document.querySelectorAll('.like-button');
         
-        // Initialize likes from localStorage
-        const initializeLikes = () => {
-            likeButtons.forEach(button => {
-                const id = button.getAttribute('data-id');
-                const isLiked = localStorage.getItem(`liked-${id}`) === 'true';
-                
-                if (isLiked) {
-                    button.classList.add('active');
-                    button.querySelector('i').classList.remove('far');
-                    button.querySelector('i').classList.add('fas');
-                }
-            });
-        };
-        
-        // Toggle like
-        likeButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                const id = button.getAttribute('data-id');
-                const isLiked = button.classList.contains('active');
-                
-                if (isLiked) {
-                    button.classList.remove('active');
-                    button.querySelector('i').classList.remove('fas');
-                    button.querySelector('i').classList.add('far');
-                    localStorage.setItem(`liked-${id}`, 'false');
-                } else {
-                    button.classList.add('active');
-                    button.querySelector('i').classList.remove('far');
-                    button.querySelector('i').classList.add('fas');
-                    localStorage.setItem(`liked-${id}`, 'true');
-                }
-            });
-        });
         
         // Initialize on load
         document.addEventListener('DOMContentLoaded', () => {
