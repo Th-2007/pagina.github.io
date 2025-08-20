@@ -20,7 +20,6 @@
             </a>
             
             <!-- Desktop Navigation -->
-            <!-- Desktop Navigation -->
             <nav class="hidden md:flex space-x-8">
                 <a href="http://127.0.0.1:5500/index.html" class="nav-link active">Inicio</a>
                 <a href="http://127.0.0.1:5500/index.html#fundacion" class="nav-link">Fundación y Orígenes</a>
@@ -241,42 +240,7 @@
             });
         });
         
-        // Gallery like buttons
-        const likeButtons = document.querySelectorAll('.like-button');
-        
-        // Initialize likes from localStorage
-        const initializeLikes = () => {
-            likeButtons.forEach(button => {
-                const id = button.getAttribute('data-id');
-                const isLiked = localStorage.getItem(`liked-${id}`) === 'true';
-                
-                if (isLiked) {
-                    button.classList.add('active');
-                    button.querySelector('i').classList.remove('far');
-                    button.querySelector('i').classList.add('fas');
-                }
-            });
-        };
-        
-        // Toggle like
-        likeButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                const id = button.getAttribute('data-id');
-                const isLiked = button.classList.contains('active');
-                
-                if (isLiked) {
-                    button.classList.remove('active');
-                    button.querySelector('i').classList.remove('fas');
-                    button.querySelector('i').classList.add('far');
-                    localStorage.setItem(`liked-${id}`, 'false');
-                } else {
-                    button.classList.add('active');
-                    button.querySelector('i').classList.remove('far');
-                    button.querySelector('i').classList.add('fas');
-                    localStorage.setItem(`liked-${id}`, 'true');
-                }
-            });
-        });
+       
         
         // Initialize on load
         document.addEventListener('DOMContentLoaded', () => {
