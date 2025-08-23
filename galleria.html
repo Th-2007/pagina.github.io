@@ -9,38 +9,41 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
-        <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="bg-white text-gray-800">
-    <!-- encabezado -->
-     <header class="fixed top-0 w-full bg-white shadow-md z-10">
-        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="javascript:void(0)" class="text-2xl font-bold text-navy">
-                <h1 class="font-serif text-navy"><span class="text-[#0B1F3A]">José</span> <span class="text-[#C62828]">Rosario</span> <span class="text-[#0B1F3A]">Pavón</span></h1>
+    <!-- Header -->
+    <header class="bg-white shadow-md z-10">
+        <div class="container mx-sauto px-4 py-0 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-navy flex items-center">
+
+                <img class="Imagencolegio" src="img/logodelcolegio.png" class="h-8">
+                <div class="leading-tight">
+                    <span class="block text-lg font-bold">José Rosario Pavón</span>
+                </div>
+
             </a>
             
-            <!-- Pc full chatgpt xdd, mentiraa -->
-             <!--esta es la parte de navegacion-->
-            <nav class="hidden md:flex space-x-8">
-                <a href="http://127.0.0.1:5500/index.html" class="nav-link active">Inicio</a>
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex space-x-6 text-sm">
                 <a href="http://127.0.0.1:5500/index.html#fundacion" class="nav-link">Fundación y Orígenes</a>
                 <a href="http://127.0.0.1:5500/index.html#mision" class="nav-link">Misión y Valores</a>
                 <a href="http://127.0.0.1:5500/lineadetiempo.html" class="nav-link">Línea de Tiempo</a>
                 <a href="http://127.0.0.1:5500/directorio.html" class="nav-link">Directorio</a>
-               
+                <a href="http://127.0.0.1:5500/noticia.html/noticia.html" class="nav-link">Noticias</a>
             </nav>
             
-            <!-- Mobile Menu Button -->
+            
+            <!-- Mobile-celular Menu Button -->
             <div class="md:hidden mobile-menu-button">
                 <i class="fas fa-bars text-2xl text-[#0B1F3A]"></i>
             </div>
             
-            <!-- Mobile Menu -->
+            <!-- Mobile-celular Menu -->
             <div class="mobile-menu">
-                <a href="https://th-2007.github.io/pagina.github.io/" class="block text-white py-3 nav-link">Inicio</a>
                 <a href="https://th-2007.github.io/pagina.github.io/index.html#fundacion" class="block text-white py-3 nav-link">Fundación y Orígenes</a>
                 <a href="https://th-2007.github.io/pagina.github.io/index.html#mision" class="block text-white py-3 nav-link">Misión y Valores</a>
-                <a href="https://th-2007.github.io/pagina.github.io/lineadetiempo.html" class="block text-white py-3 nav-link">Linea de Tiempo</a>
+                <a href="https://th-2007.github.io/pagina.github.io/lineadetiempo.html" class="block text-white py-3 nav-link">Línea de Tiempo</a>
                 <a href="https://th-2007.github.io/pagina.github.io/directorio.html" class="block text-white py-3 nav-link">Directorio</a>
             </div>
         </div>
@@ -181,7 +184,7 @@
             </div>
         </div>
     </footer>
-<!--este script es para dar me gusta y demas funciones como animaciones-->
+  <!--este script es para dar me gusta y demas funciones como animaciones-->
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script id="app-script">
@@ -250,7 +253,7 @@
         // Gallery like buttons
         const likeButtons = document.querySelectorAll('.like-button');
         
-        // Initialize likes from localStorage
+        // Inicia likes from localStorage
         const initializeLikes = () => {
             likeButtons.forEach(button => {
                 const id = button.getAttribute('data-id');

@@ -26,10 +26,20 @@
             background-position: center;
             min-height: 100vh;
         }
+
+        .Imagencolegio{
+            width: 50px;
+            height: auto;
+            
+        }
         
         .nav-link {
+
             position: relative;
             transition: var(--transition);
+            
+            
+            display: inline-block;
         }
         
         .nav-link::after {
