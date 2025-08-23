@@ -21,7 +21,7 @@
         }
         
         .hero {
-            background-image: linear-gradient(rgb(2, 13, 49), rgba(11, 31, 58, 0.8)), url('https://cdn.pixabay.com/photo/2016/11/29/06/15/adult-1867665_1280.jpg');
+            background-image: linear-gradient(rgb(2, 13, 49), rgba(11, 31, 58, 0.8)), url('https://cdn.pixabay.com/photo/2025/08/11/10/07/milky-way-9767930_1280.jpg');
             background-size: cover;
             background-position: center;
             min-height: 100vh;
@@ -30,6 +30,11 @@
         .Imagencolegio{
             width: 50px;
             height: auto;
+            
+        }
+        .tablanegra{
+            width: 300px;
+            
             
         }
         
