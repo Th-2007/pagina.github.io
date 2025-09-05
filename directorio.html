@@ -10,6 +10,11 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
         rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
@@ -42,20 +47,20 @@
 
 
 
-               <!-- Texto rotativo -->
-                        <div class="hidden md:flex flex-col items-center justify-center flex-1 px-4">
-                            <div class="text-center">
-                                <h2 class="text-xl font-semibold text-[#0B1F3A] mb-2">Somos</h2>
+            <!-- Texto rotativo -->
+            <div class="hidden md:flex flex-col items-center justify-center flex-1 px-4">
+                <div class="text-center">
+                    <h2 class="text-xl font-semibold text-[#0B1F3A] mb-2">Somos</h2>
 
-                                <!-- Contenedor más flexible -->
-                                <div class="relative min-h-[2rem] max-w-xs md:max-w-md mx-auto px-2">
-                                    <span id="rotating-text"
-                                        class="block text-[#0B1F3A] text-lg font-medium transition-opacity duration-1000 opacity-100 break-words text-center whitespace-normal"></span>
-                                </div>
-                            </div>
-                        </div>
+                    <!-- Contenedor más flexible -->
+                    <div class="relative min-h-[2rem] max-w-xs md:max-w-md mx-auto px-2">
+                        <span id="rotating-text"
+                            class="block text-[#0B1F3A] text-lg font-medium transition-opacity duration-1000 opacity-100 break-words text-center whitespace-normal"></span>
+                    </div>
+                </div>
+            </div>
 
-                        <script src="js/headerletras.js"></script>
+            <script src="js/headerletras.js"></script>
 
 
             <!-- Desktop Navigation -->
@@ -68,27 +73,50 @@
 
             </nav>
 
-            <!-- Mobile Menu Button -->
-            <div class="md:hidden mobile-menu-button">
-                <i class="fas fa-bars text-2xl text-[#0B1F3A]"></i>
-            </div>
-            <!--celulares menu -->
-            <div class="mobile-menu">
+            <button id="openMenu" class="fixed top-4 right-4 z-[9999] bg-[#0B1F3A] p-2 rounded inline-flex md:hidden"
+                aria-label="Abrir menú">
+                <i class="fas fa-bars text-white text-xl"></i>
+            </button>
+
+
+
+            <!-- Fondo oscuro SOLO en celular -->
+            <div id="backdrop" class="fixed inset-0 hidden z-[100] bg-black/60 md:hidden"></div>
+
+            <!-- Menú lateral SOLO en celular -->
+            <nav id="drawer" class="fixed right-0 top-0 h-screen w-64 z-[120]
+            translate-x-full transition-transform duration-300
+            bg-slate-900 text-white flex flex-col p-6 space-y-4 md:hidden">
+
                 <a href="https://th-2007.github.io/pagina.github.io/index.html#fundacion"
-                    class="block text-white py-3 nav-link">Fundación y Orígenes</a>
+                    class="hover:text-yellow-400">Fundación y Orígenes</a>
                 <a href="https://th-2007.github.io/pagina.github.io/index.html#mision"
-                    class="block text-white py-3 nav-link">Misión y Valores</a>
-                <a href="https://th-2007.github.io/pagina.github.io/galleria.html"
-                    class="block text-white py-3 nav-link">Galería Histórica</a>
+                    class="hover:text-yellow-400">Misión y Valores</a>
+                <a href="https://th-2007.github.io/pagina.github.io/galleria.html" class="hover:text-yellow-400">Galería
+                    Histórica</a>
                 <a href="https://th-2007.github.io/pagina.github.io/lineadetiempo.html"
-                    class="block text-white py-3 nav-link">Línea de Tiempo</a>
+                    class="hover:text-yellow-400">Línea de Tiempo</a>
                 <a href="https://th-2007.github.io/pagina.github.io/directorio.html"
-                    class="block text-white py-3 nav-link">Plantel Docente</a>
+                    class="hover:text-yellow-400">Plantel Docente</a>
+            </nav>
+            <script src="js/menucelular.js"></script>
 
 
-            </div>
+
+
+
+
+
+        </div>
         </div>
     </header>
+
+
+
+
+
+
+
 
     <!-- Hero Section -->
     <section id="inicio" class="relative h-screen flex items-center justify-center text-center overflow-hidden">
@@ -130,17 +158,16 @@
     <script src="js/carrsel.js"></script>
 
 
-   
-   
     <!-- Directorio Section -->
     <section id="directorio" class="py-20 bg-white">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-[#0B1F3A]">Directorio</h2>
-            
+
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="bg-white rounded-lg p-6 shadow-md" data-aos="fade-up">
                     <div class="text-center mb-4">
-                        <img src="https://cdn.pixabay.com/photo/2016/11/21/12/42/beard-1845166_1280.jpg" alt="Director General" class="rounded-full w-32 h-32 object-cover mx-auto mb-4">
+                        <img src="https://cdn.pixabay.com/photo/2016/11/21/12/42/beard-1845166_1280.jpg"
+                            alt="Director General" class="rounded-full w-32 h-32 object-cover mx-auto mb-4">
                         <h4 class="text-xl font-bold text-[#0B1F3A]">Carlos Mendoza</h4>
                         <p class="text-[#C62828] font-semibold">Director General</p>
                     </div>
@@ -149,10 +176,11 @@
                         <p><i class="fas fa-envelope mr-2"></i> director@joserosario.org</p>
                     </div>
                 </div>
-                
+
                 <div class="bg-white rounded-lg p-6 shadow-md" data-aos="fade-up" data-aos-delay="100">
                     <div class="text-center mb-4">
-                        <img src="https://cdn.pixabay.com/photo/2018/01/15/07/51/woman-3083383_1280.jpg" alt="Directora Académica" class="rounded-full w-32 h-32 object-cover mx-auto mb-4">
+                        <img src="https://cdn.pixabay.com/photo/2018/01/15/07/51/woman-3083383_1280.jpg"
+                            alt="Directora Académica" class="rounded-full w-32 h-32 object-cover mx-auto mb-4">
                         <h4 class="text-xl font-bold text-[#0B1F3A]">Laura Gutiérrez</h4>
                         <p class="text-[#C62828] font-semibold">Directora Académica</p>
                     </div>
@@ -161,10 +189,11 @@
                         <p><i class="fas fa-envelope mr-2"></i> academica@joserosario.org</p>
                     </div>
                 </div>
-                
+
                 <div class="bg-white rounded-lg p-6 shadow-md" data-aos="fade-up" data-aos-delay="200">
                     <div class="text-center mb-4">
-                        <img src="https://cdn.pixabay.com/photo/2016/11/18/19/07/happy-1836445_1280.jpg" alt="Director de Comunicación" class="rounded-full w-32 h-32 object-cover mx-auto mb-4">
+                        <img src="https://cdn.pixabay.com/photo/2016/11/18/19/07/happy-1836445_1280.jpg"
+                            alt="Director de Comunicación" class="rounded-full w-32 h-32 object-cover mx-auto mb-4">
                         <h4 class="text-xl font-bold text-[#0B1F3A]">Fernando Sánchez</h4>
                         <p class="text-[#C62828] font-semibold">Director de Comunicación</p>
                     </div>
@@ -173,10 +202,11 @@
                         <p><i class="fas fa-envelope mr-2"></i> prensa@joserosario.org</p>
                     </div>
                 </div>
-                
+
                 <div class="bg-white rounded-lg p-6 shadow-md" data-aos="fade-up" data-aos-delay="300">
                     <div class="text-center mb-4">
-                        <img src="https://cdn.pixabay.com/photo/2017/02/16/23/10/smile-2072907_1280.jpg" alt="Directora de Proyectos" class="rounded-full w-32 h-32 object-cover mx-auto mb-4">
+                        <img src="https://cdn.pixabay.com/photo/2017/02/16/23/10/smile-2072907_1280.jpg"
+                            alt="Directora de Proyectos" class="rounded-full w-32 h-32 object-cover mx-auto mb-4">
                         <h4 class="text-xl font-bold text-[#0B1F3A]">Marta Rodríguez</h4>
                         <p class="text-[#C62828] font-semibold">Directora de Proyectos</p>
                     </div>
@@ -185,10 +215,11 @@
                         <p><i class="fas fa-envelope mr-2"></i> proyectos@joserosario.org</p>
                     </div>
                 </div>
-                
+
                 <div class="bg-white rounded-lg p-6 shadow-md" data-aos="fade-up" data-aos-delay="400">
                     <div class="text-center mb-4">
-                        <img src="https://cdn.pixabay.com/photo/2016/11/29/09/38/adult-1868750_1280.jpg" alt="Director Financiero" class="rounded-full w-32 h-32 object-cover mx-auto mb-4">
+                        <img src="https://cdn.pixabay.com/photo/2016/11/29/09/38/adult-1868750_1280.jpg"
+                            alt="Director Financiero" class="rounded-full w-32 h-32 object-cover mx-auto mb-4">
                         <h4 class="text-xl font-bold text-[#0B1F3A]">Eduardo Vargas</h4>
                         <p class="text-[#C62828] font-semibold">Director Financiero</p>
                     </div>
@@ -197,10 +228,11 @@
                         <p><i class="fas fa-envelope mr-2"></i> finanzas@joserosario.org</p>
                     </div>
                 </div>
-                
+
                 <div class="bg-white rounded-lg p-6 shadow-md" data-aos="fade-up" data-aos-delay="500">
                     <div class="text-center mb-4">
-                        <img src="https://cdn.pixabay.com/photo/2019/11/03/20/11/portrait-4599553_1280.jpg" alt="Directora de Innovación" class="rounded-full w-32 h-32 object-cover mx-auto mb-4">
+                        <img src="https://cdn.pixabay.com/photo/2019/11/03/20/11/portrait-4599553_1280.jpg"
+                            alt="Directora de Innovación" class="rounded-full w-32 h-32 object-cover mx-auto mb-4">
                         <h4 class="text-xl font-bold text-[#0B1F3A]">Sofía Torres</h4>
                         <p class="text-[#C62828] font-semibold">Directora de Innovación</p>
                     </div>
@@ -213,7 +245,15 @@
         </div>
     </section>
 
-     <footer>
+
+
+
+
+
+
+
+
+    <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
@@ -222,7 +262,7 @@
                     <div class="social-links">
                         <a href="javascript:void(0)" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                         <a href="javascript:void(0)" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                      
+
                     </div>
                 </div>
 
@@ -336,6 +376,18 @@
             });
         });
     </script>
+
+
+
+    <!-- Botón volver al inicio -->
+    <a href="#"
+        class="fixed bottom-4 right-4 z-[9999] bg-[#0B1F3A] text-white p-3 rounded-full shadow-lg hover:bg-[#12335c] transition duration-300"
+        aria-label="Volver al inicio">
+        <i class="fas fa-arrow-up text-xl"></i>
+    </a>
+
 </body>
 
-</html> 
+</body>
+
+</html>

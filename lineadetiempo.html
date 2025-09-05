@@ -10,6 +10,11 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
         rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
@@ -42,20 +47,20 @@
 
 
 
-               <!-- Texto rotativo -->
-                        <div class="hidden md:flex flex-col items-center justify-center flex-1 px-4">
-                            <div class="text-center">
-                                <h2 class="text-xl font-semibold text-[#0B1F3A] mb-2">Somos</h2>
+            <!-- Texto rotativo -->
+            <div class="hidden md:flex flex-col items-center justify-center flex-1 px-4">
+                <div class="text-center">
+                    <h2 class="text-xl font-semibold text-[#0B1F3A] mb-2">Somos</h2>
 
-                                <!-- Contenedor más flexible -->
-                                <div class="relative min-h-[2rem] max-w-xs md:max-w-md mx-auto px-2">
-                                    <span id="rotating-text"
-                                        class="block text-[#0B1F3A] text-lg font-medium transition-opacity duration-1000 opacity-100 break-words text-center whitespace-normal"></span>
-                                </div>
-                            </div>
-                        </div>
+                    <!-- Contenedor más flexible -->
+                    <div class="relative min-h-[2rem] max-w-xs md:max-w-md mx-auto px-2">
+                        <span id="rotating-text"
+                            class="block text-[#0B1F3A] text-lg font-medium transition-opacity duration-1000 opacity-100 break-words text-center whitespace-normal"></span>
+                    </div>
+                </div>
+            </div>
 
-                        <script src="js/headerletras.js"></script>
+            <script src="js/headerletras.js"></script>
 
 
             <!-- Desktop Navigation -->
@@ -68,27 +73,52 @@
 
             </nav>
 
-            <!-- Mobile Menu Button -->
-            <div class="md:hidden mobile-menu-button">
-                <i class="fas fa-bars text-2xl text-[#0B1F3A]"></i>
-            </div>
-            <!--celulares menu -->
-            <div class="mobile-menu">
+            <button id="openMenu" class="fixed top-4 right-4 z-[9999] bg-[#0B1F3A] p-2 rounded inline-flex md:hidden"
+                aria-label="Abrir menú">
+                <i class="fas fa-bars text-white text-xl"></i>
+            </button>
+
+
+
+            <!-- Fondo oscuro SOLO en celular -->
+            <div id="backdrop" class="fixed inset-0 hidden z-[100] bg-black/60 md:hidden"></div>
+
+            <!-- Menú lateral SOLO en celular -->
+            <nav id="drawer" class="fixed right-0 top-0 h-screen w-64 z-[120]
+            translate-x-full transition-transform duration-300
+            bg-slate-900 text-white flex flex-col p-6 space-y-4 md:hidden">
+
                 <a href="https://th-2007.github.io/pagina.github.io/index.html#fundacion"
-                    class="block text-white py-3 nav-link">Fundación y Orígenes</a>
+                    class="hover:text-yellow-400">Fundación y Orígenes</a>
                 <a href="https://th-2007.github.io/pagina.github.io/index.html#mision"
-                    class="block text-white py-3 nav-link">Misión y Valores</a>
-                <a href="https://th-2007.github.io/pagina.github.io/galleria.html"
-                    class="block text-white py-3 nav-link">Galería Histórica</a>
+                    class="hover:text-yellow-400">Misión y Valores</a>
+                <a href="https://th-2007.github.io/pagina.github.io/galleria.html" class="hover:text-yellow-400">Galería
+                    Histórica</a>
                 <a href="https://th-2007.github.io/pagina.github.io/lineadetiempo.html"
-                    class="block text-white py-3 nav-link">Línea de Tiempo</a>
+                    class="hover:text-yellow-400">Línea de Tiempo</a>
                 <a href="https://th-2007.github.io/pagina.github.io/directorio.html"
-                    class="block text-white py-3 nav-link">Plantel Docente</a>
+                    class="hover:text-yellow-400">Plantel Docente</a>
+                    <script src="js/menucelular.js"></script>
+
+            </nav>
+            
 
 
-            </div>
+
+
+
+
+
+        </div>
         </div>
     </header>
+
+
+
+
+
+
+
 
     <!-- Hero Section -->
     <section id="inicio" class="relative h-screen flex items-center justify-center text-center overflow-hidden">
@@ -127,7 +157,8 @@
             ›
         </button>
     </section>
-   
+    <script src="js/carrsel.js"></script>
+
 
 
     <!-- Línea de Tiempo Section -->
@@ -394,6 +425,13 @@
             });
         });
     </script>
+
+    <!-- Botón volver al inicio -->
+    <a href="#"
+        class="fixed bottom-4 right-4 z-[9999] bg-[#0B1F3A] text-white p-3 rounded-full shadow-lg hover:bg-[#12335c] transition duration-300"
+        aria-label="Volver al inicio">
+        <i class="fas fa-arrow-up text-xl"></i>
+    </a>
 </body>
 
 </html> 

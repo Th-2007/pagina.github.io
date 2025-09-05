@@ -10,10 +10,16 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
         rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
 
+    <script src="https://cdn.tailwindcss.com"></script>
 
 
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -61,34 +67,58 @@
             <!-- Desktop Navigation -->
             <nav class="hidden md:flex space-x-6 text-sm">
                 <a href="#fundacion" class="nav-link">Fundación y Orígenes</a>
-                <a href="index.html" class="nav-link">Misión y Valores</a>
+                <a href="#mision" class="nav-link">Misión y Valores</a>
                 <a href="http://127.0.0.1:5500/galleria.html" class="nav-link">Galería Histórica</a>
                 <a href="http://127.0.0.1:5500/lineadetiempo.html" class="nav-link">Línea de Tiempo</a>
                 <a href="http://127.0.0.1:5500/directorio.html" class="nav-link">Plantel Docente</a>
 
             </nav>
 
-            <!-- Mobile Menu Button -->
-            <div class="md:hidden mobile-menu-button">
-                <i class="fas fa-bars text-2xl text-[#0B1F3A]"></i>
-            </div>
-            <!--celulares menu -->
-            <div class="mobile-menu">
+            <button id="openMenu" class="fixed top-4 right-4 z-[9999] bg-[#0B1F3A] p-2 rounded inline-flex md:hidden"
+                aria-label="Abrir menú">
+                <i class="fas fa-bars text-white text-xl"></i>
+            </button>
+
+
+
+
+            <!-- Fondo oscuro SOLO en celular -->
+            <div id="backdrop" class="fixed inset-0 hidden z-[100] bg-black/60 md:hidden"></div>
+
+            <!-- Menú lateral SOLO en celular -->
+            <nav id="drawer" class="fixed right-0 top-0 h-screen w-64 z-[120]
+            translate-x-full transition-transform duration-300
+            bg-slate-900 text-white flex flex-col p-6 space-y-4 md:hidden">
+
                 <a href="https://th-2007.github.io/pagina.github.io/index.html#fundacion"
-                    class="block text-white py-3 nav-link">Fundación y Orígenes</a>
+                    class="hover:text-yellow-400">Fundación y Orígenes</a>
                 <a href="https://th-2007.github.io/pagina.github.io/index.html#mision"
-                    class="block text-white py-3 nav-link">Misión y Valores</a>
-                <a href="https://th-2007.github.io/pagina.github.io/galleria.html"
-                    class="block text-white py-3 nav-link">Galería Histórica</a>
+                    class="hover:text-yellow-400">Misión y Valores</a>
+                <a href="https://th-2007.github.io/pagina.github.io/galleria.html" class="hover:text-yellow-400">Galería
+                    Histórica</a>
                 <a href="https://th-2007.github.io/pagina.github.io/lineadetiempo.html"
-                    class="block text-white py-3 nav-link">Línea de Tiempo</a>
+                    class="hover:text-yellow-400">Línea de Tiempo</a>
                 <a href="https://th-2007.github.io/pagina.github.io/directorio.html"
-                    class="block text-white py-3 nav-link">Plantel Docente</a>
+                    class="hover:text-yellow-400">Plantel Docente</a>
+            </nav>
+            <script src="js/menucelular.js"></script>
 
 
-            </div>
+
+
+
+
+
+        </div>
         </div>
     </header>
+
+
+
+
+
+
+
 
     <!-- Hero Section -->
     <section id="inicio" class="relative h-screen flex items-center justify-center text-center overflow-hidden">
@@ -128,6 +158,7 @@
         </button>
     </section>
     <script src="js/carrsel.js"></script>
+
 
 
     <!-- Galería Histórica Section -->
@@ -370,6 +401,13 @@
             });
         });
     </script>
+
+    <!-- Botón volver al inicio -->
+    <a href="#"
+        class="fixed bottom-4 right-4 z-[9999] bg-[#0B1F3A] text-white p-3 rounded-full shadow-lg hover:bg-[#12335c] transition duration-300"
+        aria-label="Volver al inicio">
+        <i class="fas fa-arrow-up text-xl"></i>
+    </a>
 </body>
 
 </html>
