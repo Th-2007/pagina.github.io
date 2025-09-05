@@ -14,6 +14,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
 
+
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
+
+
+
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -31,6 +39,24 @@
                 </div>
 
             </a>
+
+
+
+               <!-- Texto rotativo -->
+                        <div class="hidden md:flex flex-col items-center justify-center flex-1 px-4">
+                            <div class="text-center">
+                                <h2 class="text-xl font-semibold text-[#0B1F3A] mb-2">Somos</h2>
+
+                                <!-- Contenedor más flexible -->
+                                <div class="relative min-h-[2rem] max-w-xs md:max-w-md mx-auto px-2">
+                                    <span id="rotating-text"
+                                        class="block text-[#0B1F3A] text-lg font-medium transition-opacity duration-1000 opacity-100 break-words text-center whitespace-normal"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <script src="js/headerletras.js"></script>
+
 
             <!-- Desktop Navigation -->
             <nav class="hidden md:flex space-x-6 text-sm">
@@ -65,15 +91,44 @@
     </header>
 
     <!-- Hero Section -->
-    <section id="inicio" class="hero flex items-center justify-center px-4">
-        <div class="text-center text-white" data-aos="fade-up">
-            <h1 class="text-4xl md:text-6xl font-bold mb-4">Colegio Nacional <br>José Del Rosario Pavón</h1>
-            <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">Honrando el legado y promoviendo los valores que nos
-                definen</p>
-            <a href="https://escuelapavon.blogspot.com/"
-                class="btn-primary px-8 py-3 rounded-lg font-semibold inline-block">blogspot</a>
+    <section id="inicio" class="relative h-screen flex items-center justify-center text-center overflow-hidden">
+        <!-- Carrusel de imágenes -->
+        <div class="absolute inset-0 z-0">
+            <img src="img/colegioimg/rezo.jpg"
+                class="carousel-image absolute inset-0 w-full h-full object-cover opacity-100" />
+            <img src="img/colegioimg/logohistorico.jpeg"
+                class="carousel-image absolute inset-0 w-full h-full object-cover opacity-0" />
+            <img src="img/fondo3.jpg" class="carousel-image absolute inset-0 w-full h-full object-cover opacity-0" />
         </div>
+
+        <!-- Capa oscura -->
+        <div class="absolute inset-0 bg-black bg-opacity-50 z-10"></div>
+
+        <!-- Contenido superpuesto -->
+        <div class="relative z-20 text-white px-4" data-aos="fade-up">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4 drop-shadow-lg">Colegio Nacional<br>José Del Rosario Pavón
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto drop-shadow-md">
+                Honrando el legado y promoviendo los valores que nos definen
+            </p>
+            <a href="https://escuelapavon.blogspot.com/" target="_blank"
+                class="inline-block bg-[#C62828] hover:bg-red-700 text-white px-8 py-3 rounded-lg font-semibold transition duration-300 shadow-lg">
+                Visitar Blogspot
+            </a>
+        </div>
+
+        <!-- Botones -->
+        <button id="prevBtn"
+            class="absolute top-1/2 left-4 transform -translate-y-1/2 z-30 bg-black bg-opacity-40 text-white p-3 rounded-full hover:bg-opacity-70 transition">
+            ‹
+        </button>
+        <button id="nextBtn"
+            class="absolute top-1/2 right-4 transform -translate-y-1/2 z-30 bg-black bg-opacity-40 text-white p-3 rounded-full hover:bg-opacity-70 transition">
+            ›
+        </button>
     </section>
+    <script src="js/carrsel.js"></script>
+
 
     <!-- Fundación y Orígenes Section -->
     <section id="fundacion" class="py-20 bg-olive">
@@ -113,8 +168,8 @@
 
                             <br><br>
 
-                            Con el paso del tiempo, la escuela fue creciendo hasta contar hoy con 22 docentes altamente
-                            preparados, encargados de brindar educación integral en distintos niveles.
+                        Con el paso del tiempo, la escuela fue creciendo hasta contar hoy con 22 docentes altamente
+                        preparados, encargados de brindar educación integral en distintos niveles.
                         </p>
                     </div>
 
@@ -151,91 +206,61 @@
                     </div>
                 </div>
             </div>
-
-            <div class="flex flex-col md:flex-row-reverse items-center">
-                <div class="bg-white p-6 rounded-xl shadow-md border-r-4 border-[#C62828] relative transition-all duration-300 max-w-2xl mx-auto"
-                    data-aos="fade-left">
-                    <!-- Icono decorativo -->
-                    <div
-                        class="absolute -right-6 top-6 text-[#C62828] text-3xl hidden md:block animate__animated animate__fadeInRight animate__delay-1s">
-                        <i class="fas fa-landmark"></i>
-                    </div>
-
-                    <!-- Título -->
-                    <h3 class="text-3xl font-extrabold mb-4 text-[#0B1F3A] tracking-tight">
-                        Nuestra Historia
-                    </h3>
-
-                    <!-- Contenido colapsable -->
-                    <div id="historiaContent"
-                        class="text-gray-700 leading-relaxed text-justify text-base md:text-lg max-h-[160px] overflow-hidden transition-all duration-500 ease-in-out">
-                        <p>
-                            En el año 2008 se da un paso fundamental con la apertura del Colegio Nacional José del
-                            Rosario Pavón, que se inicia con el Bachillerato Técnico en Informática en su primer año de
-                            funcionamiento.
-                            <br><br>
-                            Esta apertura se realizó mediante la Resolución Ministerial Nº 141, y con ella se concretó
-                            el sueño de la comunidad de contar con un Colegio Nacional en Limpio.
-                            <br><br>
-                            Desde entonces, el colegio se convirtió en referente pionero en educación técnica,
-                            ofreciendo una sólida preparación académica en informática y ciencias.
-                            <br><br>
-                            Actualmente, la institución dispone de:
-                            <br>
-                            - 14 aulas pedagógicas climatizadas con tecnología y TICs (wifi, biblioteca digital, sala
-                            temática).<br>
-                            - Espacios recreativos, parque infantil y polideportivo.<br>
-                            - Circuito cerrado y sistema de seguridad para resguardar a la comunidad educativa.
-                            <br><br>
-                            En el 2022 asumió la dirección la Lic. Damiana Cabellí de Delgado, quien había estado al
-                            frente desde la fundación hasta junio de ese año. Actualmente, la dirección interina está a
-                            cargo de la Lic. Norma Liz Bogado Benítez, con Resolución Ministerial 505/2022.
-                            <br><br>
-                            Hoy, la institución cuenta con 214 familias, 67 alumnos de nivel medio y 303 alumnos de la
-                            Escuela Básica, todos organizados con consejo de alumnos, docentes, padres y la conformación
-                            del CGE.
-                        </p>
-                    </div>
-
-                    <!-- Botón "Leer más / menos" -->
-                    <div class="text-right mt-4">
-                        <button id="toggleHistoria"
-                            class="text-[#C62828] font-semibold hover:underline focus:outline-none transition duration-300">
-                            Leer más
-                        </button>
-                    </div>
+            <script src="js/boton.js"></script>
+            <div class="bg-white p-6 rounded-xl shadow-md border-r-4 border-[#C62828] relative transition-all duration-300 max-w-2xl mx-auto"
+                data-aos="fade-left">
+                <!-- Icono decorativo -->
+                <div class="absolute -left-6 top-6 text-[#C62828] text-3xl hidden md:block animate-bounce">
+                    <i class="fas fa-landmark"></i>
                 </div>
-                <script src="js/vermas.js"></script>
 
+                <!-- Título -->
+                <h3 class="text-3xl font-extrabold mb-4 text-[#0B1F3A] tracking-tight">
+                    Nuestra Historia
+                </h3>
 
-                <!-- Botón centrado -->
-                <div class="flex justify-center items-center h-screen" data-aos="fade-up">
-                    <button id="openImageModal"
-                        class="bg-[#C62828] text-white px-6 py-3 rounded-lg shadow-lg hover:bg-red-700 transition duration-300 text-lg font-semibold">
-                        Ver Logo Histórico :>
+                <!-- Contenido colapsable -->
+                <div id="historiaContent"
+                    class="text-gray-700 leading-relaxed text-justify text-base md:text-lg max-h-[160px] overflow-hidden transition-all duration-500 ease-in-out">
+                    <p>
+                        En el año 2008 se da un paso fundamental con la apertura del Colegio Nacional José del Rosario
+                        Pavón, que se inicia con el Bachillerato Técnico en Informática en su primer año de
+                        funcionamiento.
+                        <br><br>
+                        Esta apertura se realizó mediante la Resolución Ministerial Nº 141, y con ella se concretó el
+                        sueño de la comunidad de contar con un Colegio Nacional en Limpio.
+                        <br><br>
+                        Desde entonces, el colegio se convirtió en referente pionero en educación técnica, ofreciendo
+                        una sólida preparación académica en informática y ciencias.
+                        <br><br>
+                        Actualmente, la institución dispone de:
+                        <br>
+                        - 14 aulas pedagógicas climatizadas con tecnología y TICs (wifi, biblioteca digital, sala
+                        temática).<br>
+                        - Espacios recreativos, parque infantil y polideportivo.<br>
+                        - Circuito cerrado y sistema de seguridad para resguardar a la comunidad educativa.
+                        <br><br>
+                        En el 2022 asumió la dirección la Lic. Damiana Cabellí de Delgado, quien había estado al frente
+                        desde la fundación hasta junio de ese año. Actualmente, la dirección interina está a cargo de la
+                        Lic. Norma Liz Bogado Benítez, con Resolución Ministerial 505/2022.
+                        <br><br>
+                        Hoy, la institución cuenta con 214 familias, 67 alumnos de nivel medio y 303 alumnos de la
+                        Escuela Básica, todos organizados con consejo de alumnos, docentes, padres y la conformación del
+                        CGE.
+                    </p>
+                </div>
+
+                <!-- Botón "Leer más / menos" -->
+                <div class="text-right mt-4">
+                    <button id="toggleHistoria"
+                        class="text-[#C62828] font-semibold hover:underline focus:outline-none transition duration-300">
+                        Leer más
                     </button>
                 </div>
-
-                <!-- Modal con animación -->
-                <div id="imageModal"
-                    class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 hidden">
-                    <div class="relative max-w-3xl w-full px-4 animate__animated animate__fadeInDown">
-                        <!-- Botón de cerrar -->
-                        <button id="closeImageModal"
-                            class="absolute top-2 right-2 text-white text-3xl font-bold hover:text-red-500">
-                            &times;
-                        </button>
-
-                        <!-- Imagen grande -->
-                        <img src="img/colegioimg/logohistorico.jpeg" alt="Imagen histórica ampliada"
-                            class="w-full rounded-lg shadow-2xl">
-                    </div>
-                </div>
-                <script src="js/boton.js"></script>
-
-
-
             </div>
+            <script src="js/vermas2.js"></script>
+
+
         </div>
     </section>
 
@@ -376,12 +401,11 @@
             <div class="footer-content">
                 <div class="footer-column">
                     <h3>Colegio Nacional<br>José Del Rosario Pavón</h3>
-                    <p>Un legado de excelencia educativa y compromiso con nuestra comunidad desde 1995.</p>
+                    <p>Un legado de excelencia educativa y compromiso con nuestra comunidad desde 1994.</p>
                     <div class="social-links">
                         <a href="javascript:void(0)" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="javascript:void(0)" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
                         <a href="javascript:void(0)" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="javascript:void(0)" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                      
                     </div>
                 </div>
 
@@ -393,7 +417,7 @@
                         <li><a href="#mision">Misión y Valores</a></li>
                         <li><a href="http://127.0.0.1:5500/proyecto2/galleria.html">Galería Histórica</a></li>
                         <li><a href="http://127.0.0.1:5500/proyecto2/lineadetiempo.html">Línea de Tiempo</a></li>
-                        <li><a href="http://127.0.0.1:5500/proyecto2/directorio.html">Directorio</a></li>
+                        <li><a href="http://127.0.0.1:5500/proyecto2/directorio.html">Plantel Docente</a></li>
                         <li><a href="https://www.youtube.com/watch?v=xvFZjo5PgG0&list=RDxvFZjo5PgG0&start_radio=1">!NO
                                 ENTRES AQUIIIIIII</a></li>
                     </ul>
@@ -401,7 +425,7 @@
 
                 <div class="footer-column">
                     <h3>Contacto</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> Av. Principal #123, Ciudad</p>
+                    <p><i class="fas fa-map-marker-alt"></i> RUTA LUQUE - LIMPIO, LIMPIO, COLONIA JUAN DE SALAZAR.</p>
                     <p><i class="fas fa-phone"></i> (123) 456-7890</p>
                     <p><i class="fas fa-envelope"></i> info@jrpavon.org</p>
                 </div>
