@@ -1,16 +1,31 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>José Rosario Pavón</title>
+    <title>Colegio Nacional José Del Rosario Pavón</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+
+
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
+
+
+
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body class="bg-white text-gray-800">
     <!-- Header -->
     <header class="bg-white shadow-md z-10">
@@ -19,44 +34,101 @@
 
                 <img class="Imagencolegio" src="img/logodelcolegio.png" class="h-8">
                 <div class="leading-tight">
-                    <span class="block text-lg font-bold">José Rosario Pavón</span>
+                    <span class="block text-lg font-bold justify-center">Colegio Nacional</span>
+                    <span class="block text-lg font-bold">José Del Rosario Pavón</span>
                 </div>
 
             </a>
-            
+
+
+
+               <!-- Texto rotativo -->
+                        <div class="hidden md:flex flex-col items-center justify-center flex-1 px-4">
+                            <div class="text-center">
+                                <h2 class="text-xl font-semibold text-[#0B1F3A] mb-2">Somos</h2>
+
+                                <!-- Contenedor más flexible -->
+                                <div class="relative min-h-[2rem] max-w-xs md:max-w-md mx-auto px-2">
+                                    <span id="rotating-text"
+                                        class="block text-[#0B1F3A] text-lg font-medium transition-opacity duration-1000 opacity-100 break-words text-center whitespace-normal"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <script src="js/headerletras.js"></script>
+
+
             <!-- Desktop Navigation -->
             <nav class="hidden md:flex space-x-6 text-sm">
-                <a href="http://127.0.0.1:5500/index.html#fundacion" class="nav-link">Fundación y Orígenes</a>
-                <a href="http://127.0.0.1:5500/index.html#mision" class="nav-link">Misión y Valores</a>
+                <a href="#fundacion" class="nav-link">Fundación y Orígenes</a>
+                <a href="#mision" class="nav-link">Misión y Valores</a>
                 <a href="http://127.0.0.1:5500/galleria.html" class="nav-link">Galería Histórica</a>
-                <a href="http://127.0.0.1:5500/directorio.html" class="nav-link">Directorio</a>
-                
+                <a href="http://127.0.0.1:5500/lineadetiempo.html" class="nav-link">Línea de Tiempo</a>
+                <a href="http://127.0.0.1:5500/directorio.html" class="nav-link">Plantel Docente</a>
+
             </nav>
-            
-            <!-- cel Menu Button -->
+
+            <!-- Mobile Menu Button -->
             <div class="md:hidden mobile-menu-button">
                 <i class="fas fa-bars text-2xl text-[#0B1F3A]"></i>
             </div>
-            
-            <!-- cel Menu -->
+            <!--celulares menu -->
             <div class="mobile-menu">
-                <a href="https://th-2007.github.io/pagina.github.io/" class="block text-white py-3 nav-link">Inicio</a>
-                <a href="https://th-2007.github.io/pagina.github.io/index.html#fundacion" class="block text-white py-3 nav-link">Fundación y Orígenes</a>
-                <a href="https://th-2007.github.io/pagina.github.io/index.html#mision" class="block text-white py-3 nav-link">Misión y Valores</a>
-                <a href="https://th-2007.github.io/pagina.github.io/galleria.html" class="block text-white py-3 nav-link">Galería Histórica</a>
-                <a href="https://th-2007.github.io/pagina.github.io/directorio.html" class="block text-white py-3 nav-link">Directorio</a>
+                <a href="https://th-2007.github.io/pagina.github.io/index.html#fundacion"
+                    class="block text-white py-3 nav-link">Fundación y Orígenes</a>
+                <a href="https://th-2007.github.io/pagina.github.io/index.html#mision"
+                    class="block text-white py-3 nav-link">Misión y Valores</a>
+                <a href="https://th-2007.github.io/pagina.github.io/galleria.html"
+                    class="block text-white py-3 nav-link">Galería Histórica</a>
+                <a href="https://th-2007.github.io/pagina.github.io/lineadetiempo.html"
+                    class="block text-white py-3 nav-link">Línea de Tiempo</a>
+                <a href="https://th-2007.github.io/pagina.github.io/directorio.html"
+                    class="block text-white py-3 nav-link">Plantel Docente</a>
+
+
             </div>
         </div>
     </header>
 
-    <!-- encabezado Section -->
-    <section id="inicio" class="hero flex items-center justify-center px-4">
-        <div class="text-center text-white" data-aos="fade-up">
-            <h1 class="text-4xl md:text-6xl font-bold mb-4">José Rosario Pavón</h1>
-            <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">Honrando el legado y promoviendo los valores que nos definen</p>
-            <a href="#fundacion" class="btn-primary px-8 py-3 rounded-lg font-semibold inline-block">Conocer más</a>
+    <!-- Hero Section -->
+    <section id="inicio" class="relative h-screen flex items-center justify-center text-center overflow-hidden">
+        <!-- Carrusel de imágenes -->
+        <div class="absolute inset-0 z-0">
+            <img src="img/colegioimg/rezo.jpg"
+                class="carousel-image absolute inset-0 w-full h-full object-cover opacity-100" />
+            <img src="img/colegioimg/logohistorico.jpeg"
+                class="carousel-image absolute inset-0 w-full h-full object-cover opacity-0" />
+            <img src="img/fondo3.jpg" class="carousel-image absolute inset-0 w-full h-full object-cover opacity-0" />
         </div>
+
+        <!-- Capa oscura -->
+        <div class="absolute inset-0 bg-black bg-opacity-50 z-10"></div>
+
+        <!-- Contenido superpuesto -->
+        <div class="relative z-20 text-white px-4" data-aos="fade-up">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4 drop-shadow-lg">Colegio Nacional<br>José Del Rosario Pavón
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto drop-shadow-md">
+                Honrando el legado y promoviendo los valores que nos definen
+            </p>
+            <a href="https://escuelapavon.blogspot.com/" target="_blank"
+                class="inline-block bg-[#C62828] hover:bg-red-700 text-white px-8 py-3 rounded-lg font-semibold transition duration-300 shadow-lg">
+                Visitar Blogspot
+            </a>
+        </div>
+
+        <!-- Botones -->
+        <button id="prevBtn"
+            class="absolute top-1/2 left-4 transform -translate-y-1/2 z-30 bg-black bg-opacity-40 text-white p-3 rounded-full hover:bg-opacity-70 transition">
+            ‹
+        </button>
+        <button id="nextBtn"
+            class="absolute top-1/2 right-4 transform -translate-y-1/2 z-30 bg-black bg-opacity-40 text-white p-3 rounded-full hover:bg-opacity-70 transition">
+            ›
+        </button>
     </section>
+   
+
 
     <!-- Línea de Tiempo Section -->
     <section id="timeline" class="py-20 bg-gray-50">
@@ -203,36 +275,37 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
-                    <h3>José Rosario Pavón</h3>
-                    <p>Un legado de excelencia educativa y compromiso con nuestra comunidad desde 1850.</p>
+                    <h3>Colegio Nacional<br>José Del Rosario Pavón</h3>
+                    <p>Un legado de excelencia educativa y compromiso con nuestra comunidad desde 1994.</p>
                     <div class="social-links">
                         <a href="javascript:void(0)" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="javascript:void(0)" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
                         <a href="javascript:void(0)" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="javascript:void(0)" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                      
                     </div>
                 </div>
-                
+
                 <div class="footer-column">
                     <h3>Enlaces Rápidos</h3>
                     <ul class="footer-links">
-                        <li><a href="http://127.0.0.1:5500/proyecto2/index.html">Inicio</a></li>
-                        <li><a href="http://127.0.0.1:5500/proyecto2/index.html#fundacion">Fundación y Orígenes</a></li>
-                        <li><a href="http://127.0.0.1:5500/proyecto2/index.html#mision">Misión y Valores</a></li>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#fundacion">Fundación y Orígenes</a></li>
+                        <li><a href="#mision">Misión y Valores</a></li>
                         <li><a href="http://127.0.0.1:5500/proyecto2/galleria.html">Galería Histórica</a></li>
                         <li><a href="http://127.0.0.1:5500/proyecto2/lineadetiempo.html">Línea de Tiempo</a></li>
-                        <li><a href="http://127.0.0.1:5500/proyecto2/directorio.html">Directorio</a></li>
+                        <li><a href="http://127.0.0.1:5500/proyecto2/directorio.html">Plantel Docente</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=xvFZjo5PgG0&list=RDxvFZjo5PgG0&start_radio=1">!NO
+                                ENTRES AQUIIIIIII</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-column">
                     <h3>Contacto</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> Av. Principal #123, Ciudad</p>
+                    <p><i class="fas fa-map-marker-alt"></i> RUTA LUQUE - LIMPIO, LIMPIO, COLONIA JUAN DE SALAZAR.</p>
                     <p><i class="fas fa-phone"></i> (123) 456-7890</p>
                     <p><i class="fas fa-envelope"></i> info@jrpavon.org</p>
                 </div>
             </div>
-            
+
             <div class="footer-bottom">
                 <p>&copy; 2025 José Rosario Pavón. Todos los derechos reservados.</p>
             </div>
@@ -240,24 +313,25 @@
     </footer>
 
 
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script id="app-script">
-        // Iniciar AOS - libreria :)
+        // Initialize AOS
         AOS.init({
             duration: 800,
             easing: 'ease-in-out',
             once: true,
             offset: 100
         });
-        
-        // celular menu Toggle
+
+        // Mobile Menu Toggle
         const mobileMenuButton = document.querySelector('.mobile-menu-button');
         const mobileMenu = document.querySelector('.mobile-menu');
-        
+
         mobileMenuButton.addEventListener('click', () => {
             mobileMenu.classList.toggle('open');
-            
-            // Toggle icon boton
+
+            // Toggle icon
             const icon = mobileMenuButton.querySelector('i');
             if (mobileMenu.classList.contains('open')) {
                 icon.classList.remove('fa-bars');
@@ -267,34 +341,35 @@
                 icon.classList.add('fa-bars');
             }
         });
-        
+
+        // Close mobile menu when clicking on a link
         document.querySelectorAll('.mobile-menu a').forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenu.classList.remove('open');
-                
-                // Reset icon - reiniciar
+
+                // Reset icon
                 const icon = mobileMenuButton.querySelector('i');
                 icon.classList.remove('fa-times');
                 icon.classList.add('fa-bars');
             });
         });
-        
+
         // Active nav link on scroll
         const sections = document.querySelectorAll('section');
         const navLinks = document.querySelectorAll('.nav-link');
-        
+
         window.addEventListener('scroll', () => {
             let current = '';
-            
+
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
                 const sectionHeight = section.clientHeight;
-                
+
                 if (pageYOffset >= sectionTop - 200) {
                     current = section.getAttribute('id');
                 }
             });
-            
+
             navLinks.forEach(link => {
                 link.classList.remove('active');
                 if (link.getAttribute('href').substring(1) === current) {
@@ -302,13 +377,13 @@
                 }
             });
         });
-        
-        
-        
+
+
+
         // Initialize on load
         document.addEventListener('DOMContentLoaded', () => {
             initializeLikes();
-            
+
             // Set initial active nav link
             const currentSection = window.location.hash ? window.location.hash.substring(1) : 'inicio';
             document.querySelectorAll('.nav-link').forEach(link => {
@@ -320,4 +395,5 @@
         });
     </script>
 </body>
-</html>
+
+</html> 
