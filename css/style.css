@@ -24,12 +24,7 @@ h6 {
     font-family: 'Playfair Display', serif;
 }
 
-.hero {
-    background-image: linear-gradient(rgb(2, 13, 49), rgba(11, 31, 58, 0.8)), url('https://cdn.pixabay.com/photo/2025/08/11/10/07/milky-way-9767930_1280.jpg');
-    background-size: cover;
-    background-position: center;
-    min-height: 100vh;
-}
+
 
 .transition-height {
     transition: height 0.3s ease;
@@ -170,6 +165,60 @@ h6 {
     background-color: var(--red);
 }
 
+  /* Cursor pointer para títulos que activan el toggle */
+  #timeline .toggle-btn {
+    cursor: pointer;
+  }
+
+  /* Mostrar contenido oculto con transición */
+  #timeline .content-text,
+  #timeline .content-text-hidden {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  /* Contenido activo se expande */
+  #timeline .content-text.active,
+  #timeline .content-text-hidden.active {
+    max-height: 500px; /* suficiente para mostrar texto */
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  /* Resaltar item activo móvil */
+  #timeline .timeline-item.active {
+    background-color: #fff7f7;
+    box-shadow: 0 0 10px #C62828;
+    border-radius: 6px;
+    z-index: 10;
+  }
+
+  /* Resaltar item activo desktop (horizontal) */
+  #timeline .timeline-item-horizontal.active {
+    border-color: #C62828;
+    background-color: #fff7f7;
+    box-shadow: 0 0 12px #C62828;
+    z-index: 10;
+  }
+
+  /* Agrandar punto activo */
+  #timeline .timeline-item.active .timeline-dot,
+  #timeline .timeline-item-horizontal.active .timeline-dot-horizontal {
+    transform: scale(1.4);
+    transition: transform 0.3s ease;
+  }
+
+
+
+
+
+
+
+
+
 /* Footer */
 footer {
     background-color: var(--navy);
@@ -291,6 +340,13 @@ footer {
         padding-top: 40px;
     }
 }
+
+
+
+
+
+
+
 
 .mobile-menu-button {
     cursor: pointer;

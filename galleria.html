@@ -66,8 +66,8 @@
 
             <!-- Desktop Navigation -->
             <nav class="hidden md:flex space-x-6 text-sm">
-                <a href="#fundacion" class="nav-link">Fundación y Orígenes</a>
-                <a href="#mision" class="nav-link">Misión y Valores</a>
+                <a href="http://127.0.0.1:5500/index.html#fundacion" class="nav-link">Fundación y Orígenes</a>
+                <a href="http://127.0.0.1:5500/index.html#mision" class="nav-link">Misión y Valores</a>
                 <a href="http://127.0.0.1:5500/galleria.html" class="nav-link">Galería Histórica</a>
                 <a href="http://127.0.0.1:5500/lineadetiempo.html" class="nav-link">Línea de Tiempo</a>
                 <a href="http://127.0.0.1:5500/directorio.html" class="nav-link">Plantel Docente</a>
@@ -159,121 +159,181 @@
     </section>
     <script src="js/carrsel.js"></script>
 
-
-
     <!-- Galería Histórica Section -->
     <section id="galeria" class="py-20 bg-white">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-[#0B1F3A]">Galería Histórica</h2>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="gallery-item rounded-lg overflow-hidden shadow-md" data-aos="fade-up">
-                    <img src="img/seccion de galeria/trofeos.jpeg" alt="Imagen histórica 1"
-                        class="w-full h-64 object-cover">
-                    <div class="like-button" data-id="1">
-                        <i class="far fa-heart text-xl"></i>
+                <!-- Imagen 1 -->
+                <div class="gallery-item rounded-lg overflow-hidden shadow-lg relative" data-id="1" data-aos="fade-up">
+                    <div class="overflow-hidden group">
+                        <img src="img/seccion de galeria/trofeos.jpeg" alt="Imagen histórica 1"
+                            class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-500" />
+                    </div>
+                    <div class="like-button absolute top-2 right-2 bg-white p-2 rounded-full shadow cursor-pointer"
+                        data-id="1">
+                        <i class="far fa-heart text-red-500 text-xl transition-all duration-300"></i>
+                        <span class="like-count text-sm ml-1 text-gray-700">0</span>
                     </div>
                     <div class="p-4">
-                        <h4 class="font-bold text-lg mb-2">Trofeos y Premios de Jose Del Rosario Pavon</h4>
-                        <p class="text-gray-600">Todos los trofeos que nuestros alumnos ganaron en las competiciones por
-                            su desempeno y trabajo en equipo</p>
+                        <h4 class="font-bold text-lg mb-2">Trofeos y Premios</h4>
+                        <p class="text-gray-600">
+                            Todos los trofeos ganados en competiciones por el desempeño y trabajo en equipo.
+                        </p>
                     </div>
+
+                    <!-- Comentarios -->
+                    <section class="comentarios mt-16">
+                        <button
+                            class="toggle-comments bg-[#0B1F3A] hover:bg-[#12335c] text-white px-6 py-2 rounded mb-4">
+                            Mostrar Comentarios
+                        </button>
+
+                        <div class="comment-section hidden bg-gray-50 p-4 rounded shadow-md">
+                            <div class="comment-list space-y-4 mb-4"></div>
+
+                            <form class="comment-form space-y-2">
+                                <input type="text" class="username-input w-full p-2 border border-gray-300 rounded"
+                                    placeholder="Tu nombre" required />
+                                <textarea class="comment-input w-full p-2 border border-gray-300 rounded"
+                                    placeholder="Escribe un comentario..." rows="3" required></textarea>
+                                <button type="submit"
+                                    class="bg-[#C62828] hover:bg-red-700 text-white px-4 py-2 rounded">
+                                    Publicar Comentario
+                                </button>
+                            </form>
+                        </div>
+                    </section>
                 </div>
 
-                <div class="gallery-item rounded-lg overflow-hidden shadow-md" data-aos="fade-up" data-aos-delay="100">
-                    <img src="https://cdn.pixabay.com/photo/2015/07/10/17/24/portugal-839817_1280.jpg"
-                        alt="Imagen histórica 2" class="w-full h-64 object-cover">
-                    <div class="like-button" data-id="2">
-                        <i class="far fa-heart text-xl"></i>
+                <!-- Imagen 2 -->
+                <div class="gallery-item rounded-lg overflow-hidden shadow-lg relative" data-id="2" data-aos="fade-up"
+                    data-aos-delay="100">
+                    <div class="overflow-hidden group">
+                        <img src="https://cdn.pixabay.com/photo/2015/07/10/17/24/portugal-839817_1280.jpg"
+                            alt="Imagen histórica 2"
+                            class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-500" />
+                    </div>
+                    <div class="like-button absolute top-2 right-2 bg-white p-2 rounded-full shadow cursor-pointer"
+                        data-id="2">
+                        <i class="far fa-heart text-red-500 text-xl transition-all duration-300"></i>
+                        <span class="like-count text-sm ml-1 text-gray-700">0</span>
                     </div>
                     <div class="p-4">
                         <h4 class="font-bold text-lg mb-2">Primer Congreso (1985)</h4>
-                        <p class="text-gray-600">Reunión fundacional con los primeros miembros</p>
+                        <p class="text-gray-600">Reunión fundacional con los primeros miembros.</p>
                     </div>
+
+                    <!-- Comentarios -->
+                    <section class="comentarios mt-16">
+                        <button
+                            class="toggle-comments bg-[#0B1F3A] hover:bg-[#12335c] text-white px-6 py-2 rounded mb-4">
+                            Mostrar Comentarios
+                        </button>
+
+                        <div class="comment-section hidden bg-gray-50 p-4 rounded shadow-md">
+                            <div class="comment-list space-y-4 mb-4"></div>
+
+                            <form class="comment-form space-y-2">
+                                <input type="text" class="username-input w-full p-2 border border-gray-300 rounded"
+                                    placeholder="Tu nombre" required />
+                                <textarea class="comment-input w-full p-2 border border-gray-300 rounded"
+                                    placeholder="Escribe un comentario..." rows="3" required></textarea>
+                                <button type="submit"
+                                    class="bg-[#C62828] hover:bg-red-700 text-white px-4 py-2 rounded">
+                                    Publicar Comentario
+                                </button>
+                            </form>
+                        </div>
+                      
+                    </section>
                 </div>
 
-                <div class="gallery-item rounded-lg overflow-hidden shadow-md" data-aos="fade-up" data-aos-delay="200">
-                    <img src="https://cdn.pixabay.com/photo/2017/11/07/00/07/fantasy-2925250_1280.jpg"
-                        alt="Imagen histórica 3" class="w-full h-64 object-cover">
-                    <div class="like-button" data-id="3">
-                        <i class="far fa-heart text-xl"></i>
+
+                <!-- Imagen 3 -->
+                <div class="gallery-item rounded-lg overflow-hidden shadow-lg relative" data-id="3" data-aos="fade-up"
+                    data-aos-delay="100">
+                    <div class="overflow-hidden group">
+                        <img src="https://cdn.pixabay.com/photo/2015/07/10/17/24/portugal-839817_1280.jpg"
+                            alt="Imagen histórica 2"
+                            class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-500" />
+                    </div>
+                    <div class="like-button absolute top-2 right-2 bg-white p-2 rounded-full shadow cursor-pointer"
+                        data-id="2">
+                        <i class="far fa-heart text-red-500 text-xl transition-all duration-300"></i>
+                        <span class="like-count text-sm ml-1 text-gray-700">0</span>
                     </div>
                     <div class="p-4">
-                        <h4 class="font-bold text-lg mb-2">Celebración del Aniversario (1998)</h4>
-                        <p class="text-gray-600">20 años preservando nuestra historia</p>
+                        <h4 class="font-bold text-lg mb-2">Primer Congreso (1985)</h4>
+                        <p class="text-gray-600">Reunión fundacional con los primeros miembros.</p>
                     </div>
+
+                    <!-- Comentarios -->
+                    <section class="comentarios mt-16">
+                        <button
+                            class="toggle-comments bg-[#0B1F3A] hover:bg-[#12335c] text-white px-6 py-2 rounded mb-4">
+                            Mostrar Comentarios
+                        </button>
+
+                        <div class="comment-section hidden bg-gray-50 p-4 rounded shadow-md">
+                            <div class="comment-list space-y-4 mb-4"></div>
+
+                            <form class="comment-form space-y-2">
+                                <input type="text" class="username-input w-full p-2 border border-gray-300 rounded"
+                                    placeholder="Tu nombre" required />
+                                <textarea class="comment-input w-full p-2 border border-gray-300 rounded"
+                                    placeholder="Escribe un comentario..." rows="3" required></textarea>
+                                <button type="submit"
+                                    class="bg-[#C62828] hover:bg-red-700 text-white px-4 py-2 rounded">
+                                    Publicar Comentario
+                                </button>
+                            </form>
+                        </div>
+                      
+                    </section>
                 </div>
 
-                <div class="gallery-item rounded-lg overflow-hidden shadow-md" data-aos="fade-up" data-aos-delay="300">
-                    <img src="https://cdn.pixabay.com/photo/2017/05/19/15/16/countryside-2326787_1280.jpg"
-                        alt="Imagen histórica 4" class="w-full h-64 object-cover">
-                    <div class="like-button" data-id="4">
-                        <i class="far fa-heart text-xl"></i>
-                    </div>
-                    <div class="p-4">
-                        <h4 class="font-bold text-lg mb-2">Reconocimiento Nacional (2002)</h4>
-                        <p class="text-gray-600">Premio a la labor cultural</p>
-                    </div>
-                </div>
-
-                <div class="gallery-item rounded-lg overflow-hidden shadow-md" data-aos="fade-up" data-aos-delay="400">
-                    <img src="https://cdn.pixabay.com/photo/2016/01/22/20/42/man-1156619_1280.jpg"
-                        alt="Imagen histórica 5" class="w-full h-64 object-cover">
-                    <div class="like-button" data-id="5">
-                        <i class="far fa-heart text-xl"></i>
-                    </div>
-                    <div class="p-4">
-                        <h4 class="font-bold text-lg mb-2">Expansión Internacional (2010)</h4>
-                        <p class="text-gray-600">Primera delegación en el extranjero</p>
-                    </div>
-                </div>
-
-                <div class="gallery-item rounded-lg overflow-hidden shadow-md" data-aos="fade-up" data-aos-delay="500">
-                    <img src="https://cdn.pixabay.com/photo/2018/08/09/10/46/phone-3594206_1280.jpg"
-                        alt="Imagen histórica 6" class="w-full h-64 object-cover">
-                    <div class="like-button" data-id="6">
-                        <i class="far fa-heart text-xl"></i>
-                    </div>
-                    <div class="p-4">
-                        <h4 class="font-bold text-lg mb-2">Era Digital (2018)</h4>
-                        <p class="text-gray-600">Lanzamiento de la plataforma online</p>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
+
+
+
+
+
 
     <!--este es el pie de pagina-->
     <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
-                    <h3>José Rosario Pavón</h3>
-                    <p>Un legado de excelencia educativa y compromiso con nuestra comunidad desde 1850.</p>
+                    <h3>Colegio Nacional<br>José Del Rosario Pavón</h3>
+                    <p>Un legado de excelencia educativa y compromiso con nuestra comunidad desde 1994.</p>
                     <div class="social-links">
                         <a href="javascript:void(0)" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="javascript:void(0)" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
                         <a href="javascript:void(0)" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="javascript:void(0)" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+
                     </div>
                 </div>
 
                 <div class="footer-column">
                     <h3>Enlaces Rápidos</h3>
                     <ul class="footer-links">
-                        <li><a href="http://127.0.0.1:5500/proyecto2/index.html">Inicio</a></li>
-                        <li><a href="http://127.0.0.1:5500/proyecto2/index.html#fundacion">Fundación y Orígenes</a></li>
-                        <li><a href="http://127.0.0.1:5500/proyecto2/index.html#mision">Misión y Valores</a></li>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#fundacion">Fundación y Orígenes</a></li>
+                        <li><a href="#mision">Misión y Valores</a></li>
                         <li><a href="http://127.0.0.1:5500/proyecto2/galleria.html">Galería Histórica</a></li>
                         <li><a href="http://127.0.0.1:5500/proyecto2/lineadetiempo.html">Línea de Tiempo</a></li>
-                        <li><a href="http://127.0.0.1:5500/proyecto2/directorio.html">Directorio</a></li>
+                        <li><a href="http://127.0.0.1:5500/proyecto2/directorio.html">Plantel Docente</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=xvFZjo5PgG0&list=RDxvFZjo5PgG0&start_radio=1">!NO
+                                ENTRES AQUIIIIIII</a></li>
                     </ul>
                 </div>
 
-
                 <div class="footer-column">
                     <h3>Contacto</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> Av. Principal #123, Ciudad</p>
+                    <p><i class="fas fa-map-marker-alt"></i> RUTA LUQUE - LIMPIO, LIMPIO, COLONIA JUAN DE SALAZAR.</p>
                     <p><i class="fas fa-phone"></i> (123) 456-7890</p>
                     <p><i class="fas fa-envelope"></i> info@jrpavon.org</p>
                 </div>
@@ -284,122 +344,12 @@
             </div>
         </div>
     </footer>
-    <!--este script es para dar me gusta y demas funciones como animaciones-->
+
+    
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script id="app-script">
-        // Initialize AOS
-        AOS.init({
-            duration: 800,
-            easing: 'ease-in-out',
-            once: true,
-            offset: 100
-        });
-
-        // Mobile Menu Toggle
-        const mobileMenuButton = document.querySelector('.mobile-menu-button');
-        const mobileMenu = document.querySelector('.mobile-menu');
-
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('open');
-
-            // Toggle icon
-            const icon = mobileMenuButton.querySelector('i');
-            if (mobileMenu.classList.contains('open')) {
-                icon.classList.remove('fa-bars');
-                icon.classList.add('fa-times');
-            } else {
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
-            }
-        });
-
-        // Close mobile menu when clicking on a link
-        document.querySelectorAll('.mobile-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.remove('open');
-
-                // Reset icon
-                const icon = mobileMenuButton.querySelector('i');
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
-            });
-        });
-
-        // Active nav link on scroll
-        const sections = document.querySelectorAll('section');
-        const navLinks = document.querySelectorAll('.nav-link');
-
-        window.addEventListener('scroll', () => {
-            let current = '';
-
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-
-                if (pageYOffset >= sectionTop - 200) {
-                    current = section.getAttribute('id');
-                }
-            });
-
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href').substring(1) === current) {
-                    link.classList.add('active');
-                }
-            });
-        });
-
-        // Gallery like buttons
-        const likeButtons = document.querySelectorAll('.like-button');
-
-        // Inicia likes from localStorage
-        const initializeLikes = () => {
-            likeButtons.forEach(button => {
-                const id = button.getAttribute('data-id');
-                const isLiked = localStorage.getItem(`liked-${id}`) === 'true';
-
-                if (isLiked) {
-                    button.classList.add('active');
-                    button.querySelector('i').classList.remove('far');
-                    button.querySelector('i').classList.add('fas');
-                }
-            });
-        };
-
-        // Toggle like
-        likeButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                const id = button.getAttribute('data-id');
-                const isLiked = button.classList.contains('active');
-
-                if (isLiked) {
-                    button.classList.remove('active');
-                    button.querySelector('i').classList.remove('fas');
-                    button.querySelector('i').classList.add('far');
-                    localStorage.setItem(`liked-${id}`, 'false');
-                } else {
-                    button.classList.add('active');
-                    button.querySelector('i').classList.remove('far');
-                    button.querySelector('i').classList.add('fas');
-                    localStorage.setItem(`liked-${id}`, 'true');
-                }
-            });
-        });
-
-        // Initialize on load
-        document.addEventListener('DOMContentLoaded', () => {
-            initializeLikes();
-
-            // Set initial active nav link
-            const currentSection = window.location.hash ? window.location.hash.substring(1) : 'inicio';
-            document.querySelectorAll('.nav-link').forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href') === `#${currentSection}`) {
-                    link.classList.add('active');
-                }
-            });
-        });
+    <script src="js/animacion.js/animation.js" id="app-script">
+       
     </script>
 
     <!-- Botón volver al inicio -->
@@ -408,6 +358,8 @@
         aria-label="Volver al inicio">
         <i class="fas fa-arrow-up text-xl"></i>
     </a>
+    <script src="js/galeriajsfuncion/galleriacorazones.js"></script>
+     <script src="js/galeriajsfuncion/galeriacomentario.js"></script>
 </body>
 
 </html>
