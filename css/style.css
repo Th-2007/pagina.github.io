@@ -165,53 +165,97 @@ h6 {
     background-color: var(--red);
 }
 
-  /* Cursor pointer para títulos que activan el toggle */
-  #timeline .toggle-btn {
+/* Cursor pointer para títulos que activan el toggle */
+#timeline .toggle-btn {
     cursor: pointer;
-  }
+}
 
-  /* Mostrar contenido oculto con transición */
-  #timeline .content-text,
-  #timeline .content-text-hidden {
+/* Mostrar contenido oculto con transición */
+#timeline .content-text,
+#timeline .content-text-hidden {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.4s ease, padding 0.4s ease;
     padding-top: 0;
     padding-bottom: 0;
-  }
+}
 
-  /* Contenido activo se expande */
-  #timeline .content-text.active,
-  #timeline .content-text-hidden.active {
-    max-height: 500px; /* suficiente para mostrar texto */
+/* Contenido activo se expande */
+#timeline .content-text.active,
+#timeline .content-text-hidden.active {
+    max-height: 500px;
+    /* suficiente para mostrar texto */
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
-  }
+}
 
-  /* Resaltar item activo móvil */
-  #timeline .timeline-item.active {
+/* Resaltar item activo móvil */
+#timeline .timeline-item.active {
     background-color: #fff7f7;
     box-shadow: 0 0 10px #C62828;
     border-radius: 6px;
     z-index: 10;
-  }
+}
 
-  /* Resaltar item activo desktop (horizontal) */
-  #timeline .timeline-item-horizontal.active {
+/* Resaltar item activo desktop (horizontal) */
+#timeline .timeline-item-horizontal.active {
     border-color: #C62828;
     background-color: #fff7f7;
     box-shadow: 0 0 12px #C62828;
     z-index: 10;
-  }
+}
 
-  /* Agrandar punto activo */
-  #timeline .timeline-item.active .timeline-dot,
-  #timeline .timeline-item-horizontal.active .timeline-dot-horizontal {
+/* Agrandar punto activo */
+#timeline .timeline-item.active .timeline-dot,
+#timeline .timeline-item-horizontal.active .timeline-dot-horizontal {
     transform: scale(1.4);
     transition: transform 0.3s ease;
-  }
+}
 
+/* tabla de servicios */
+#servicios {
+    background-color: #f0f4f8;
+    padding: 50px 30px;
+    margin: 30px auto;
+    max-width: 1000px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-left: 8px solid #0073e6;
+    border-radius: 5px;
+}
 
+#servicios h2 {
+    color: #004080;
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+
+#servicios h3 {
+    color: #0059b3;
+    margin-top: 1em;
+}
+
+#servicios h4 {
+    color: #0066cc;
+    margin-top: 1em;
+}
+
+#servicios ul {
+    margin-left: 20px;
+    line-height: 1.6;
+}
+
+#servicios p {
+    margin-bottom: 1em;
+}
+
+#servicios a {
+    color: #0073e6;
+    text-decoration: none;
+}
+
+#servicios a:hover {
+    text-decoration: underline;
+}
 
 
 
