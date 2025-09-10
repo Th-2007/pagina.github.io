@@ -63,36 +63,33 @@
                 <a href="http://127.0.0.1:5500/subpaginas/directorio.html" class="nav-link">Plantel Docente</a>
 
             </nav>
-
-            <!-- Botón menú móvil -->
-            <button id="openMenu" class="md:hidden bg-[#0B1F3A] p-2 rounded" aria-label="Abrir menú">
+            <!-- Botón menú móvil fijo en la esquina superior derecha -->
+            <button id="openMenu" class="fixed top-4 right-4 z-[10000] bg-[#0B1F3A] p-2 rounded md:hidden"
+                aria-label="Abrir menú">
                 <i class="fas fa-bars text-white text-xl"></i>
             </button>
-        </div>
 
 
+            <!-- Fondo oscuro SOLO en celular -->
+            <div id="backdrop" class="fixed inset-0 hidden z-[9999] bg-black/60 md:hidden"></div>
 
-        <!-- Fondo oscuro SOLO en celular -->
-        <div id="backdrop" class="fixed inset-0 hidden z-[100] bg-black/60 md:hidden"></div>
 
-        <!-- Menú lateral SOLO en celular -->
-        <nav id="drawer" class="fixed right-0 top-0 h-screen w-64 z-[120]
-            translate-x-full transition-transform duration-300
-            bg-slate-900 text-white flex flex-col p-6 space-y-4 md:hidden">
-
-            <a href="https://th-2007.github.io/pagina.github.io/index.html#fundacion"
-                class="hover:text-yellow-400">Fundación y Orígenes</a>
-            <a href="https://th-2007.github.io/pagina.github.io/index.html#mision" class="hover:text-yellow-400">Misión
-                y Valores</a>
-            <a href="https://th-2007.github.io/pagina.github.io/galleria.html" class="hover:text-yellow-400">Galería
-                Histórica</a>
-            <a href="https://th-2007.github.io/pagina.github.io/lineadetiempo.html" class="hover:text-yellow-400">Línea
-                de Tiempo</a>
-            <a href="https://th-2007.github.io/pagina.github.io/directorio.html" class="hover:text-yellow-400">Plantel
-                Docente</a>
-            <a href="https://th-2007.github.io/pagina.github.io/servicios.html" class="hover:text-yellow-400">Nuestros
-                Servicios</a>
-        </nav>
+            <!-- Menú lateral SOLO en celular -->
+            <nav id="drawer"
+                class="fixed right-0 top-0 h-screen w-64 z-[9999] translate-x-full transition-transform duration-300 bg-slate-900 text-white flex flex-col p-6 space-y-4 md:hidden">
+                <a href="https://th-2007.github.io/pagina.github.io/index.html#fundacion"
+                    class="hover:text-yellow-400">Fundación y Orígenes</a>
+                <a href="https://th-2007.github.io/pagina.github.io/index.html#mision"
+                    class="hover:text-yellow-400">Misión y Valores</a>
+                <a href="https://th-2007.github.io/pagina.github.io/subpaginas/galleria.html"
+                    class="hover:text-yellow-400">Galería Histórica</a>
+                <a href="https://th-2007.github.io/pagina.github.io/subpaginas/lineadetiempo.html"
+                    class="hover:text-yellow-400">Línea de Tiempo</a>
+                <a href="https://th-2007.github.io/pagina.github.io/subpaginas/directorio.html"
+                    class="hover:text-yellow-400">Plantel Docente</a>
+                <a href="https://th-2007.github.io/pagina.github.io/subpaginas/servicios.html"
+                    class="hover:text-yellow-400">Nuestros Servicios</a>
+            </nav>
 
         </div>
         </div>
