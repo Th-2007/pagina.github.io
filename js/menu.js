@@ -1,3 +1,10 @@
+// Mantener el botón siguiendo el scroll
+const openBtn = document.getElementById('openMenu');
+window.addEventListener('scroll', () => {
+const scrollTop = window.scrollY;
+openBtn.style.top = `${scrollTop + 16}px`; // 16px de margen desde arriba
+});
+
 
 
 document.addEventListener('DOMContentLoaded', () => {
