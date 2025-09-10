@@ -57,16 +57,11 @@ h6 {
 }
 
 
-
-
-
+/* link linea roja */
 .nav-link {
-
     position: relative;
-    transition: var(--transition);
-
-
     display: inline-block;
+    padding-bottom: 2px; /* espacio para que la línea no se superponga al texto */
 }
 
 .nav-link::after {
@@ -74,10 +69,10 @@ h6 {
     position: absolute;
     width: 0;
     height: 2px;
-    bottom: -4px;
+    bottom: 0; /* ajustá si querés más cerca o más lejos del texto */
     left: 0;
-    background-color: var(--red);
-    transition: var(--transition);
+    background-color: #C62828; /* línea roja */
+    transition: width 0.3s ease;
 }
 
 .nav-link:hover::after,
@@ -85,9 +80,11 @@ h6 {
     width: 100%;
 }
 
+/* opcional: mantener color de enlace en rojo si está activo */
 .nav-link.active {
-    color: var(--red);
+    color: #C62828;
 }
+
 
 .btn-primary {
     background-color: var(--red);
@@ -263,57 +260,6 @@ h6 {
 
 
 
-/* Footer */
-footer {
-    background-color: var(--navy);
-    color: var(--white);
-    padding: 40px 0 20px;
-}
-
-.footer-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 30px;
-    margin-bottom: 30px;
-}
-
-.footer-column h3 {
-    color: var(--white);
-    margin-bottom: 20px;
-    position: relative;
-    padding-bottom: 10px;
-}
-
-.footer-column h3::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 50px;
-    height: 2px;
-    background-color: var(--red);
-}
-
-.footer-links {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.footer-links li {
-    margin-bottom: 10px;
-}
-
-.footer-links a {
-    color: #CCC;
-    text-decoration: none;
-    transition: var(--transition);
-}
-
-.footer-links a:hover {
-    color: var(--red);
-    padding-left: 5px;
-}
 
 .social-links {
     display: flex;
