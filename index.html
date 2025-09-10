@@ -14,6 +14,10 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
+       <!-- Tailwind CSS CDN -->
+            <script src="https://cdn.tailwindcss.com"></script>
+
+          
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
@@ -60,7 +64,7 @@
                 </div>
             </div>
 
-            <script src="js/headerletras.js"></script>
+            <script src="js/generaljs/headerletras.js"></script>
 
 
             <!-- Desktop Navigation -->
@@ -70,7 +74,6 @@
                 <a href="http://127.0.0.1:5500/galleria.html" class="nav-link">Galería Histórica</a>
                 <a href="http://127.0.0.1:5500/lineadetiempo.html" class="nav-link">Línea de Tiempo</a>
                 <a href="http://127.0.0.1:5500/directorio.html" class="nav-link">Plantel Docente</a>
-                <a href="http://127.0.0.1:5500/servicios.html" class="nav-link">Nuestros Servicios</a>
 
             </nav>
 
@@ -102,7 +105,7 @@
                 <a href="https://th-2007.github.io/pagina.github.io/servicios.html"
                     class="hover:text-yellow-400">Nuestros Servicios</a>
             </nav>
-            <script src="js/menucelular.js"></script>
+            <script src="js/generaljs/menucelular.js"></script>
 
 
 
@@ -142,9 +145,9 @@
             <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto drop-shadow-md">
                 Honrando el legado y promoviendo los valores que nos definen
             </p>
-            <a href="https://escuelapavon.blogspot.com/" target="_blank"
+            <a href="http://127.0.0.1:5500/servicios.html" target="_blank"
                 class="inline-block bg-[#C62828] hover:bg-red-700 text-white px-8 py-3 rounded-lg font-semibold transition duration-300 shadow-lg">
-                Visitar Blogspot
+                Nuestros Servicios
             </a>
         </div>
 
@@ -158,7 +161,7 @@
             ›
         </button>
     </section>
-    <script src="js/carrsel.js"></script>
+    <script src="js/iniciohistori.js/boton.js"></script>
 
 
 
@@ -212,20 +215,24 @@
                             Leer más
                         </button>
                     </div>
+                    <script src="js/iniciohistori.js/vermas.js"></script>
                 </div>
-                <script src="js/vermas.js"></script>
+                
 
                 <div class="flex justify-center items-center h-screen" data-aos="fade-up">
-                    <button id="openImageModal"
+                    <button id="openImageModal" class="bg-[#C62828] text-white px-4 py-2 rounded-lg shadow-md hover:bg-red-700"
                         class="bg-[#C62828] text-white px-6 py-3 rounded-lg shadow-lg hover:bg-red-700 transition duration-300 text-lg font-semibold">
                         Ver Fundación :>
                     </button>
+                    <script src="js/iniciohistori.js/boton.js"></script>
                 </div>
+                
 
                 <!-- Modal con animación -->
                 <div id="imageModal"
                     class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 hidden">
-                    <div class="relative max-w-3xl w-full px-4 animate__animated animate__fadeInDown">
+                   <div class="relative max-w-3xl w-full px-4 transform transition-all duration-200 ease-out scale-95 opacity-0">
+
                         <!-- Botón de cerrar -->
                         <button id="closeImageModal"
                             class="absolute top-2 right-2 text-white text-3xl font-bold hover:text-red-500">
@@ -238,7 +245,12 @@
                     </div>
                 </div>
             </div>
-            <script src="js/boton.js"></script>
+
+            
+            <script src="js/iniciohistori.js/boton.js"></script>
+
+
+
             <div class="bg-white p-6 rounded-xl shadow-md border-r-4 border-[#C62828] relative transition-all duration-300 max-w-2xl mx-auto"
                 data-aos="fade-left">
                 <!-- Icono decorativo -->
@@ -290,7 +302,7 @@
                     </button>
                 </div>
             </div>
-            <script src="js/vermas2.js"></script>
+            <script src="js/iniciohistori.js/vermas2.js"></script>
 
 
         </div>
@@ -309,11 +321,6 @@
                     actuales en el mundo laboral y en estudios superiores.
                 </p>
             </div>
-            <!-- Tailwind CSS CDN -->
-            <script src="https://cdn.tailwindcss.com"></script>
-
-            <!-- FontAwesome CDN -->
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
                 <!-- Tarjeta 1 -->
@@ -426,7 +433,7 @@
 
             </div>
 
-            <script src="js/desplazar.js"></script>
+            <script src="js/iniciohistori.js/desplazar.js"></script>
 
 
         </div>
