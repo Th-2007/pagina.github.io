@@ -28,6 +28,23 @@
 </head>
 
 <body class="bg-white text-gray-800">
+
+
+    <!-- Alerta de bienvenida -->
+    <div id="welcomeAlert" class="fixed inset-0 flex items-center justify-center z-[10000] bg-black/40">
+        <div class="bg-white text-center rounded-lg p-6 shadow-lg flex items-center space-x-4">
+            <span class="text-3xl">😘</span>
+            <div>
+                <p class="font-bold text-lg">Bienvenidos al sitio web! :3</p>
+                <p class="text-sm text-gray-600">Esperamos que disfrutes tu visita. :></p>
+            </div>
+        </div>
+    </div>
+    
+
+
+
+
     <!-- ================= HEADER ================= -->
     <header class="bg-white shadow-md z-10">
         <div class="container mx-auto px-4 py-2 flex justify-between items-center">
@@ -97,7 +114,7 @@
     <!-- ================= HERO ================= -->
     <section id="inicio" class="relative h-screen flex items-center justify-center text-center overflow-hidden">
 
-         <!-- Carrusel de fondo RESPONSIVO para PC y móviles (sin necesidad de imágenes duplicadas) -->
+        <!-- Carrusel de fondo RESPONSIVO para PC y móviles (sin necesidad de imágenes duplicadas) -->
         <div class="absolute inset-0 z-0">
             <!-- Imagen 1 -->
             <img src="../img/headerimage/costado.jpeg" alt="Costado"
@@ -111,7 +128,7 @@
             <img src="../img/headerimage/adentro.jpeg" alt="Adentro"
                 class="carousel-image absolute inset-0 w-full h-full object-cover opacity-0" />
         </div>
-        
+
         <!-- Overlay oscuro -->
         <div class="absolute inset-0 bg-black bg-opacity-50 z-10"></div>
 
@@ -488,6 +505,7 @@
     <script src="js/generaljs/menucelular.js"></script>
     <script src="js/animacion/animation.js"></script>
     <script src="js/menu.js"></script>
+    <script src="js/alertas/alerta.js"></script>
 
 
 
