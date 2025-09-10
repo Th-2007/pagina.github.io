@@ -54,7 +54,7 @@
 
 
 
-              <!-- Desktop Navigation -->
+            <!-- Desktop Navigation -->
             <nav class="hidden md:flex space-x-6 text-sm">
                 <a href="http://127.0.0.1:5500/index.html#mision" class="nav-link">Fundación y Orígenes</a>
                 <a href="http://127.0.0.1:5500/index.html#mision" class="nav-link">Misión y Valores</a>
@@ -64,7 +64,7 @@
 
             </nav>
 
-             <!-- Botón menú móvil fijo en la esquina superior derecha -->
+            <!-- Botón menú móvil fijo en la esquina superior derecha -->
             <button id="openMenu" class="fixed top-4 right-4 z-[10000] bg-[#0B1F3A] p-2 rounded md:hidden"
                 aria-label="Abrir menú">
                 <i class="fas fa-bars text-white text-xl"></i>
@@ -97,14 +97,21 @@
     <!-- ================= HERO ================= -->
     <section id="inicio" class="relative h-screen flex items-center justify-center text-center overflow-hidden">
 
-        <!-- Carrusel de fondo -->
+        <!-- Carrusel de fondo RESPONSIVO para PC y móviles (sin necesidad de imágenes duplicadas) -->
         <div class="absolute inset-0 z-0">
-            <img src="../img/colegioimg/WhatsApp Image 2025-09-09 at 00.07.20.jpeg"
+            <!-- Imagen 1 -->
+            <img src="../img/headerimage/costado.jpeg" alt="Costado"
                 class="carousel-image absolute inset-0 w-full h-full object-cover opacity-100" />
-            <img src="img/colegioimg/logo.jpeg"
+
+            <!-- Imagen 2 -->
+            <img src="../img/headerimage/entrada.jpeg" alt="Entrada"
                 class="carousel-image absolute inset-0 w-full h-full object-cover opacity-0" />
-            <img src="img/fondo3.jpg" class="carousel-image absolute inset-0 w-full h-full object-cover opacity-0" />
+
+            <!-- Imagen 3 -->
+            <img src="../img/headerimage/adentro.jpeg" alt="Adentro"
+                class="carousel-image absolute inset-0 w-full h-full object-cover opacity-0" />
         </div>
+
 
         <!-- Overlay oscuro -->
         <div class="absolute inset-0 bg-black bg-opacity-50 z-10"></div>
@@ -146,7 +153,7 @@
                     <div class="text-center mb-4">
                         <img src="https://cdn.pixabay.com/photo/2016/11/21/12/42/beard-1845166_1280.jpg"
                             alt="Director General" class="rounded-full w-32 h-32 object-cover mx-auto mb-4">
-                        <h4 class="text-xl font-bold text-[#0B1F3A]">Carlos Mendoza</h4>
+                        <h4 class="text-xl font-bold text-[#0B1F3A]">Dic. Norma Bogado</h4>
                         <p class="text-[#C62828] font-semibold">Director General</p>
                     </div>
                     <div class="text-gray-600 text-center">
@@ -160,7 +167,7 @@
                         <img src="https://cdn.pixabay.com/photo/2018/01/15/07/51/woman-3083383_1280.jpg"
                             alt="Directora Académica" class="rounded-full w-32 h-32 object-cover mx-auto mb-4">
                         <h4 class="text-xl font-bold text-[#0B1F3A]">Laura Gutiérrez</h4>
-                        <p class="text-[#C62828] font-semibold">Directora Académica</p>
+                        <p class="text-[#C62828] font-semibold">Coordinadora Académica</p>
                     </div>
                     <div class="text-gray-600 text-center">
                         <p class="mb-4">Responsable de programas educativos</p>
@@ -172,11 +179,11 @@
                     <div class="text-center mb-4">
                         <img src="https://cdn.pixabay.com/photo/2016/11/18/19/07/happy-1836445_1280.jpg"
                             alt="Director de Comunicación" class="rounded-full w-32 h-32 object-cover mx-auto mb-4">
-                        <h4 class="text-xl font-bold text-[#0B1F3A]">Fernando Sánchez</h4>
-                        <p class="text-[#C62828] font-semibold">Director de Comunicación</p>
+                        <h4 class="text-xl font-bold text-[#0B1F3A]">Lic. Liz Carmen</h4>
+                        <p class="text-[#C62828] font-semibold">Profesora de Informatica</p>
                     </div>
                     <div class="text-gray-600 text-center">
-                        <p class="mb-4">Encargado de relaciones públicas</p>
+                        <p class="mb-4">Magister e Analista en Sistemas</p>
                         <p><i class="fas fa-envelope mr-2"></i> prensa@joserosario.org</p>
                     </div>
                 </div>
@@ -220,7 +227,7 @@
                     </div>
                 </div>
             </div>
-           
+
         </div>
     </section>
 
