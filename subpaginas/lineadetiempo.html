@@ -2,65 +2,56 @@
 <html lang="es">
 
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Colegio Nacional José Del Rosario Pavón</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
         rel="stylesheet">
 
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-
-
-
-
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>AOS.init();</script>
-
-
-
+    <!-- AOS -->
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
-    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Estilos propios -->
+    <link rel="stylesheet" href="../css general/style.css">
 </head>
 
 <body class="bg-white text-gray-800">
-    <!-- Header -->
+    <!-- ================= HEADER ================= -->
     <header class="bg-white shadow-md z-10">
-        <div class="container mx-sauto px-4 py-0 flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-bold text-navy flex items-center">
+        <div class="container mx-auto px-4 py-2 flex justify-between items-center">
 
-                <img class="Imagencolegio" src="img/logodelcolegio.png" class="h-8">
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center space-x-2">
+                <img src="../img/logodelcolegio.png" alt="Logo Colegio" class="h-12">
                 <div class="leading-tight">
-                    <span class="block text-lg font-bold justify-center">Colegio Nacional</span>
+                    <span class="block text-lg font-bold">Colegio Nacional</span>
                     <span class="block text-lg font-bold">José Del Rosario Pavón</span>
                 </div>
-
             </a>
-
-
 
             <!-- Texto rotativo -->
             <div class="hidden md:flex flex-col items-center justify-center flex-1 px-4">
-                <div class="text-center">
-                    <h2 class="text-xl font-semibold text-[#0B1F3A] mb-2">Somos</h2>
-
-                    <!-- Contenedor más flexible -->
-                    <div class="relative min-h-[2rem] max-w-xs md:max-w-md mx-auto px-2">
-                        <span id="rotating-text"
-                            class="block text-[#0B1F3A] text-lg font-medium transition-opacity duration-1000 opacity-100 break-words text-center whitespace-normal"></span>
-                    </div>
+                <h2 class="text-xl font-semibold text-[#0B1F3A] mb-2">Somos</h2>
+                <div class="relative min-h-[2rem] max-w-md mx-auto px-2">
+                    <span id="rotating-text"
+                        class="block text-[#0B1F3A] text-lg font-medium transition-opacity duration-1000"></span>
                 </div>
             </div>
 
-            <script src="js/headerletras.js"></script>
+
+
 
 
             <!-- Desktop Navigation -->
@@ -68,86 +59,74 @@
                 <a href="http://127.0.0.1:5500/index.html#fundacion" class="nav-link">Fundación y Orígenes</a>
                 <a href="http://127.0.0.1:5500/index.html#mision" class="nav-link">Misión y Valores</a>
                 <a href="http://127.0.0.1:5500/galleria.html" class="nav-link">Galería Histórica</a>
-               
+                <a href="http://127.0.0.1:5500/lineadetiempo.html" class="nav-link">Línea de Tiempo</a>
                 <a href="http://127.0.0.1:5500/directorio.html" class="nav-link">Plantel Docente</a>
-                <a href="http://127.0.0.1:5500/servicios.html" class="nav-link">Nuestros Servicios</a>
 
             </nav>
 
-            <button id="openMenu" class="fixed top-4 right-4 z-[9999] bg-[#0B1F3A] p-2 rounded inline-flex md:hidden"
-                aria-label="Abrir menú">
+            <!-- Botón menú móvil -->
+            <button id="openMenu" class="md:hidden bg-[#0B1F3A] p-2 rounded" aria-label="Abrir menú">
                 <i class="fas fa-bars text-white text-xl"></i>
             </button>
+        </div>
 
 
 
-            <!-- Fondo oscuro SOLO en celular -->
-            <div id="backdrop" class="fixed inset-0 hidden z-[100] bg-black/60 md:hidden"></div>
+        <!-- Fondo oscuro SOLO en celular -->
+        <div id="backdrop" class="fixed inset-0 hidden z-[100] bg-black/60 md:hidden"></div>
 
-            <!-- Menú lateral SOLO en celular -->
-            <nav id="drawer" class="fixed right-0 top-0 h-screen w-64 z-[120]
+        <!-- Menú lateral SOLO en celular -->
+        <nav id="drawer" class="fixed right-0 top-0 h-screen w-64 z-[120]
             translate-x-full transition-transform duration-300
             bg-slate-900 text-white flex flex-col p-6 space-y-4 md:hidden">
 
-                <a href="https://th-2007.github.io/pagina.github.io/index.html#fundacion"
-                    class="hover:text-yellow-400">Fundación y Orígenes</a>
-                <a href="https://th-2007.github.io/pagina.github.io/index.html#mision"
-                    class="hover:text-yellow-400">Misión y Valores</a>
-                <a href="https://th-2007.github.io/pagina.github.io/galleria.html" class="hover:text-yellow-400">Galería
-                    Histórica</a>
-             
-                <a href="https://th-2007.github.io/pagina.github.io/directorio.html"
-                    class="hover:text-yellow-400">Plantel Docente</a>
-                    <a href="https://th-2007.github.io/pagina.github.io/servicios.html"
-                    class="hover:text-yellow-400">Nuestros Servicios</a>
-            </nav>
-            
-
-
-
-
-
-
+            <a href="https://th-2007.github.io/pagina.github.io/index.html#fundacion"
+                class="hover:text-yellow-400">Fundación y Orígenes</a>
+            <a href="https://th-2007.github.io/pagina.github.io/index.html#mision" class="hover:text-yellow-400">Misión
+                y Valores</a>
+            <a href="https://th-2007.github.io/pagina.github.io/galleria.html" class="hover:text-yellow-400">Galería
+                Histórica</a>
+            <a href="https://th-2007.github.io/pagina.github.io/lineadetiempo.html" class="hover:text-yellow-400">Línea
+                de Tiempo</a>
+            <a href="https://th-2007.github.io/pagina.github.io/directorio.html" class="hover:text-yellow-400">Plantel
+                Docente</a>
+            <a href="https://th-2007.github.io/pagina.github.io/servicios.html" class="hover:text-yellow-400">Nuestros
+                Servicios</a>
+        </nav>
 
         </div>
         </div>
     </header>
-
-
-
-
-
-
-
-
-    <!-- Hero Section -->
+    <!-- ================= HERO ================= -->
     <section id="inicio" class="relative h-screen flex items-center justify-center text-center overflow-hidden">
-        <!-- Carrusel de imágenes -->
+
+        <!-- Carrusel de fondo -->
         <div class="absolute inset-0 z-0">
-            <img src="img/colegioimg/rezo.jpg"
+            <img src="../img/colegioimg/WhatsApp Image 2025-09-09 at 00.07.20.jpeg"
                 class="carousel-image absolute inset-0 w-full h-full object-cover opacity-100" />
-            <img src="img/colegioimg/logohistorico.jpeg"
+            <img src="img/colegioimg/logo.jpeg"
                 class="carousel-image absolute inset-0 w-full h-full object-cover opacity-0" />
             <img src="img/fondo3.jpg" class="carousel-image absolute inset-0 w-full h-full object-cover opacity-0" />
         </div>
 
-        <!-- Capa oscura -->
+        <!-- Overlay oscuro -->
         <div class="absolute inset-0 bg-black bg-opacity-50 z-10"></div>
 
-        <!-- Contenido superpuesto -->
-        <div class="relative z-20 text-white px-4" data-aos="fade-up">
-            <h1 class="text-4xl md:text-6xl font-bold mb-4 drop-shadow-lg">Colegio Nacional<br>José Del Rosario Pavón
+        <!-- Contenido principal -->
+        <div class="relative z-20 px-4 text-white" data-aos="fade-up">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4 drop-shadow-lg">
+                Colegio Nacional<br>José Del Rosario Pavón
             </h1>
             <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto drop-shadow-md">
                 Honrando el legado y promoviendo los valores que nos definen
             </p>
-            <a href="https://escuelapavon.blogspot.com/" target="_blank"
+            <a href="servicios.html"
                 class="inline-block bg-[#C62828] hover:bg-red-700 text-white px-8 py-3 rounded-lg font-semibold transition duration-300 shadow-lg">
-                Visitar Blogspot
+                Nuestros Servicios
             </a>
         </div>
 
-        <!-- Botones -->
+        <!-- Botones de navegación -->
         <button id="prevBtn"
             class="absolute top-1/2 left-4 transform -translate-y-1/2 z-30 bg-black bg-opacity-40 text-white p-3 rounded-full hover:bg-opacity-70 transition">
             ‹
@@ -156,8 +135,8 @@
             class="absolute top-1/2 right-4 transform -translate-y-1/2 z-30 bg-black bg-opacity-40 text-white p-3 rounded-full hover:bg-opacity-70 transition">
             ›
         </button>
+
     </section>
-    <script src="js/carrsel.js"></script>
 
 
 
@@ -322,7 +301,6 @@
                 </div>
             </div>
         </div>
-        <script src="js/lineadetiempo/lineadetiempo.js"></script>
     </section>
 
 
@@ -331,70 +309,67 @@
 
 
 
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <h3>Colegio Nacional<br>José Del Rosario Pavón</h3>
-                    <p>Un legado de excelencia educativa y compromiso con nuestra comunidad desde 1994.</p>
-                    <div class="social-links">
-                        <a href="javascript:void(0)" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="javascript:void(0)" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+     <!-- ================= FOOTER ================= -->
+    <footer class="bg-slate-900 text-white py-10">
+        <div class="container mx-auto px-4 grid md:grid-cols-3 gap-8 text-left md:text-left">
 
-                    </div>
-                </div>
-
-                <div class="footer-column">
-                    <h3>Enlaces Rápidos</h3>
-                    <ul class="footer-links">
-                        <li><a href="#inicio">Inicio</a></li>
-                        <li><a href="#fundacion">Fundación y Orígenes</a></li>
-                        <li><a href="#mision">Misión y Valores</a></li>
-                        <li><a href="http://127.0.0.1:5500/proyecto2/galleria.html">Galería Histórica</a></li>
-                        <li><a href="http://127.0.0.1:5500/proyecto2/lineadetiempo.html">Línea de Tiempo</a></li>
-                        <li><a href="http://127.0.0.1:5500/proyecto2/directorio.html">Plantel Docente</a></li>
-                        <li><a href="https://www.youtube.com/watch?v=xvFZjo5PgG0&list=RDxvFZjo5PgG0&start_radio=1">!NO
-                                ENTRES AQUIIIIIII</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-column">
-                    <h3>Contacto</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> RUTA LUQUE - LIMPIO, LIMPIO, COLONIA JUAN DE SALAZAR.</p>
-                    <p><i class="fas fa-phone"></i> (123) 456-7890</p>
-                    <p><i class="fas fa-envelope"></i> info@jrpavon.org</p>
-                </div>
+            <!-- Colegio -->
+            <div class="mb-4 text-white">
+                <h3 class="font-bold text-lg">
+                    Colegio Nacional<br>
+                    <span class="inline-block border-b-2 border-red-600">José Del Rosario Pavón</span>
+                </h3>
+                <p class="mt-2">Un legado de excelencia educativa desde 1994.</p>
+            </div>
+            <!-- Enlaces rápidos -->
+            <div>
+                <h3 class="font-bold text-lg mb-2"><span class="inline-block border-b-2 border-red-600">Enlaces
+                        Rápidos</span></h3>
+                <ul class="space-y-1">
+                    <li><a href="#inicio" class="hover:text-red-600 transition-colors">Inicio</a></li>
+                    <li><a href="#fundacion" class="hover:text-red-600 transition-colors">Fundación</a></li>
+                    <li><a href="#mision" class="hover:text-red-600 transition-colors">Misión</a></li>
+                    <li><a href="galleria.html" class="hover:text-red-600 transition-colors">Galería</a></li>
+                </ul>
             </div>
 
-            <div class="footer-bottom">
-                <p>&copy; 2025 José Rosario Pavón. Todos los derechos reservados.</p>
+            <!-- Contacto -->
+            <div>
+                <h3 class="font-bold text-lg mb-2"><span class="inline-block border-b-2 border-red-600">Contacto</span>
+                </h3>
+                <p><i class="fas fa-map-marker-alt"></i> RUTA LUQUE - LIMPIO, LIMPIO</p>
+                <p><i class="fas fa-phone"></i> (123) 456-7890</p>
+                <p><i class="fas fa-envelope"></i> info@jrpavon.org</p>
             </div>
+
+        </div>
+        <br>
+        <hr class="border-t-2 border-red-600 my-4">
+
+        <div class="text-right md:text-center mt-6 text-sm text-gray-300">
+            &copy; 2025 José Rosario Pavón. Todos los derechos reservados.
         </div>
     </footer>
+    <!-- Botón volver al inicio -->
+    <a href="#"
+        class="fixed bottom-4 right-4 z-[9999] bg-[#0B1F3A] text-white p-3 rounded-full shadow-lg hover:bg-[#12335c] transition duration-300"
+        aria-label="Volver al inicio">
+        <i class="fas fa-arrow-up text-xl"></i>
+    </a>
 
-
-
-    <script src="js/menucelulae.js"></script>
-
+    <!-- ================= SCRIPTS ================= -->
+    <script>AOS.init();</script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="js/animacion.js/animation.js" id="app-script">
+    <script src="../js/animacion.js/animation.js" id="app-script"></script>
+    <script src="../js/iniciohistorio/desplazar.js"></script>
+    <script src="../js/generaljs/carrsel.js"></script>
+    <script src="../js/generaljs/headerletras.js"></script>
+    <script src="../js/generaljs/menucelular.js"></script>
+    <script src="../js/animacion/animation.js"></script>
+    <script src="../js/lineadetiempo/lineadetiempo.js"></script>
 
-    </script>
 
-    <!-- Botón volver al inicio -->
-    <a href="#"
-        class="fixed bottom-4 right-4 z-[9999] bg-[#0B1F3A] text-white p-3 rounded-full shadow-lg hover:bg-[#12335c] transition duration-300"
-        aria-label="Volver al inicio">
-        <i class="fas fa-arrow-up text-xl"></i>
-    </a>
-    <script src="js/galeriacomentarios/galeriacomentario.js"></script>
 
-    <!-- Botón volver al inicio -->
-    <a href="#"
-        class="fixed bottom-4 right-4 z-[9999] bg-[#0B1F3A] text-white p-3 rounded-full shadow-lg hover:bg-[#12335c] transition duration-300"
-        aria-label="Volver al inicio">
-        <i class="fas fa-arrow-up text-xl"></i>
-    </a>
 </body>
 
 </html>
