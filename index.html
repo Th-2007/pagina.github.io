@@ -24,34 +24,17 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
 
     <!-- Estilos propios -->
-    <link rel="stylesheet" href="css general/style.css">
+    <link rel="stylesheet" href="/css general/style.css">
 </head>
 
 <body class="bg-white text-gray-800">
-
-
-    <!-- Alerta de bienvenida -->
-   <div id="welcomeAlert" class="fixed inset-0 flex items-center justify-start z-[10000] bg-black/40 transition-opacity duration-500 opacity-100">
-    <div class="bg-white text-left rounded-lg p-6 shadow-lg flex items-center space-x-4 ml-6 transform transition-transform duration-500 scale-100">
-            <span class="text-3xl">😘</span>
-            <div>
-                <p class="font-bold text-lg">Bienvenidos al sitio web! :3</p>
-                <p class="text-sm text-gray-600">Esperamos que disfrutes tu visita. :></p>
-            </div>
-        </div>
-    </div>
-    
-
-
-
-
     <!-- ================= HEADER ================= -->
     <header class="bg-white shadow-md z-10">
         <div class="container mx-auto px-4 py-2 flex justify-between items-center">
 
             <!-- Logo -->
-            <a href="index.html" class="flex items-center space-x-2">
-                <img src="img/logodelcolegio.png" alt="Logo Colegio" class="h-12">
+            <a href="http://127.0.0.1:5500/index.html#" class="flex items-center space-x-2">
+                <img src="/img/logodelcolegio.png" alt="Logo Colegio" class="h-12">
                 <div class="leading-tight">
                     <span class="block text-lg font-bold">Colegio Nacional</span>
                     <span class="block text-lg font-bold">José Del Rosario Pavón</span>
@@ -72,7 +55,7 @@
 
 
             <!-- Desktop Navigation -->
-            <nav class="hidden md:flex space-x-6 text-sm">
+             <nav class="hidden md:flex space-x-6 text-sm">
                 <a href="http://127.0.0.1:5500/index.html#mision" class="nav-link">Fundación y Orígenes</a>
                 <a href="http://127.0.0.1:5500/index.html#mision" class="nav-link">Misión y Valores</a>
                 <a href="http://127.0.0.1:5500/subpaginas/galleria.html#galeria" class="nav-link">Galería Histórica</a>
@@ -80,6 +63,7 @@
                 <a href="http://127.0.0.1:5500/subpaginas/directorio.html#directorio" class="nav-link">Plantel Docente</a>
 
             </nav>
+
             <!-- Botón menú móvil fijo en la esquina superior derecha -->
             <button id="openMenu" class="fixed top-4 right-4 z-[10000] bg-[#0B1F3A] p-2 rounded md:hidden"
                 aria-label="Abrir menú">
@@ -94,19 +78,20 @@
             <!-- Menú lateral SOLO en celular -->
             <nav id="drawer"
                 class="fixed right-0 top-0 h-screen w-64 z-[9999] translate-x-full transition-transform duration-300 bg-slate-900 text-white flex flex-col p-6 space-y-4 md:hidden">
-                <a href="https://th-2007.github.io/pagina.github.io/index.html#fundacion"
-                    class="hover:text-yellow-400">Fundación y Orígenes</a>
-                <a href="https://th-2007.github.io/pagina.github.io/index.html#mision"
-                    class="hover:text-yellow-400">Misión y Valores</a>
+                <a href="http://127.0.0.1:5500/index.html#fundacion"
+                    class="hover:text-red-800">Fundación y Orígenes</a>
+                <a href="https://th-2007.github.io/pagina.github.io/index.html#mision" class="hover:text-red-800">Misión
+                    y Valores</a>
                 <a href="https://th-2007.github.io/pagina.github.io/subpaginas/galleria.html#galeria"
-                    class="hover:text-yellow-400">Galería Histórica</a>
+                    class="hover:text-red-800">Galería Histórica</a>
                 <a href="https://th-2007.github.io/pagina.github.io/subpaginas/lineadetiempo.html#timeline"
-                    class="hover:text-yellow-400">Línea de Tiempo</a>
+                    class="hover:text-red-800">Línea de Tiempo</a>
                 <a href="https://th-2007.github.io/pagina.github.io/subpaginas/directorio.html#timeline"
-                    class="hover:text-yellow-400">Plantel Docente</a>
+                    class="hover:text-red-800">Plantel Docente</a>
                 <a href="https://th-2007.github.io/pagina.github.io/subpaginas/servicios.html#servicios"
-                    class="hover:text-yellow-400">Nuestros Servicios</a>
+                    class="hover:text-red-800">Nuestros Servicios</a>
             </nav>
+
 
         </div>
         </div>
@@ -117,17 +102,18 @@
         <!-- Carrusel de fondo RESPONSIVO para PC y móviles (sin necesidad de imágenes duplicadas) -->
         <div class="absolute inset-0 z-0">
             <!-- Imagen 1 -->
-            <img src="img/headerimage/costado.jpeg" alt="Costado"
+            <img src="../img/headerimage/costado.jpeg" alt="Costado"
                 class="carousel-image absolute inset-0 w-full h-full object-cover opacity-100" />
 
             <!-- Imagen 2 -->
-            <img src="/img/headerimage/entrada.jpeg" alt="Entrada"
+            <img src="../img/headerimage/entrada.jpeg" alt="Entrada"
                 class="carousel-image absolute inset-0 w-full h-full object-cover opacity-0" />
 
             <!-- Imagen 3 -->
-            <img src="/img/headerimage/adentro.jpeg" alt="Adentro"
+            <img src="../img/headerimage/adentro.jpeg" alt="Adentro"
                 class="carousel-image absolute inset-0 w-full h-full object-cover opacity-0" />
         </div>
+
 
         <!-- Overlay oscuro -->
         <div class="absolute inset-0 bg-black bg-opacity-50 z-10"></div>
@@ -140,7 +126,7 @@
             <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto drop-shadow-md">
                 Honrando el legado y promoviendo los valores que nos definen
             </p>
-            <a href="http://127.0.0.1:5500/subpaginas/servicios.html"
+            <a href="http://127.0.0.1:5500/subpaginas/servicios.html#servicios"
                 class="inline-block bg-[#C62828] hover:bg-red-700 text-white px-8 py-3 rounded-lg font-semibold transition duration-300 shadow-lg">
                 Nuestros Servicios
             </a>
@@ -162,7 +148,7 @@
 
 
     <!-- Fundación y Orígenes Section -->
-    <section id="fundacion" class="py-20 bg-olive">
+    <section id="fundacion1" class="py-20 bg-olive">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-[#0B1F3A]">Fundación y Orígenes</h2>
 
