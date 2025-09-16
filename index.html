@@ -13,7 +13,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
         rel="stylesheet">
-        
+
 
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -29,12 +29,25 @@
 </head>
 
 <body class="bg-white text-gray-800">
+
+    <!-- Alerta de bienvenida -->
+    <div id="welcomeAlert" class="fixed inset-0 flex items-center justify-center z-[10000] bg-black/40">
+        <div class="bg-white text-center rounded-lg p-6 shadow-lg flex items-center space-x-4">
+            <span class="text-3xl">😘</span>
+            <div>
+                <p class="font-bold text-lg">Bienvenidos al sitio web! :3</p>
+                <p class="text-sm text-gray-600">Esperamos que disfrutes tu visita. :></p>
+            </div>
+        </div>
+    </div>
+
+
     <!-- ================= HEADER ================= -->
     <header class="bg-white shadow-md z-10">
         <div class="container mx-auto px-4 py-2 flex justify-between items-center">
 
             <!-- Logo -->
-             <a href="http://127.0.0.1:5500/index.html#" class="flex items-center space-x-2">
+            <a href="http://127.0.0.1:5500/index.html#" class="flex items-center space-x-2">
                 <img src="/img/logodelcolegio.png" alt="Logo Colegio" class="h-12">
                 <div class="leading-tight">
                     <span class="block text-lg font-bold">Colegio Nacional</span>
@@ -56,12 +69,14 @@
 
 
             <!-- Desktop Navigation -->
-             <nav class="hidden md:flex space-x-6 text-sm">
+            <nav class="hidden md:flex space-x-6 text-sm">
                 <a href="http://127.0.0.1:5500/index.html#mision" class="nav-link">Fundación y Orígenes</a>
                 <a href="http://127.0.0.1:5500/index.html#mision" class="nav-link">Misión y Valores</a>
                 <a href="http://127.0.0.1:5500/subpaginas/galleria.html#galeria" class="nav-link">Galería Histórica</a>
-                <a href="http://127.0.0.1:5500/subpaginas/lineadetiempo.html#timeline" class="nav-link">Línea de Tiempo</a>
-                <a href="http://127.0.0.1:5500/subpaginas/directorio.html#directorio" class="nav-link">Plantel Docente</a>
+                <a href="http://127.0.0.1:5500/subpaginas/lineadetiempo.html#timeline" class="nav-link">Línea de
+                    Tiempo</a>
+                <a href="http://127.0.0.1:5500/subpaginas/directorio.html#directorio" class="nav-link">Plantel
+                    Docente</a>
 
             </nav>
 
@@ -448,7 +463,8 @@
                     <li><a href="#fundacion" class="hover:text-red-600 transition-colors">Fundación</a></li>
                     <li><a href="#mision" class="hover:text-red-600 transition-colors">Misión</a></li>
                     <li><a href="galleria.html" class="hover:text-red-600 transition-colors">Galería</a></li>
-                    <li><a href="https://www.youtube.com/watch?v=xvFZjo5PgG0&list=RDxvFZjo5PgG0&start_radio=1" class="hover:text-red-600 transition-colors">No entres aqui</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=xvFZjo5PgG0&list=RDxvFZjo5PgG0&start_radio=1"
+                            class="hover:text-red-600 transition-colors">No entres aqui</a></li>
                 </ul>
             </div>
 
@@ -490,7 +506,6 @@
     <script src="js/iniciohistorio/vermas2.js"></script>
     <script src="js/generaljs/carrsel.js"></script>
     <script src="js/generaljs/headerletras.js"></script>
-    
     <script src="js/animacion/animation.js"></script>
     <script src="js/menu.js"></script>
     <script src="js/alertas/alerta.js"></script>
