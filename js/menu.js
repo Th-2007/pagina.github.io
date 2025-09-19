@@ -30,27 +30,3 @@ document.addEventListener('DOMContentLoaded', () => {
 
   
 });
-
-
- const openMenu = document.getElementById("openMenu");
-  const drawer = document.getElementById("drawer");
-  const backdrop = document.getElementById("backdrop");
-
-  openMenu.addEventListener("click", () => {
-    drawer.classList.remove("hidden");
-    backdrop.classList.remove("hidden");
-
-    // pequeña pausa para que la transición se vea
-    setTimeout(() => {
-      drawer.classList.remove("translate-x-full");
-    }, 10);
-  });
-
-  backdrop.addEventListener("click", () => {
-    drawer.classList.add("translate-x-full");
-    // esperar a que termine la animación para ocultar del todo
-    setTimeout(() => {
-      drawer.classList.add("hidden");
-      backdrop.classList.add("hidden");
-    }, 300); // mismo tiempo que duration-300
-  });
