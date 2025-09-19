@@ -1,32 +1,25 @@
-// menucelulae.js
-document.addEventListener('DOMContentLoaded', () => {
-  // Elementos del menú
-  const openBtn = document.getElementById('openMenu');
-  const drawer = document.getElementById('drawer');
-  const backdrop = document.getElementById('backdrop');
+  const openMenu = document.getElementById("openMenu");
+  const drawer = document.getElementById("drawer");
+  const backdrop = document.getElementById("backdrop");
 
-  // Función abrir menú
-  const openMenu = () => {
-    drawer.classList.remove('translate-x-full');
-    backdrop.classList.remove('hidden');
-  };
+  openMenu.addEventListener("click", () => {
+    drawer.classList.remove("hidden");
+    backdrop.classList.remove("hidden");
 
-  // Función cerrar menú
-  const closeMenu = () => {
-    drawer.classList.add('translate-x-full');
-    backdrop.classList.add('hidden');
-  };
+    // pequeña pausa para que la transición se vea
+    setTimeout(() => {
+      drawer.classList.remove("translate-x-full");
+    }, 10);
+  });
 
-  // Alternar menú
-  const toggleMenu = () => {
-    const isOpen = !drawer.classList.contains('translate-x-full');
-    isOpen ? closeMenu() : openMenu();
-  };
+  backdrop.addEventListener("click", () => {
+    drawer.classList.add("translate-x-full");
+    // esperar a que termine la animación para ocultar del todo
+    setTimeout(() => {
+      drawer.classList.add("hidden");
+      backdrop.classList.add("hidden");
+    }, 300); // mismo tiempo que duration-300
+  });
 
-  // Eventos de menú
-  openBtn.addEventListener('click', toggleMenu);
-  backdrop.addEventListener('click', closeMenu);
-  drawer.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
-
-  
-});
+  // Cerrar el menú al hacer clic en un enlace
+  const menuLinks = drawer.querySelectorAll("a");
