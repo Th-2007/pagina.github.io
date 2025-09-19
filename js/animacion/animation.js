@@ -60,17 +60,3 @@
             });
         });
 
-
-        // Initialize on load
-        document.addEventListener('DOMContentLoaded', () => {
-            initializeLikes();
-
-            // Set initial active nav link
-            const currentSection = window.location.hash ? window.location.hash.substring(1) : 'inicio';
-            document.querySelectorAll('.nav-link').forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href') === `#${currentSection}`) {
-                    link.classList.add('active');
-                }
-            });
-        });
