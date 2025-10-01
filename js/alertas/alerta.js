@@ -1,4 +1,4 @@
 setTimeout(() => {
 const alertDiv = document.getElementById('welcomeAlert');
 if (alertDiv) alertDiv.style.display = 'none';
-}, 3000); // Desaparece después de 3 segundos
+}, 1000); // Desaparece después de 1 segundos
