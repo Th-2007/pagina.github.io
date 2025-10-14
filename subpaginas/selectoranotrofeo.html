@@ -4,8 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Seleccionar Año - Galería Histórica</title>
-    <link rel="stylesheet" href="../css/selector.css">
-  
+  <link rel="stylesheet" href="../css/selector.css">
 </head>
 <body>
 
@@ -17,7 +16,7 @@
     <div class="year-display" id="selectedYear">2017</div>
 
     <div class="slider-container">
-      <input type="range" id="yearRange" min="2012" max="2025" value="2017" step="1">
+      <input type="range" id="yearRange" min="2016" max="2024" value="2017" step="1">
     </div>
   </div>
 
@@ -38,7 +37,7 @@
       const year = yearRange.value;
       document.body.classList.add("fade-out");
       setTimeout(() => {
-        window.location.href = `galeria_${year}.html`;
+        window.location.href = `trofeo${year}.html`;
       }, 500);
     });
   </script>
