@@ -75,7 +75,7 @@
             <div id="backdrop" class="fixed inset-0 hidden z-[9999] bg-black/60 md:hidden"></div>
 
 
-           <!-- Menú lateral SOLO en celular -->
+             <!-- Menú lateral SOLO en celular -->
             <nav id="drawer"
                 class="fixed right-0 top-0 h-screen w-64 z-[9999] translate-x-full transition-transform duration-300 bg-slate-900 text-white flex flex-col p-6 space-y-4 md:hidden">
                 <a href="https://th-2007.github.io/pagina.github.io/index.html#fundacion1" class="hover:text-red-800">Fundación y Orígenes</a>
@@ -89,7 +89,6 @@
                 <a href="https://th-2007.github.io/pagina.github.io/subpaginas/servicios.html#servicios"
                     class="hover:text-red-800">Nuestros Servicios</a>
             </nav>
-
         </div>
         </div>
     </header>
@@ -99,15 +98,15 @@
         <!-- Carrusel de fondo RESPONSIVO para PC y móviles (sin necesidad de imágenes duplicadas) -->
         <div class="absolute inset-0 z-0">
             <!-- Imagen 1 -->
-            <img src="../img/headerimage/costado.jpeg" alt="Costado"
+            <img src="img/colegioimg/headerimage/costado.jpeg" alt="Costado"
                 class="carousel-image absolute inset-0 w-full h-full object-cover opacity-100" />
 
             <!-- Imagen 2 -->
-            <img src="../img/headerimage/entrada.jpeg" alt="Entrada"
+            <img src="img/colegioimg/headerimage/entrada.jpeg" alt="Entrada"
                 class="carousel-image absolute inset-0 w-full h-full object-cover opacity-0" />
 
             <!-- Imagen 3 -->
-            <img src="../img/headerimage/adentro.jpeg" alt="Adentro"
+            <img src="img/colegioimg/headerimage/adentro.jpeg" alt="Adentro"
                 class="carousel-image absolute inset-0 w-full h-full object-cover opacity-0" />
         </div>
 
@@ -141,92 +140,106 @@
 
     </section>
 
-
-    <!-- Directorio Section -->
-    <section id="directorio" class="py-20 bg-white">
+    <!-- Galería Histórica Section -->
+    <section id="galeria" class="py-20 bg-white">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-[#0B1F3A]">Directorio</h2>
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-[#0B1F3A]">Galería Histórica</h2>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-white rounded-lg p-6 shadow-md" data-aos="fade-up">
-                    <div class="text-center mb-4">
-                        <img src="https://cdn.pixabay.com/photo/2016/11/21/12/42/beard-1845166_1280.jpg"
-                            alt="Director General" class="rounded-full w-32 h-32 object-cover mx-auto mb-4">
-                        <h4 class="text-xl font-bold text-[#0B1F3A]">Dic. Norma Bogado</h4>
-                        <p class="text-[#C62828] font-semibold">Director General</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!--seccion de trofeos apardo nuevo--->
+                <!-- Imagen 1 -->
+                <div class="gallery-item rounded-lg overflow-hidden shadow-lg relative" data-id="1" data-aos="fade-up">
+                    <div class="overflow-hidden group">
+                        <a href="http://127.0.0.1:5500/subpaginas/selectoranotrofeo.html" target="_blank" rel="noopener noreferrer">
+                            <img src="../img/secciondegaleria/trofeos.jpeg" alt="Imagen histórica 1"
+                                class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-500" />
+                        </a>
                     </div>
-                    <div class="text-gray-600 text-center">
-                        <p class="mb-4">Líder de nuestra organización desde 2015</p>
-                        <p><i class="fas fa-envelope mr-2"></i> director@joserosario.org</p>
+
+                    <div class="like-button absolute top-2 right-2 bg-white p-2 rounded-full shadow cursor-pointer"
+                        data-id="1">
+                        <i class="far fa-heart text-red-500 text-xl transition-all duration-300"></i>
+                        <span class="like-count text-sm ml-1 text-gray-700">0</span>
                     </div>
+
+                    <div class="p-4">
+                        <h4 class="font-bold text-lg mb-2">Trofeos y Premios</h4>
+                        <p class="text-gray-600">
+                            Todos los trofeos ganados en competiciones por el desempeño y trabajo en equipo.
+                        </p>
+                    </div>
+
+                    
                 </div>
 
-                <div class="bg-white rounded-lg p-6 shadow-md" data-aos="fade-up" data-aos-delay="100">
-                    <div class="text-center mb-4">
-                        <img src="https://cdn.pixabay.com/photo/2018/01/15/07/51/woman-3083383_1280.jpg"
-                            alt="Directora Académica" class="rounded-full w-32 h-32 object-cover mx-auto mb-4">
-                        <h4 class="text-xl font-bold text-[#0B1F3A]">Laura Gutiérrez</h4>
-                        <p class="text-[#C62828] font-semibold">Coordinadora Académica</p>
+
+                <!-- Imagen 2 -->
+                <div class="gallery-item rounded-lg overflow-hidden shadow-lg relative" data-id="2" data-aos="fade-up"
+                    data-aos-delay="100">
+                    <div class="overflow-hidden group">
+                        <a href="http://127.0.0.1:5500/subpaginas/selectorano1.html" target="_blank" rel="noopener noreferrer">
+                            <img src="../img/seccion de galeria/trofeos.jpeg" alt="Imagen histórica 1"
+                                class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-500" />
+                        </a>
                     </div>
-                    <div class="text-gray-600 text-center">
-                        <p class="mb-4">Responsable de programas educativos</p>
-                        <p><i class="fas fa-envelope mr-2"></i> academica@joserosario.org</p>
+                    <div class="like-button absolute top-2 right-2 bg-blue p-2 rounded-full shadow cursor-pointer"
+                        data-id="2">
+                        <i class="far fa-heart text-red-500 text-xl transition-all duration-300"></i>
+                        <span class="like-count text-sm ml-1 text-gray-700">0</span>
                     </div>
+                    <div class="p-4">
+                        <h4 class="font-bold text-lg mb-2">Evolucion del colegio</h4>
+                        <p class="text-gray-600">imagenes historicas sobre la evolucion del colegio nacional jose del rosario pavon.</p>
+                    </div>
+
+                    >
+                </div>
+                 <!-- Imagen 2.5 -->
+                <div class="gallery-item rounded-lg overflow-hidden shadow-lg relative" data-id="4" data-aos="fade-up"
+                    data-aos-delay="100">
+                    <div class="overflow-hidden group">
+                        <a href="http://127.0.0.1:5500/subpaginas/selectorano1.html" target="_blank" rel="noopener noreferrer">
+                            <img src="../img/seccion de galeria/trofeos.jpeg" alt="Imagen histórica 1"
+                                class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-500" />
+                        </a>
+                    </div>
+                    <div class="like-button absolute top-2 right-2 bg-blue p-2 rounded-full shadow cursor-pointer"
+                        data-id="2">
+                        <i class="far fa-heart text-red-500 text-xl transition-all duration-300"></i>
+                        <span class="like-count text-sm ml-1 text-gray-700">0</span>
+                    </div>
+                    <div class="p-4">
+                        <h4 class="font-bold text-lg mb-2">Promociones</h4>
+                        <p class="text-gray-600">imagenes historicas sobre la evolucion del colegio nacional jose del rosario pavon.</p>
+                    </div>
+
+                    >
                 </div>
 
-                <div class="bg-white rounded-lg p-6 shadow-md" data-aos="fade-up" data-aos-delay="200">
-                    <div class="text-center mb-4">
-                        <img src="../img/profesores/liz.jpeg"
-                            alt="Director de Comunicación" class="rounded-full w-32 h-32 object-cover mx-auto mb-4">
-                        <h4 class="text-xl font-bold text-[#0B1F3A]">Lic. Liz Carmen</h4>
-                        <p class="text-[#C62828] font-semibold">Profesora de Informatica</p>
+
+                <!-- Imagen 3 -->
+                <div class="gallery-item rounded-lg overflow-hidden shadow-lg relative" data-id="3" data-aos="fade-up"
+                    data-aos-delay="100">
+                    <div class="overflow-hidden group">
+                        <a href="http://127.0.0.1:5500/subpaginas/selectorano1.html" target="_blank" rel="noopener noreferrer">
+                            <img src="../img/seccion de galeria/trofeos.jpeg" alt="Imagen histórica 1"
+                                class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-500" />
+                        </a>
                     </div>
-                    <div class="text-gray-600 text-center">
-                        <p class="mb-4">Magister e Analista en Sistemas</p>
-                        <p><i class="fas fa-envelope mr-2"></i> prensa@joserosario.org</p>
+                    <div class="like-button absolute top-2 right-2 bg-white p-2 rounded-full shadow cursor-pointer"
+                        data-id="2">
+                        <i class="far fa-heart text-red-500 text-xl transition-all duration-300"></i>
+                        <span class="like-count text-sm ml-1 text-gray-700">0</span>
                     </div>
+                    <div class="p-4">
+                        <h4 class="font-bold text-lg mb-2">DESFILE</h4>
+                        <p class="text-gray-600">Todos los desfiles de jose del rosario pavon.</p>
+                    </div>
+
+                   
                 </div>
 
-                <div class="bg-white rounded-lg p-6 shadow-md" data-aos="fade-up" data-aos-delay="300">
-                    <div class="text-center mb-4">
-                        <img src="https://cdn.pixabay.com/photo/2017/02/16/23/10/smile-2072907_1280.jpg"
-                            alt="Directora de Proyectos" class="rounded-full w-32 h-32 object-cover mx-auto mb-4">
-                        <h4 class="text-xl font-bold text-[#0B1F3A]">Marta Rodríguez</h4>
-                        <p class="text-[#C62828] font-semibold">Directora de Proyectos</p>
-                    </div>
-                    <div class="text-gray-600 text-center">
-                        <p class="mb-4">Coordinación de iniciativas comunitarias</p>
-                        <p><i class="fas fa-envelope mr-2"></i> proyectos@joserosario.org</p>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-lg p-6 shadow-md" data-aos="fade-up" data-aos-delay="400">
-                    <div class="text-center mb-4">
-                        <img src="https://cdn.pixabay.com/photo/2016/11/29/09/38/adult-1868750_1280.jpg"
-                            alt="Director Financiero" class="rounded-full w-32 h-32 object-cover mx-auto mb-4">
-                        <h4 class="text-xl font-bold text-[#0B1F3A]">Eduardo Vargas</h4>
-                        <p class="text-[#C62828] font-semibold">Director Financiero</p>
-                    </div>
-                    <div class="text-gray-600 text-center">
-                        <p class="mb-4">Gestión financiera y recursos</p>
-                        <p><i class="fas fa-envelope mr-2"></i> finanzas@joserosario.org</p>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-lg p-6 shadow-md" data-aos="fade-up" data-aos-delay="500">
-                    <div class="text-center mb-4">
-                        <img src="https://cdn.pixabay.com/photo/2019/11/03/20/11/portrait-4599553_1280.jpg"
-                            alt="Directora de Innovación" class="rounded-full w-32 h-32 object-cover mx-auto mb-4">
-                        <h4 class="text-xl font-bold text-[#0B1F3A]">Sofía Torres</h4>
-                        <p class="text-[#C62828] font-semibold">Directora de Innovación</p>
-                    </div>
-                    <div class="text-gray-600 text-center">
-                        <p class="mb-4">Desarrollo tecnológico y transformación digital</p>
-                        <p><i class="fas fa-envelope mr-2"></i> innovacion@joserosario.org</p>
-                    </div>
-                </div>
             </div>
-
         </div>
     </section>
 
@@ -235,9 +248,7 @@
 
 
 
-
-
-
+    <!--este es el pie de pagina-->
     <!-- ================= FOOTER ================= -->
     <footer class="bg-slate-900 text-white py-10">
         <div class="container mx-auto px-4 grid md:grid-cols-3 gap-8 text-left md:text-left">
@@ -250,7 +261,8 @@
                 </h3>
                 <p class="mt-2">Un legado de excelencia educativa desde 1994.</p>
             </div>
-           <!-- Enlaces rápidos -->
+            <!-- Enlaces rápidos -->
+    
             <div>
                 <h3 class="font-bold text-lg mb-2"><span class="inline-block border-b-2 border-red-600">Enlaces
                         Rápidos</span></h3>
@@ -277,9 +289,10 @@
         <br>
         <hr class="border-t-2 border-red-600 my-4">
 
-       <div class="text-left md:text-left mt-6 text-sm text-gray-300">
+        <div class="text-left md:text-left mt-6 text-sm text-gray-300">
             &copy; 2025 José Rosario Pavón. Todos los derechos reservados.
         </div>
+
     </footer>
     <!-- Botón volver al inicio -->
     <a href="#"
@@ -297,6 +310,8 @@
     <script src="../js/generaljs/headerletras.js"></script>
     <script src="../js/generaljs/menucelular.js"></script>
     <script src="../js/animacion/animation.js"></script>
+    <script src="../js/galeriajsfuncion/galeriacomentario.js"></script>
+    <script src="../js/galeriajsfuncion/galleriacorazones.js"></script>
 
 
 

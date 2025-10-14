@@ -75,7 +75,7 @@
             <div id="backdrop" class="fixed inset-0 hidden z-[9999] bg-black/60 md:hidden"></div>
 
 
-            <!-- Menú lateral SOLO en celular -->
+           <!-- Menú lateral SOLO en celular -->
             <nav id="drawer"
                 class="fixed right-0 top-0 h-screen w-64 z-[9999] translate-x-full transition-transform duration-300 bg-slate-900 text-white flex flex-col p-6 space-y-4 md:hidden">
                 <a href="https://th-2007.github.io/pagina.github.io/index.html#fundacion1" class="hover:text-red-800">Fundación y Orígenes</a>
@@ -90,7 +90,6 @@
                     class="hover:text-red-800">Nuestros Servicios</a>
             </nav>
 
-
         </div>
         </div>
     </header>
@@ -100,15 +99,15 @@
         <!-- Carrusel de fondo RESPONSIVO para PC y móviles (sin necesidad de imágenes duplicadas) -->
         <div class="absolute inset-0 z-0">
             <!-- Imagen 1 -->
-            <img src="../img/headerimage/costado.jpeg" alt="Costado"
+            <img src="img/headerimage/costado.jpeg" alt="Costado"
                 class="carousel-image absolute inset-0 w-full h-full object-cover opacity-100" />
 
             <!-- Imagen 2 -->
-            <img src="../img/headerimage/entrada.jpeg" alt="Entrada"
+            <img src="img/headerimage/entrada.jpeg" alt="Entrada"
                 class="carousel-image absolute inset-0 w-full h-full object-cover opacity-0" />
 
             <!-- Imagen 3 -->
-            <img src="../img/headerimage/adentro.jpeg" alt="Adentro"
+            <img src="img/headerimage/adentro.jpeg" alt="Adentro"
                 class="carousel-image absolute inset-0 w-full h-full object-cover opacity-0" />
         </div>
 
@@ -124,7 +123,10 @@
             <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto drop-shadow-md">
                 Honrando el legado y promoviendo los valores que nos definen
             </p>
-            
+             <a href="https://th-2007.github.io/pagina.github.io/subpaginas/servicios.html#servicios"
+                class="inline-block bg-[#C62828] hover:bg-red-700 text-white px-8 py-3 rounded-lg font-semibold transition duration-300 shadow-lg">
+                Nuestros Servicios
+            </a>
         </div>
 
         <!-- Botones de navegación -->
@@ -139,83 +141,100 @@
 
     </section>
 
-    <section id="servicios" class="py-12 px-6 bg-gray-50">
-        <div class="max-w-5xl mx-auto">
-            <!-- Encabezado -->
-            <h2 class="text-3xl font-bold text-center text-blue-900 mb-4">Servicios Educativos</h2>
-            <p class="text-center text-gray-700 mb-10">
-                En la <strong>Institución Educativa José del Rosario Pavón</strong>, ofrecemos formación técnica de
-                calidad
-                orientada a satisfacer las necesidades del mundo actual. Nuestro programa de Técnico en Informática está
-                cuidadosamente diseñado para desarrollar habilidades prácticas, promover el pensamiento crítico y
-                facilitar
-                la inserción laboral.
-            </p>
 
-            <!-- Tarjeta de Técnico en Informática -->
-            <div class="bg-white shadow-lg rounded-2xl p-8 mb-10 hover:shadow-2xl transition duration-300">
-                <h3 class="text-2xl font-semibold text-blue-800 flex items-center gap-2">🎓 Técnico en Informática</h3>
-                <p class="text-gray-600 mt-2">
-                    El programa brinda una sólida base en tecnologías de la información y computación, con un enfoque
-                    práctico y actualizado.
-                </p>
+    <!-- Directorio Section -->
+    <section id="directorio" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-[#0B1F3A]">Directorio</h2>
 
-                <!-- Competencias -->
-                <details class="mt-4">
-                    <summary class="cursor-pointer font-semibold text-blue-700">Competencias adquiridas</summary>
-                    <ul class="list-disc list-inside text-gray-600 mt-2 space-y-1">
-                        <li><strong>Mantenimiento:</strong> Diagnóstico de fallas físicas y reemplazo de componentes.
-                        </li>
-                        <li><strong>Software:</strong> Instalación y configuración de sistemas operativos y herramientas
-                            digitales.</li>
-                        <li><strong>Redes:</strong> Diseño e implementación de redes LAN, routers y seguridad.</li>
-                        <li><strong>Aplicaciones:</strong> Creación de aplicaciones simples y scripting básico.</li>
-                        <li><strong>Programación:</strong> Lógica, estructuras de decisión y bucles.</li>
-                        <li><strong>Bases de datos:</strong> Modelado, SQL básico y gestión de información.</li>
-                    </ul>
-                </details>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg p-6 shadow-md" data-aos="fade-up">
+                    <div class="text-center mb-4">
+                        <img src="https://cdn.pixabay.com/photo/2016/11/21/12/42/beard-1845166_1280.jpg"
+                            alt="Director General" class="rounded-full w-32 h-32 object-cover mx-auto mb-4">
+                        <h4 class="text-xl font-bold text-[#0B1F3A]">Dic. Norma Bogado</h4>
+                        <p class="text-[#C62828] font-semibold">Director General</p>
+                    </div>
+                    <div class="text-gray-600 text-center">
+                        <p class="mb-4">Líder de nuestra organización desde 2015</p>
+                        <p><i class="fas fa-envelope mr-2"></i> director@joserosario.org</p>
+                    </div>
+                </div>
 
-                <!-- Modalidad -->
-                <details class="mt-4">
-                    <summary class="cursor-pointer font-semibold text-blue-700">Modalidad del programa</summary>
-                    <ul class="list-disc list-inside text-gray-600 mt-2 space-y-1">
-                        <li><strong>Duración:</strong> 1–2 años académicos.</li>
-                        <li><strong>Método:</strong> Teórico-práctico con talleres y proyectos.</li>
-                        <li><strong>Modalidad:</strong> Presencial con apoyo virtual/híbrido.</li>
-                    </ul>
-                </details>
+                <div class="bg-white rounded-lg p-6 shadow-md" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-center mb-4">
+                        <img src="https://cdn.pixabay.com/photo/2018/01/15/07/51/woman-3083383_1280.jpg"
+                            alt="Directora Académica" class="rounded-full w-32 h-32 object-cover mx-auto mb-4">
+                        <h4 class="text-xl font-bold text-[#0B1F3A]">Laura Gutiérrez</h4>
+                        <p class="text-[#C62828] font-semibold">Coordinadora Académica</p>
+                    </div>
+                    <div class="text-gray-600 text-center">
+                        <p class="mb-4">Responsable de programas educativos</p>
+                        <p><i class="fas fa-envelope mr-2"></i> academica@joserosario.org</p>
+                    </div>
+                </div>
 
-                <!-- Beneficios -->
-                <details class="mt-4">
-                    <summary class="cursor-pointer font-semibold text-blue-700">Beneficios para estudiantes</summary>
-                    <ul class="list-disc list-inside text-gray-600 mt-2 space-y-1">
-                        <li><strong>Alta empleabilidad:</strong> Habilidades clave del mercado actual.</li>
-                        <li><strong>Enfoque práctico:</strong> Laboratorios y proyectos aplicados.</li>
-                        <li><strong>Formación integral:</strong> Competencias técnicas y blandas.</li>
-                        <li><strong>Estudios superiores:</strong> Base sólida para especializaciones.</li>
-                    </ul>
-                </details>
+                <div class="bg-white rounded-lg p-6 shadow-md" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-center mb-4">
+                        <img src="../img/profesores/liz.jpeg"
+                            alt="Director de Comunicación" class="rounded-full w-32 h-32 object-cover mx-auto mb-4">
+                        <h4 class="text-xl font-bold text-[#0B1F3A]">Lic. Liz Carmen</h4>
+                        <p class="text-[#C62828] font-semibold">Profesora de Informatica</p>
+                    </div>
+                    <div class="text-gray-600 text-center">
+                        <p class="mb-4">Magister e Analista en Sistemas</p>
+                        <p><i class="fas fa-envelope mr-2"></i> prensa@joserosario.org</p>
+                    </div>
+                </div>
 
-                <!-- Requisitos -->
-                <details class="mt-4">
-                    <summary class="cursor-pointer font-semibold text-blue-700">Requisitos de ingreso</summary>
-                    <ul class="list-disc list-inside text-gray-600 mt-2 space-y-1">
-                        <li>Certificado de estudios secundarios.</li>
-                        <li>Prueba de diagnóstico o entrevista.</li>
-                        <li>Motivación e interés en informática.</li>
-                    </ul>
-                </details>
+                <div class="bg-white rounded-lg p-6 shadow-md" data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-center mb-4">
+                        <img src="https://cdn.pixabay.com/photo/2017/02/16/23/10/smile-2072907_1280.jpg"
+                            alt="Directora de Proyectos" class="rounded-full w-32 h-32 object-cover mx-auto mb-4">
+                        <h4 class="text-xl font-bold text-[#0B1F3A]">Marta Rodríguez</h4>
+                        <p class="text-[#C62828] font-semibold">Directora de Proyectos</p>
+                    </div>
+                    <div class="text-gray-600 text-center">
+                        <p class="mb-4">Coordinación de iniciativas comunitarias</p>
+                        <p><i class="fas fa-envelope mr-2"></i> proyectos@joserosario.org</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg p-6 shadow-md" data-aos="fade-up" data-aos-delay="400">
+                    <div class="text-center mb-4">
+                        <img src="https://cdn.pixabay.com/photo/2016/11/29/09/38/adult-1868750_1280.jpg"
+                            alt="Director Financiero" class="rounded-full w-32 h-32 object-cover mx-auto mb-4">
+                        <h4 class="text-xl font-bold text-[#0B1F3A]">Eduardo Vargas</h4>
+                        <p class="text-[#C62828] font-semibold">Director Financiero</p>
+                    </div>
+                    <div class="text-gray-600 text-center">
+                        <p class="mb-4">Gestión financiera y recursos</p>
+                        <p><i class="fas fa-envelope mr-2"></i> finanzas@joserosario.org</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg p-6 shadow-md" data-aos="fade-up" data-aos-delay="500">
+                    <div class="text-center mb-4">
+                        <img src="https://cdn.pixabay.com/photo/2019/11/03/20/11/portrait-4599553_1280.jpg"
+                            alt="Directora de Innovación" class="rounded-full w-32 h-32 object-cover mx-auto mb-4">
+                        <h4 class="text-xl font-bold text-[#0B1F3A]">Sofía Torres</h4>
+                        <p class="text-[#C62828] font-semibold">Directora de Innovación</p>
+                    </div>
+                    <div class="text-gray-600 text-center">
+                        <p class="mb-4">Desarrollo tecnológico y transformación digital</p>
+                        <p><i class="fas fa-envelope mr-2"></i> innovacion@joserosario.org</p>
+                    </div>
+                </div>
             </div>
 
-            <!-- Contacto -->
-            <div class="bg-blue-900 text-white rounded-2xl shadow-lg p-8 text-center">
-                <h4 class="text-xl font-semibold mb-4">📞 Contacto e información adicional</h4>
-                <p><strong>Dirección:</strong> Calle Ficticia #123, Mariano Roque Alonso, Paraguay</p>
-                <p><strong>Teléfono:</strong> +595 123 456 789</p>
-                <p><strong>Email:</strong> info@institucionpavon.edu.py</p>
-            </div>
         </div>
     </section>
+
+
+
+
+
+
 
 
 
