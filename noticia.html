@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Colegio Nacional José Del Rosario Pavón</title>
 
     <!-- Tailwind CSS -->
@@ -13,6 +13,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
         rel="stylesheet">
+
 
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -24,17 +25,49 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
 
     <!-- Estilos propios -->
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="bg-white text-gray-800">
+
+
+    <!-- Alerta de bienvenida -->
+    <div id="welcomeAlert" class="fixed inset-0 flex z-[10000] bg-black/40 
+    items-start justify-start p-4 mt-8
+    md:items-center md:justify-center md:mt-0">
+
+        <div class="bg-white text-center rounded-lg p-6 shadow-lg flex items-center space-x-4 max-w-md">
+            <span class="text-3xl">😘</span>
+            <div>
+                <p class="font-bold text-lg">Bienvenidos al Rincon de Noticia</p>
+                <p class="text-sm text-gray-600">Lugar para Informarse</p>
+            </div>
+        </div>
+    </div>
+    <!-- Banner de Noticias Dinámico -->
+    <section id="noticias" class="bg-[#0B1F3A] text-white py-4 px-4 text-center shadow-md">
+        <div class="container mx-auto">
+            <p class="text-lg font-semibold">
+                📰 <span class="text-yellow-400">Últimas Noticias:</span>
+                <span id="mensaje-noticia" class="transition duration-500">Graduación de los terceros años</span>
+                <a href="https://th-2007.github.io/pagina.github.io/subpaginas/noticias.html#noticias"
+                    class="text-yellow-400 hover:text-yellow-300 transition duration-300 font-semibold">
+                    Haz clic aquí para saber más
+                </a>
+            </p>
+        </div>
+    </section>
+
+
+
+
     <!-- ================= HEADER ================= -->
     <header class="bg-white shadow-md z-10">
         <div class="container mx-auto px-4 py-2 flex justify-between items-center">
 
             <!-- Logo -->
             <a href="http://127.0.0.1:5500/index.html#" class="flex items-center space-x-2">
-                <img src="../img/logodelcolegio.png" alt="Logo Colegio" class="h-12">
+                <img src="img/logodelcolegio.png" alt="Logo Colegio" class="h-12">
                 <div class="leading-tight">
                     <span class="block text-lg font-bold">Colegio Nacional</span>
                     <span class="block text-lg font-bold">José Del Rosario Pavón</span>
@@ -55,12 +88,14 @@
 
 
             <!-- Desktop Navigation -->
-             <nav class="hidden md:flex space-x-6 text-sm">
+            <nav class="hidden md:flex space-x-6 text-sm">
                 <a href="http://127.0.0.1:5500/index.html#mision" class="nav-link">Fundación y Orígenes</a>
                 <a href="http://127.0.0.1:5500/index.html#mision" class="nav-link">Misión y Valores</a>
                 <a href="http://127.0.0.1:5500/subpaginas/galleria.html#galeria" class="nav-link">Galería Histórica</a>
-                <a href="http://127.0.0.1:5500/subpaginas/lineadetiempo.html#timeline" class="nav-link">Línea de Tiempo</a>
-                <a href="http://127.0.0.1:5500/subpaginas/directorio.html#directorio" class="nav-link">Plantel Docente</a>
+                <a href="http://127.0.0.1:5500/subpaginas/lineadetiempo.html#timeline" class="nav-link">Línea de
+                    Tiempo</a>
+                <a href="http://127.0.0.1:5500/subpaginas/directorio.html#directorio" class="nav-link">Plantel
+                    Docente</a>
 
             </nav>
 
@@ -78,14 +113,16 @@
             <!-- Menú lateral SOLO en celular -->
             <nav id="drawer"
                 class="fixed right-0 top-0 h-screen w-64 z-[9999] translate-x-full transition-transform duration-300 bg-slate-900 text-white flex flex-col p-6 space-y-4 md:hidden">
-                <a href="https://th-2007.github.io/pagina.github.io/index.html#fundacion1" class="hover:text-red-800">Fundación y Orígenes</a>
+                <a href="https://th-2007.github.io/pagina.github.io/index.html#fundacion1"
+                    class="hover:text-red-800">Fundación y Orígenes</a>
                 <a href="https://th-2007.github.io/pagina.github.io/index.html#mision" class="hover:text-red-800">Misión
                     y Valores</a>
                 <a href="https://th-2007.github.io/pagina.github.io/subpaginas/galleria.html#galeria"
                     class="hover:text-red-800">Galería Histórica</a>
                 <a href="https://th-2007.github.io/pagina.github.io/subpaginas/lineadetiempo.html#timeline"
                     class="hover:text-red-800">Línea de Tiempo</a>
-                <a href="https://th-2007.github.io/pagina.github.io/subpaginas/directorio.html#directorio" class="hover:text-red-800">Plantel Docente</a>
+                <a href="https://th-2007.github.io/pagina.github.io/subpaginas/directorio.html#directorio"
+                    class="hover:text-red-800">Plantel Docente</a>
                 <a href="https://th-2007.github.io/pagina.github.io/subpaginas/servicios.html#servicios"
                     class="hover:text-red-800">Nuestros Servicios</a>
             </nav>
@@ -100,15 +137,15 @@
         <!-- Carrusel de fondo RESPONSIVO para PC y móviles (sin necesidad de imágenes duplicadas) -->
         <div class="absolute inset-0 z-0">
             <!-- Imagen 1 -->
-            <img src="img/headerimage/costado.jpeg" alt="Costado"
+            <img src="img/colegioimg/headerimage/costado.jpeg" alt="Costado"
                 class="carousel-image absolute inset-0 w-full h-full object-cover opacity-100" />
 
             <!-- Imagen 2 -->
-            <img src="img/headerimage/entrada.jpeg" alt="Entrada"
+            <img src="img/colegioimg/headerimage/entrada.jpeg" alt="Entrada"
                 class="carousel-image absolute inset-0 w-full h-full object-cover opacity-0" />
 
             <!-- Imagen 3 -->
-            <img src="img/headerimage/adentro.jpeg" alt="Adentro"
+            <img src="img/colegioimg/headerimage/adentro.jpeg" alt="Adentro"
                 class="carousel-image absolute inset-0 w-full h-full object-cover opacity-0" />
         </div>
 
@@ -124,7 +161,10 @@
             <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto drop-shadow-md">
                 Honrando el legado y promoviendo los valores que nos definen
             </p>
-            
+            <a href="https://th-2007.github.io/pagina.github.io/subpaginas/servicios.html#servicios"
+                class="inline-block bg-[#C62828] hover:bg-red-700 text-white px-8 py-3 rounded-lg font-semibold transition duration-300 shadow-lg">
+                Nuestros Servicios
+            </a>
         </div>
 
         <!-- Botones de navegación -->
@@ -138,34 +178,53 @@
         </button>
 
     </section>
-    <section id="noticia">
-        <div class="container mx-auto px-4 py-12">
-            <h2 class="text-3xl font-bold text-center mb-8 text-[#0B1F3A]" data-aos="fade-up">Últimas Noticias</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Noticia 1 -->
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="100">
-                    <img src="../img/noticias/noticia1.jpg" alt="Noticia 1" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2">Inauguración de Nuevas Instalaciones</h3>
-                        <p class="text-gray-600 mb-4">El pasado mes, el colegio inauguró nuevas aulas y un moderno laboratorio de ciencias para mejorar la experiencia educativa de nuestros estudiantes.</p>
-                        <a href="#" class="text-blue-500 hover:underline">Leer más</a>
-                    </div>
-                </div>
-                <!-- Noticia 2 -->
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="200">
-                    <img src="../img/noticias/noticia2.jpg" alt="Noticia 2" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2">Premiación en Olimpiada de Matemáticas</h3>
-                        <p class="text-gray-600 mb-4">Felicitamos a nuestros estudiantes que participaron y ganaron premios en la reciente Olimpiada Nacional de Matemáticas, demostrando su talento y dedicación.</p>
-                        <a href="#" class="text-blue-500 hover:underline">Leer más</a>
-                    </div>
-                </div>
-                <!-- Noticia 3 -->
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="300">
-                    <img src="../img/noticias/noticia3.jpg" alt="Noticia 3" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2">Campaña de Re
+    <!-- Sección de Noticias -->
+    <section id="noticias" class="py-16 container mx-auto px-6 space-y-16">
+
+        <!-- Noticia 1 - Imagen a la derecha -->
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+            <div>
+                <h2 class="text-2xl font-bold mb-4">🎓 Graduación de los terceros años</h2>
+                <p class="text-lg mb-4">
+                    Una emotiva ceremonia celebró la culminación de una etapa académica importante. Felicitamos a todos
+                    los egresados por su esfuerzo y dedicación.
+                </p>
+                <a href="#" class="text-[#C62828] font-semibold hover:underline">Leer más...</a>
+            </div>
+            <img src="https://via.placeholder.com/500x300" alt="Graduación" class="rounded-2xl shadow-lg w-full h-auto">
+        </div>
+
+        <!-- Noticia 2 - Imagen a la izquierda -->
+        <div class="grid md:grid-cols-2 gap-8 items-center md:flex-row-reverse">
+            <img src="https://via.placeholder.com/500x300" alt="Exámenes finales"
+                class="rounded-2xl shadow-lg w-full h-auto">
+            <div>
+                <h2 class="text-2xl font-bold mb-4">🧠 Se acercan los exámenes finales</h2>
+                <p class="text-lg mb-4">
+                    Los estudiantes se preparan para los exámenes del cierre del año lectivo. Recordamos revisar el
+                    calendario escolar y cumplir con los cronogramas.
+                </p>
+                <a href="#" class="text-[#C62828] font-semibold hover:underline">Leer más...</a>
+            </div>
+        </div>
+
+        <!-- Noticia 3 - Imagen a la derecha -->
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+            <div>
+                <h2 class="text-2xl font-bold mb-4">🤸‍♀️ Exhibición de gimnasia escolar</h2>
+                <p class="text-lg mb-4">
+                    En el polideportivo del colegio se llevó a cabo una gran exhibición de gimnasia, donde los
+                    estudiantes
+                    demostraron sus habilidades, coordinación y trabajo en equipo ante toda la comunidad educativa.
+                </p>
+                <a href="#" class="text-[#C62828] font-semibold hover:underline">Leer más...</a>
+            </div>
+            <img src="https://via.placeholder.com/500x300" alt="Exhibición de gimnasia"
+                class="rounded-2xl shadow-lg w-full h-auto">
+        </div>
+
     </section>
+
 
 
     <!-- ================= FOOTER ================= -->
@@ -180,15 +239,19 @@
                 </h3>
                 <p class="mt-2">Un legado de excelencia educativa desde 1994.</p>
             </div>
-           <!-- Enlaces rápidos -->
+            <!-- Enlaces rápidos -->
             <div>
                 <h3 class="font-bold text-lg mb-2"><span class="inline-block border-b-2 border-red-600">Enlaces
                         Rápidos</span></h3>
                 <ul class="space-y-1">
-                    <li><a href="https://th-2007.github.io/pagina.github.io/index.html#inicio" class="hover:text-red-600 transition-colors">Inicio</a></li>
-                    <li><a href="https://th-2007.github.io/pagina.github.io/index.html#fundacion" class="hover:text-red-600 transition-colors">Fundación</a></li>
-                    <li><a href="https://th-2007.github.io/pagina.github.io/index.html#mision" class="hover:text-red-600 transition-colors">Misión</a></li>
-                    <li><a href="https://th-2007.github.io/pagina.github.io/galleria.html#galeria" class="hover:text-red-600 transition-colors">Galería</a></li>
+                    <li><a href="https://th-2007.github.io/pagina.github.io/index.html#inicio"
+                            class="hover:text-red-600 transition-colors">Inicio</a></li>
+                    <li><a href="https://th-2007.github.io/pagina.github.io/index.html#fundacion"
+                            class="hover:text-red-600 transition-colors">Fundación</a></li>
+                    <li><a href="https://th-2007.github.io/pagina.github.io/index.html#mision"
+                            class="hover:text-red-600 transition-colors">Misión</a></li>
+                    <li><a href="https://th-2007.github.io/pagina.github.io/galleria.html#galeria"
+                            class="hover:text-red-600 transition-colors">Galería</a></li>
                     <li><a href="https://www.youtube.com/watch?v=xvFZjo5PgG0&list=RDxvFZjo5PgG0&start_radio=1"
                             class="hover:text-red-600 transition-colors">No entres aqui</a></li>
                 </ul>
@@ -207,10 +270,14 @@
         <br>
         <hr class="border-t-2 border-red-600 my-4">
 
-       <div class="text-left md:text-left mt-6 text-sm text-gray-300">
+        <div class="text-left md:text-left mt-6 text-sm text-gray-300">
             &copy; 2025 José Rosario Pavón. Todos los derechos reservados.
         </div>
     </footer>
+
+
+
+
     <!-- Botón volver al inicio -->
     <a href="#"
         class="fixed bottom-4 right-4 z-[9999] bg-[#0B1F3A] text-white p-3 rounded-full shadow-lg hover:bg-[#12335c] transition duration-300"
@@ -220,13 +287,23 @@
 
     <!-- ================= SCRIPTS ================= -->
     <script>AOS.init();</script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="../js/animacion.js/animation.js" id="app-script"></script>
-    <script src="../js/iniciohistorio/desplazar.js"></script>
-    <script src="../js/generaljs/carrsel.js"></script>
-    <script src="../js/generaljs/headerletras.js"></script>
-    <script src="../js/generaljs/menucelular.js"></script>
-    <script src="../js/animacion/animation.js"></script>
+    <script src="js/animacion.js/animation.js" id="app-script"></script>
+    <script src="js/iniciohistorio/boton.js"></script>
+    <script src="js/iniciohistorio/desplazar.js"></script>
+    <script src="js/iniciohistorio/vermas.js"></script>
+    <script src="js/iniciohistorio/vermas2.js"></script>
+    <script src="js/generaljs/carrsel.js"></script>
+    <script src="js/generaljs/headerletras.js"></script>
+    <script src="js/animacion/animation.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/alertas/alerta.js"></script>
+    <script src="js/bnoticias.js"></script>
 
 
 
