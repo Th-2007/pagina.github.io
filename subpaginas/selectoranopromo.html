@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seleccionar Año - Galería Histórica</title>
+  <link rel="stylesheet" href="../css/selector.css">
+</head>
+<body>
+
+  <h1>Seleccionar Año</h1>
+  <p>Desliza la barra para elegir el año de la galería</p>
+
+  <!-- Contenedor centrado -->
+  <div class="center-container">
+    <div class="year-display" id="selectedYear">2017</div>
+
+    <div class="slider-container">
+      <input type="range" id="yearRange" min="2016" max="2024" value="2017" step="1">
+    </div>
+  </div>
+
+  <button id="goButton">OK</button>
+
+  <footer>© Galería Histórica - Colegio José del Rosario Pavón</footer>
+
+  <script>
+    const yearRange = document.getElementById("yearRange");
+    const selectedYear = document.getElementById("selectedYear");
+    const goButton = document.getElementById("goButton");
+
+    yearRange.addEventListener("input", () => {
+      selectedYear.textContent = yearRange.value;
+    });
+
+    goButton.addEventListener("click", () => {
+      const year = yearRange.value;
+      document.body.classList.add("fade-out");
+      setTimeout(() => {
+        window.location.href = `../subpaginas/promocion/promo${year}.html`;
+      }, 500);
+    });
+  </script>
+
+</body>
+</html>
