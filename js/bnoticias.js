@@ -1,10 +1,12 @@
  // Lista de noticias que rotarán
   const noticias = [
-    "Graduación de los terceros años",
+    "Graduación de los terceros",
     "Se acercan los exámenes finales",
-    "Inician las inscripciones 2025",
-    "Nueva biblioteca digital disponible",
-    "Concurso de ciencia y tecnología en marcha"
+    "Inician las inscripciones 2026",
+    "Cierre de Ñe'ery",
+    "Exibición de Gimnastica",
+    "Defensa del Poyecto de los Alumnos del Tercer Curso",
+    
   ];
 
   let indice = 0;
