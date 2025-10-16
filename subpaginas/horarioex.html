@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Horarios de Exámenes - Colegio José Del Rosario Pavón</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+<body class="bg-white font-sans relative">
+
+<!-- Header -->
+<header class="bg-[#0B1F3A] text-white py-6 shadow-lg">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+        <h1 class="text-3xl font-bold animate-pulse">📅 Horarios de Exámenes</h1>
+        <p class="mt-2 text-lg text-[#C62828]">Colegio José Del Rosario Pavón</p>
+    </div>
+</header>
+
+<!-- Filtros -->
+<section class="py-6 px-6 bg-white border-b border-gray-200">
+    <div class="max-w-5xl mx-auto text-center">
+        <h2 class="text-xl font-semibold mb-4 text-[#0B1F3A]">Filtrar por categoría</h2>
+        <div class="flex flex-wrap justify-center gap-3">
+            <button class="filter-btn bg-[#0B1F3A] text-white px-4 py-2 rounded hover:bg-[#0B3A5A] transition" data-category="all">Todos</button>
+            <button class="filter-btn bg-[#0B1F3A] text-white px-4 py-2 rounded hover:bg-[#0B3A5A] transition" data-category="Matemática">Matemática</button>
+            <button class="filter-btn bg-[#0B1F3A] text-white px-4 py-2 rounded hover:bg-[#0B3A5A] transition" data-category="Ciencias">Ciencias</button>
+            <button class="filter-btn bg-[#0B1F3A] text-white px-4 py-2 rounded hover:bg-[#0B3A5A] transition" data-category="Economía">Economía</button>
+            <button class="filter-btn bg-[#0B1F3A] text-white px-4 py-2 rounded hover:bg-[#0B3A5A] transition" data-category="Psicología">Psicología</button>
+        </div>
+    </div>
+</section>
+
+<!-- Sección de horarios -->
+<main class="py-12 px-6">
+    <div class="max-w-6xl mx-auto">
+        <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 transition-all duration-500">
+            
+            <!-- Tarjeta de examen -->
+            <div class="exam-card bg-white border border-gray-200 rounded-2xl shadow-md p-6 transform hover:scale-105 hover:-translate-y-2 hover:shadow-xl transition-all duration-500" data-category="Ciencias" data-aos="fade-up">
+                <h3 class="text-xl font-bold mb-2 text-[#0B1F3A] hover:text-[#C62828] hover:animate-bounce">27/10</h3>
+                <p class="text-gray-700 font-semibold">Laboratorio</p>
+            </div>
+
+            <div class="exam-card bg-white border border-gray-200 rounded-2xl shadow-md p-6 transform hover:scale-105 hover:-translate-y-2 hover:shadow-xl transition-all duration-500" data-category="Lengua" data-aos="fade-up" data-aos-delay="50">
+                <h3 class="text-xl font-bold mb-2 text-[#0B1F3A] hover:text-[#C62828] hover:animate-bounce">28/10</h3>
+                <p class="text-gray-700 font-semibold">Castellano</p>
+            </div>
+
+            <div class="exam-card bg-white border border-gray-200 rounded-2xl shadow-md p-6 transform hover:scale-105 hover:-translate-y-2 hover:shadow-xl transition-all duration-500" data-category="Psicología" data-aos="fade-up" data-aos-delay="100">
+                <h3 class="text-xl font-bold mb-2 text-[#0B1F3A] hover:text-[#C62828] hover:animate-bounce">30/10</h3>
+                <p class="text-gray-700 font-semibold">Psicología 1</p>
+            </div>
+
+            <div class="exam-card bg-white border border-gray-200 rounded-2xl shadow-md p-6 transform hover:scale-105 hover:-translate-y-2 hover:shadow-xl transition-all duration-500" data-category="Matemática" data-aos="fade-up" data-aos-delay="150">
+                <h3 class="text-xl font-bold mb-2 text-[#0B1F3A] hover:text-[#C62828] hover:animate-bounce">31/10</h3>
+                <p class="text-gray-700 font-semibold">Matemática Aplicada</p>
+            </div>
+
+            <!-- Agregar más exámenes aquí -->
+        </div>
+    </div>
+</main>
+
+<!-- Botón volver arriba -->
+<button id="scrollTopBtn" class="fixed bottom-6 right-6 bg-[#0B1F3A] text-white p-3 rounded-full shadow-lg hover:bg-[#0B3A5A] transition hidden">
+    ↑
+</button>
+
+<!-- Footer -->
+<footer class="bg-[#0B1F3A] text-white py-6 mt-12">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+        <p>&copy; 2025 Colegio José Del Rosario Pavón. Todos los derechos reservados.</p>
+    </div>
+</footer>
+
+<script>
+    // Inicializar AOS
+    AOS.init({duration:800, easing:'ease-in-out', once:true});
+
+    // Filtro interactivo
+    const buttons = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('.exam-card');
+
+    buttons.forEach(button => {
+        button.addEventListener('click', () => {
+            const category = button.getAttribute('data-category');
+            cards.forEach(card => {
+                if(category === 'all' || card.getAttribute('data-category') === category){
+                    card.classList.remove('hidden');
+                    card.classList.add('block');
+                } else {
+                    card.classList.add('hidden');
+                    card.classList.remove('block');
+                }
+            });
+        });
+    });
+
+    // Botón volver arriba
+    const scrollBtn = document.getElementById('scrollTopBtn');
+    window.addEventListener('scroll', () => {
+        if(window.scrollY > 300) scrollBtn.classList.remove('hidden');
+        else scrollBtn.classList.add('hidden');
+    });
+
+    scrollBtn.addEventListener('click', () => {
+        window.scrollTo({top:0, behavior:'smooth'});
+    });
+</script>
+
+</body>
+</html>
