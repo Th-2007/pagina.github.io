@@ -178,95 +178,121 @@
         </button>
 
     </section>
-
-
-    <!-- Directorio Section -->
+    <!-- ================= PLANTEL DOCENTE ================= -->
     <section id="directorio" class="py-20 bg-white">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-[#0B1F3A]">Directorio</h2>
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-[#0B1F3A]">Plantel Docente</h2>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-white rounded-lg p-6 shadow-md" data-aos="fade-up">
-                    <div class="text-center mb-4">
-                        <img src="img/profesores/02cbf420-dfd6-4bb0-bc88-852030d6135c.jpg"
-                            alt="Director General" class="rounded-full w-32 h-32 object-cover mx-auto mb-4">
-                        <h4 class="text-xl font-bold text-[#0B1F3A]">Dic. Norma Bogado</h4>
-                        <p class="text-[#C62828] font-semibold">Director Del Colegio</p>
-                    </div>
-                    <div class="text-gray-600 text-center">
-                        <p class="mb-4">Líder de nuestro Colegio</p>
-                        <p><i class="fas fa-envelope mr-2"></i> director@joserosario.org</p>
-                    </div>
+            <!-- Secciones como "cards" clicables -->
+            <div class="flex justify-center gap-8 mb-12">
+                <div class="cursor-pointer text-center" data-tab="directivos">
+                    <img src="img/directivos/director.jpg" alt="Directivos"
+                        class="rounded-full w-32 h-32 mx-auto hover:ring-4 hover:ring-[#C62828] transition">
+                    <h4 class="mt-4 text-xl font-bold text-[#0B1F3A]">Directivos</h4>
                 </div>
-
-                <div class="bg-white rounded-lg p-6 shadow-md" data-aos="fade-up" data-aos-delay="100">
-                    <div class="text-center mb-4">
-                        <img src="img/profesores/sussam.png"
-                            alt="Directora Académica" class="rounded-full w-32 h-32 object-cover mx-auto mb-4">
-                        <h4 class="text-xl font-bold text-[#0B1F3A]">Sussana</h4>
-                        <p class="text-[#C62828] font-semibold">Coordinadora Académica</p>
-                    </div>
-                    <div class="text-gray-600 text-center">
-                        <p class="mb-4">Coordinadora</p>
-                        <p><i class="fas fa-envelope mr-2"></i> Coor@joserosario.org</p>
-                    </div>
+                <div class="cursor-pointer text-center" data-tab="coordinadores">
+                    <img src="img/coordinadores/coordinador.jpg" alt="Coordinadores"
+                        class="rounded-full w-32 h-32 mx-auto hover:ring-4 hover:ring-[#C62828] transition">
+                    <h4 class="mt-4 text-xl font-bold text-[#0B1F3A]">Coordinadores</h4>
                 </div>
-
-                <div class="bg-white rounded-lg p-6 shadow-md" data-aos="fade-up" data-aos-delay="200">
-                    <div class="text-center mb-4">
-                        <img src="../img/profesores/liz.jpeg"
-                            alt="Director de Comunicación" class="rounded-full w-32 h-32 object-cover mx-auto mb-4">
-                        <h4 class="text-xl font-bold text-[#0B1F3A]">Lic. Liz Carmen</h4>
-                        <p class="text-[#C62828] font-semibold">Profesora de Informatica</p>
-                    </div>
-                    <div class="text-gray-600 text-center">
-                        <p class="mb-4">Magister e Analista en Sistemas</p>
-                        <p><i class="fas fa-envelope mr-2"></i> prensa@joserosario.org</p>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-lg p-6 shadow-md" data-aos="fade-up" data-aos-delay="300">
-                    <div class="text-center mb-4">
-                        <img src="/img/profesores/f1a70a92-74b7-46db-8d96-c5f60232e0a3.jpg"
-                            alt="Directora de Proyectos" class="rounded-full w-32 h-32 object-cover mx-auto mb-4">
-                        <h4 class="text-xl font-bold text-[#0B1F3A]">Celso Rodriguez</h4>
-                        <p class="text-[#C62828] font-semibold">Ing. Informatica</p>
-                    </div>
-                    <div class="text-gray-600 text-center">
-                        <p class="mb-4">Profesor en Informatica</p>
-                        <p><i class="fas fa-envelope mr-2"></i> proyectos@joserosario.org</p>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-lg p-6 shadow-md" data-aos="fade-up" data-aos-delay="400">
-                    <div class="text-center mb-4">
-                        <img src="img/profesores/Captura de pantalla 2025-10-15 064915.png"
-                            alt="Director Financiero" class="rounded-full w-32 h-32 object-cover mx-auto mb-4">
-                        <h4 class="text-xl font-bold text-[#0B1F3A]">Natalia</h4>
-                        <p class="text-[#C62828] font-semibold">Profesora de Informatica</p>
-                    </div>
-                    <div class="text-gray-600 text-center">
-                        <p class="mb-4">lic. Informatica</p>
-                        <p><i class="fas fa-envelope mr-2"></i> info@joserosario.org</p>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-lg p-6 shadow-md" data-aos="fade-up" data-aos-delay="500">
-                    <div class="text-center mb-4">
-                        <img src="img/profesores/pro.li.png"
-                            alt="Directora de Innovación" class="rounded-full w-32 h-32 object-cover mx-auto m-4">
-                        <h4 class="text-xl font-bold text-[#0B1F3A]">Librada</h4>
-                        <p class="text-[#C62828] font-semibold">Profesora del Proyecto</p>
-                    </div>
-                    <div class="text-gray-600 text-center">
-                        <p class="mb-4">Encargada de guiar y Supervisar el Desarrollo del Aprendizaje</p>
-                        <p><i class="fas fa-envelope mr-2"></i> proyecto@joserosario.org</p>
-                    </div>
+                <div class="cursor-pointer text-center" data-tab="docentes">
+                    <img src="img/docentes/profesor.jpg" alt="Docentes"
+                        class="rounded-full w-32 h-32 mx-auto hover:ring-4 hover:ring-[#C62828] transition">
+                    <h4 class="mt-4 text-xl font-bold text-[#0B1F3A]">Docentes</h4>
                 </div>
             </div>
 
+            <!-- Contenido dinámico -->
+            <div id="tabContent">
+                <!-- Directivos -->
+                <div class="tab-item" data-content="directivos">
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div class="bg-white rounded-lg p-6 shadow-md" data-aos="fade-up">
+                            <div class="text-center mb-4">
+                                <img src="img/profesores/02cbf420-dfd6-4bb0-bc88-852030d6135c.jpg"
+                                    alt="Director General" class="rounded-full w-32 h-32 object-cover mx-auto mb-4">
+                                <h4 class="text-xl font-bold text-[#0B1F3A]">Dic. Norma Bogado</h4>
+                                <p class="text-[#C62828] font-semibold">Directora del Colegio</p>
+                            </div>
+                            <div class="text-gray-600 text-center">
+                                <p>Líder de nuestro Colegio</p>
+                                <p><i class="fas fa-envelope mr-2"></i> director@joserosario.org</p>
+                            </div>
+                        </div>
+
+                        <!-- Agregá más directivos aquí -->
+                    </div>
+                </div>
+
+                <!-- Coordinadores -->
+                <div class="tab-item hidden" data-content="coordinadores">
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div class="bg-white rounded-lg p-6 shadow-md" data-aos="fade-up">
+                            <div class="text-center mb-4">
+                                <img src="img/coordinadores/coordinador1.jpg" alt="Coordinador"
+                                    class="rounded-full w-32 h-32 object-cover mx-auto mb-4">
+                                <h4 class="text-xl font-bold text-[#0B1F3A]">Juan Pérez</h4>
+                                <p class="text-[#C62828] font-semibold">Coordinador Académico</p>
+                            </div>
+                            <div class="text-gray-600 text-center">
+                                <p>Coordina el área académica</p>
+                                <p><i class="fas fa-envelope mr-2"></i> coordinacion@joserosario.org</p>
+                            </div>
+                        </div>
+
+                        <!-- Agregá más coordinadores aquí -->
+                    </div>
+                </div>
+
+                <!-- Docentes -->
+                <div class="tab-item hidden" data-content="docentes">
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div class="bg-white rounded-lg p-6 shadow-md" data-aos="fade-up">
+                            <div class="text-center mb-4">
+                                <img src="img/docentes/profesor1.jpg" alt="Docente"
+                                    class="rounded-full w-32 h-32 object-cover mx-auto mb-4">
+                                <h4 class="text-xl font-bold text-[#0B1F3A]">María González</h4>
+                                <p class="text-[#C62828] font-semibold">Profesora de Matemática</p>
+                            </div>
+                            <div class="text-gray-600 text-center">
+                                <p>Responsable de Matemática</p>
+                                <p><i class="fas fa-envelope mr-2"></i> mgonzalez@joserosario.org</p>
+                            </div>
+                        </div>
+
+                        <!-- Agregá más docentes aquí -->
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
+
+    <script>
+        const tabs = document.querySelectorAll('[data-tab]');
+        const tabContents = document.querySelectorAll('.tab-item');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const target = tab.getAttribute('data-tab');
+
+                tabContents.forEach(content => {
+                    if (content.getAttribute('data-content') === target) {
+                        content.classList.remove('hidden');
+                        content.classList.add('block');
+                    } else {
+                        content.classList.add('hidden');
+                        content.classList.remove('block');
+                    }
+                });
+            });
+        });
+    </script>
+
+
+
+
+
+
 
 
 
