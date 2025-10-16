@@ -1,114 +1,350 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Horarios de Exámenes - Colegio José Del Rosario Pavón</title>
-<script src="https://cdn.tailwindcss.com"></script>
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colegio Nacional José Del Rosario Pavón</title>
+
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
+    <!-- Estilos propios -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="bg-white font-sans relative">
 
-<!-- Header -->
-<header class="bg-[#0B1F3A] text-white py-6 shadow-lg">
-    <div class="max-w-6xl mx-auto px-6 text-center">
-        <h1 class="text-3xl font-bold animate-pulse">📅 Horarios de Exámenes</h1>
-        <p class="mt-2 text-lg text-[#C62828]">Colegio José Del Rosario Pavón</p>
-    </div>
-</header>
+<body class="bg-white text-gray-800">
 
-<!-- Filtros -->
-<section class="py-6 px-6 bg-white border-b border-gray-200">
-    <div class="max-w-5xl mx-auto text-center">
-        <h2 class="text-xl font-semibold mb-4 text-[#0B1F3A]">Filtrar por categoría</h2>
-        <div class="flex flex-wrap justify-center gap-3">
-            <button class="filter-btn bg-[#0B1F3A] text-white px-4 py-2 rounded hover:bg-[#0B3A5A] transition" data-category="all">Todos</button>
-            <button class="filter-btn bg-[#0B1F3A] text-white px-4 py-2 rounded hover:bg-[#0B3A5A] transition" data-category="Matemática">Matemática</button>
-            <button class="filter-btn bg-[#0B1F3A] text-white px-4 py-2 rounded hover:bg-[#0B3A5A] transition" data-category="Ciencias">Ciencias</button>
-            <button class="filter-btn bg-[#0B1F3A] text-white px-4 py-2 rounded hover:bg-[#0B3A5A] transition" data-category="Economía">Economía</button>
-            <button class="filter-btn bg-[#0B1F3A] text-white px-4 py-2 rounded hover:bg-[#0B3A5A] transition" data-category="Psicología">Psicología</button>
+
+    <!-- Alerta de bienvenida -->
+    <div id="welcomeAlert" class="fixed inset-0 flex z-[10000] bg-black/40 
+    items-start justify-start p-4 mt-8
+    md:items-center md:justify-center md:mt-0">
+
+        <div class="bg-white text-center rounded-lg p-6 shadow-lg flex items-center space-x-4 max-w-md">
+            <span class="text-3xl">😘</span>
+            <div>
+                <p class="font-bold text-lg">Bienvenidos al sitio web! :3</p>
+                <p class="text-sm text-gray-600">Esperamos que disfrutes tu visita. :></p>
+            </div>
         </div>
     </div>
-</section>
-
-<!-- Sección de horarios -->
-<main class="py-12 px-6">
-    <div class="max-w-6xl mx-auto">
-        <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 transition-all duration-500">
-            
-            <!-- Tarjeta de examen -->
-            <div class="exam-card bg-white border border-gray-200 rounded-2xl shadow-md p-6 transform hover:scale-105 hover:-translate-y-2 hover:shadow-xl transition-all duration-500" data-category="Ciencias" data-aos="fade-up">
-                <h3 class="text-xl font-bold mb-2 text-[#0B1F3A] hover:text-[#C62828] hover:animate-bounce">27/10</h3>
-                <p class="text-gray-700 font-semibold">Laboratorio</p>
-            </div>
-
-            <div class="exam-card bg-white border border-gray-200 rounded-2xl shadow-md p-6 transform hover:scale-105 hover:-translate-y-2 hover:shadow-xl transition-all duration-500" data-category="Lengua" data-aos="fade-up" data-aos-delay="50">
-                <h3 class="text-xl font-bold mb-2 text-[#0B1F3A] hover:text-[#C62828] hover:animate-bounce">28/10</h3>
-                <p class="text-gray-700 font-semibold">Castellano</p>
-            </div>
-
-            <div class="exam-card bg-white border border-gray-200 rounded-2xl shadow-md p-6 transform hover:scale-105 hover:-translate-y-2 hover:shadow-xl transition-all duration-500" data-category="Psicología" data-aos="fade-up" data-aos-delay="100">
-                <h3 class="text-xl font-bold mb-2 text-[#0B1F3A] hover:text-[#C62828] hover:animate-bounce">30/10</h3>
-                <p class="text-gray-700 font-semibold">Psicología 1</p>
-            </div>
-
-            <div class="exam-card bg-white border border-gray-200 rounded-2xl shadow-md p-6 transform hover:scale-105 hover:-translate-y-2 hover:shadow-xl transition-all duration-500" data-category="Matemática" data-aos="fade-up" data-aos-delay="150">
-                <h3 class="text-xl font-bold mb-2 text-[#0B1F3A] hover:text-[#C62828] hover:animate-bounce">31/10</h3>
-                <p class="text-gray-700 font-semibold">Matemática Aplicada</p>
-            </div>
-
-            <!-- Agregar más exámenes aquí -->
+    <!-- Banner de Noticias Dinámico -->
+    <section id="noticias" class="bg-[#0B1F3A] text-white py-4 px-4 text-center shadow-md">
+        <div class="container mx-auto">
+            <p class="text-lg font-semibold">
+                📰 <span class="text-yellow-400">Últimas Noticias:</span>
+                <span id="mensaje-noticia" class="transition duration-500">Graduación de los terceros años</span>
+                <a href="https://th-2007.github.io/pagina.github.io/subpaginas/noticias.html#noticias"
+                    class="text-yellow-400 hover:text-yellow-300 transition duration-300 font-semibold">
+                    Haz clic aquí para saber más
+                </a>
+            </p>
         </div>
-    </div>
-</main>
+    </section>
 
-<!-- Botón volver arriba -->
-<button id="scrollTopBtn" class="fixed bottom-6 right-6 bg-[#0B1F3A] text-white p-3 rounded-full shadow-lg hover:bg-[#0B3A5A] transition hidden">
-    ↑
-</button>
 
-<!-- Footer -->
-<footer class="bg-[#0B1F3A] text-white py-6 mt-12">
-    <div class="max-w-6xl mx-auto px-6 text-center">
-        <p>&copy; 2025 Colegio José Del Rosario Pavón. Todos los derechos reservados.</p>
-    </div>
-</footer>
 
-<script>
-    // Inicializar AOS
-    AOS.init({duration:800, easing:'ease-in-out', once:true});
 
-    // Filtro interactivo
-    const buttons = document.querySelectorAll('.filter-btn');
-    const cards = document.querySelectorAll('.exam-card');
+    <!-- ================= HEADER ================= -->
+    <header class="bg-white shadow-md z-10">
+        <div class="container mx-auto px-4 py-2 flex justify-between items-center">
 
-    buttons.forEach(button => {
-        button.addEventListener('click', () => {
-            const category = button.getAttribute('data-category');
-            cards.forEach(card => {
-                if(category === 'all' || card.getAttribute('data-category') === category){
-                    card.classList.remove('hidden');
-                    card.classList.add('block');
-                } else {
-                    card.classList.add('hidden');
-                    card.classList.remove('block');
-                }
-            });
-        });
-    });
+            <!-- Logo -->
+            <a href="http://127.0.0.1:5500/index.html#" class="flex items-center space-x-2">
+                <img src="img/logodelcolegio.png" alt="Logo Colegio" class="h-12">
+                <div class="leading-tight">
+                    <span class="block text-lg font-bold">Colegio Nacional</span>
+                    <span class="block text-lg font-bold">José Del Rosario Pavón</span>
+                </div>
+            </a>
 
-    // Botón volver arriba
-    const scrollBtn = document.getElementById('scrollTopBtn');
-    window.addEventListener('scroll', () => {
-        if(window.scrollY > 300) scrollBtn.classList.remove('hidden');
-        else scrollBtn.classList.add('hidden');
-    });
+            <!-- Texto rotativo -->
+            <div class="hidden md:flex flex-col items-center justify-center flex-1 px-4">
+                <h2 class="text-xl font-semibold text-[#0B1F3A] mb-2">Somos</h2>
+                <div class="relative min-h-[2rem] max-w-md mx-auto px-2">
+                    <span id="rotating-text"
+                        class="block text-[#0B1F3A] text-lg font-medium transition-opacity duration-1000"></span>
+                </div>
+            </div>
 
-    scrollBtn.addEventListener('click', () => {
-        window.scrollTo({top:0, behavior:'smooth'});
-    });
-</script>
 
-</body>
+
+
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex space-x-6 text-sm">
+                <a href="http://127.0.0.1:5500/index.html#mision" class="nav-link">Fundación y Orígenes</a>
+                <a href="http://127.0.0.1:5500/index.html#mision" class="nav-link">Misión y Valores</a>
+                <a href="http://127.0.0.1:5500/galleria.html#galeria" class="nav-link">Galería Histórica</a>
+                <a href="http://127.0.0.1:5500/lineadetiempo.html#timeline" class="nav-link">Línea de
+                    Tiempo</a>
+                <a href="http://127.0.0.1:5500/directorio.html#directorio" class="nav-link">Plantel
+                    Docente</a>
+
+            </nav>
+
+            <!-- Botón menú móvil fijo en la esquina superior derecha -->
+            <button id="openMenu" class="fixed top-4 right-4 z-[10000] bg-[#0B1F3A] p-2 rounded md:hidden"
+                aria-label="Abrir menú">
+                <i class="fas fa-bars text-white text-xl"></i>
+            </button>
+
+
+            <!-- Fondo oscuro SOLO en celular -->
+            <div id="backdrop" class="fixed inset-0 hidden z-[9999] bg-black/60 md:hidden"></div>
+
+
+            <!-- Menú lateral SOLO en celular -->
+            <nav id="drawer"
+                class="fixed right-0 top-0 h-screen w-64 z-[9999] translate-x-full transition-transform duration-300 bg-slate-900 text-white flex flex-col p-6 space-y-4 md:hidden">
+                <a href="https://th-2007.github.io/pagina.github.io/index.html#fundacion1"
+                    class="hover:text-red-800">Fundación y Orígenes</a>
+                <a href="https://th-2007.github.io/pagina.github.io/index.html#mision" class="hover:text-red-800">Misión
+                    y Valores</a>
+                <a href="https://th-2007.github.io/pagina.github.io/subpaginas/galleria.html#galeria"
+                    class="hover:text-red-800">Galería Histórica</a>
+                <a href="https://th-2007.github.io/pagina.github.io/subpaginas/lineadetiempo.html#timeline"
+                    class="hover:text-red-800">Línea de Tiempo</a>
+                <a href="https://th-2007.github.io/pagina.github.io/subpaginas/directorio.html#directorio"
+                    class="hover:text-red-800">Plantel Docente</a>
+                <a href="https://th-2007.github.io/pagina.github.io/subpaginas/servicios.html#servicios"
+                    class="hover:text-red-800">Nuestros Servicios</a>
+            </nav>
+
+
+        </div>
+        </div>
+    </header>
+    <!-- ================= HERO ================= -->
+    <section id="inicio" class="relative h-screen flex items-center justify-center text-center overflow-hidden">
+
+        <!-- Carrusel de fondo RESPONSIVO para PC y móviles (sin necesidad de imágenes duplicadas) -->
+        <div class="absolute inset-0 z-0">
+            <!-- Imagen 1 -->
+            <img src="img/colegioimg/headerimage/costado.jpeg" alt="Costado"
+                class="carousel-image absolute inset-0 w-full h-full object-cover opacity-100" />
+
+            <!-- Imagen 2 -->
+            <img src="img/colegioimg/headerimage/entrada.jpeg" alt="Entrada"
+                class="carousel-image absolute inset-0 w-full h-full object-cover opacity-0" />
+
+            <!-- Imagen 3 -->
+            <img src="img/colegioimg/headerimage/adentro.jpeg" alt="Adentro"
+                class="carousel-image absolute inset-0 w-full h-full object-cover opacity-0" />
+        </div>
+
+
+        <!-- Overlay oscuro -->
+        <div class="absolute inset-0 bg-black bg-opacity-50 z-10"></div>
+
+        <!-- Contenido principal -->
+        <div class="relative z-20 px-4 text-white" data-aos="fade-up">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4 drop-shadow-lg">
+                Colegio Nacional<br>José Del Rosario Pavón
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto drop-shadow-md">
+                Honrando el legado y promoviendo los valores que nos definen
+            </p>
+            <a href="https://th-2007.github.io/pagina.github.io/subpaginas/servicios.html#servicios"
+                class="inline-block bg-[#C62828] hover:bg-red-700 text-white px-8 py-3 rounded-lg font-semibold transition duration-300 shadow-lg">
+                Nuestros Servicios
+            </a>
+        </div>
+
+        <!-- Botones de navegación -->
+        <button id="prevBtn"
+            class="absolute top-1/2 left-4 transform -translate-y-1/2 z-30 bg-black bg-opacity-40 text-white p-3 rounded-full hover:bg-opacity-70 transition">
+            ‹
+        </button>
+        <button id="nextBtn"
+            class="absolute top-1/2 right-4 transform -translate-y-1/2 z-30 bg-black bg-opacity-40 text-white p-3 rounded-full hover:bg-opacity-70 transition">
+            ›
+        </button>
+
+    </section>
+
+    <body class="bg-white font-sans relative">
+
+        <!-- Header -->
+        <header class="bg-[#0B1F3A] text-white py-6 shadow-lg">
+            <div class="max-w-6xl mx-auto px-6 text-center">
+                <h1 class="text-3xl font-bold animate-pulse">📅 Horarios de Exámenes</h1>
+                <p class="mt-2 text-lg text-[#C62828]">Colegio José Del Rosario Pavón</p>
+            </div>
+        </header>
+
+        <!-- Filtros -->
+        <section class="py-6 px-6 bg-white border-b border-gray-200">
+            <div class="max-w-5xl mx-auto text-center">
+                <h2 class="text-xl font-semibold mb-4 text-[#0B1F3A]">Filtrar por categoría</h2>
+                <div class="flex flex-wrap justify-center gap-3">
+                    <button class="filter-btn bg-[#0B1F3A] text-white px-4 py-2 rounded hover:bg-[#0B3A5A] transition"
+                        data-category="all">Todos</button>
+                    <button class="filter-btn bg-[#0B1F3A] text-white px-4 py-2 rounded hover:bg-[#0B3A5A] transition"
+                        data-category="Matemática">Matemática</button>
+                    <button class="filter-btn bg-[#0B1F3A] text-white px-4 py-2 rounded hover:bg-[#0B3A5A] transition"
+                        data-category="Ciencias">Ciencias</button>
+                    <button class="filter-btn bg-[#0B1F3A] text-white px-4 py-2 rounded hover:bg-[#0B3A5A] transition"
+                        data-category="Economía">Economía</button>
+                    <button class="filter-btn bg-[#0B1F3A] text-white px-4 py-2 rounded hover:bg-[#0B3A5A] transition"
+                        data-category="Psicología">Psicología</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de horarios -->
+        <main class="py-12 px-6">
+            <div class="max-w-6xl mx-auto">
+                <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 transition-all duration-500">
+
+                    <!-- Tarjeta de examen -->
+                    <div class="exam-card bg-white border border-gray-200 rounded-2xl shadow-md p-6 transform hover:scale-105 hover:-translate-y-2 hover:shadow-xl transition-all duration-500"
+                        data-category="Ciencias" data-aos="fade-up">
+                        <h3 class="text-xl font-bold mb-2 text-[#0B1F3A] hover:text-[#C62828] hover:animate-bounce">
+                            27/10</h3>
+                        <p class="text-gray-700 font-semibold">Laboratorio</p>
+                    </div>
+
+                    <div class="exam-card bg-white border border-gray-200 rounded-2xl shadow-md p-6 transform hover:scale-105 hover:-translate-y-2 hover:shadow-xl transition-all duration-500"
+                        data-category="Lengua" data-aos="fade-up" data-aos-delay="50">
+                        <h3 class="text-xl font-bold mb-2 text-[#0B1F3A] hover:text-[#C62828] hover:animate-bounce">
+                            28/10</h3>
+                        <p class="text-gray-700 font-semibold">Castellano</p>
+                    </div>
+
+                    <div class="exam-card bg-white border border-gray-200 rounded-2xl shadow-md p-6 transform hover:scale-105 hover:-translate-y-2 hover:shadow-xl transition-all duration-500"
+                        data-category="Psicología" data-aos="fade-up" data-aos-delay="100">
+                        <h3 class="text-xl font-bold mb-2 text-[#0B1F3A] hover:text-[#C62828] hover:animate-bounce">
+                            30/10</h3>
+                        <p class="text-gray-700 font-semibold">Psicología 1</p>
+                    </div>
+
+                    <div class="exam-card bg-white border border-gray-200 rounded-2xl shadow-md p-6 transform hover:scale-105 hover:-translate-y-2 hover:shadow-xl transition-all duration-500"
+                        data-category="Matemática" data-aos="fade-up" data-aos-delay="150">
+                        <h3 class="text-xl font-bold mb-2 text-[#0B1F3A] hover:text-[#C62828] hover:animate-bounce">
+                            31/10</h3>
+                        <p class="text-gray-700 font-semibold">Matemática Aplicada</p>
+                    </div>
+
+                    <!-- Agregar más exámenes aquí -->
+                </div>
+            </div>
+        </main>
+
+        <!-- Botón volver arriba -->
+        <button id="scrollTopBtn"
+            class="fixed bottom-6 right-6 bg-[#0B1F3A] text-white p-3 rounded-full shadow-lg hover:bg-[#0B3A5A] transition hidden">
+            ↑
+        </button>
+
+        <!-- Footer -->
+        <footer class="bg-[#0B1F3A] text-white py-6 mt-12">
+            <div class="max-w-6xl mx-auto px-6 text-center">
+                <p>&copy; 2025 Colegio José Del Rosario Pavón. Todos los derechos reservados.</p>
+            </div>
+        </footer>
+
+        
+          <!-- ================= FOOTER ================= -->
+    <footer class="bg-slate-900 text-white py-10">
+        <div class="container mx-auto px-4 grid md:grid-cols-3 gap-8 text-left md:text-left">
+
+            <!-- Colegio -->
+            <div class="mb-4 text-white">
+                <h3 class="font-bold text-lg">
+                    Colegio Nacional<br>
+                    <span class="inline-block border-b-2 border-red-600">José Del Rosario Pavón</span>
+                </h3>
+                <p class="mt-2">Un legado de excelencia educativa desde 1994.</p>
+            </div>
+            <!-- Enlaces rápidos -->
+            <div>
+                <h3 class="font-bold text-lg mb-2"><span class="inline-block border-b-2 border-red-600">Enlaces
+                        Rápidos</span></h3>
+                <ul class="space-y-1">
+                    <li><a href="https://th-2007.github.io/pagina.github.io/index.html#inicio"
+                            class="hover:text-red-600 transition-colors">Inicio</a></li>
+                    <li><a href="https://th-2007.github.io/pagina.github.io/index.html#fundacion"
+                            class="hover:text-red-600 transition-colors">Fundación</a></li>
+                    <li><a href="https://th-2007.github.io/pagina.github.io/index.html#mision"
+                            class="hover:text-red-600 transition-colors">Misión</a></li>
+                    <li><a href="https://th-2007.github.io/pagina.github.io/galleria.html#galeria"
+                            class="hover:text-red-600 transition-colors">Galería</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=xvFZjo5PgG0&list=RDxvFZjo5PgG0&start_radio=1"
+                            class="hover:text-red-600 transition-colors">No entres aqui</a></li>
+                </ul>
+            </div>
+
+            <!-- Contacto -->
+            <div>
+                <h3 class="font-bold text-lg mb-2"><span class="inline-block border-b-2 border-red-600">Contacto</span>
+                </h3>
+                <p><i class="fas fa-map-marker-alt"></i> RUTA LUQUE - LIMPIO, LIMPIO</p>
+                <p><i class="fas fa-phone"></i> (123) 456-7890</p>
+                <p><i class="fas fa-envelope"></i> info@jrpavon.org</p>
+            </div>
+
+        </div>
+        <br>
+        <hr class="border-t-2 border-red-600 my-4">
+
+        <div class="text-left md:text-left mt-6 text-sm text-gray-300">
+            &copy; 2025 José Rosario Pavón. Todos los derechos reservados.
+        </div>
+    </footer>
+
+
+
+
+    <!-- Botón volver al inicio -->
+    <a href="#"
+        class="fixed bottom-4 right-4 z-[9999] bg-[#0B1F3A] text-white p-3 rounded-full shadow-lg hover:bg-[#12335c] transition duration-300"
+        aria-label="Volver al inicio">
+        <i class="fas fa-arrow-up text-xl"></i>
+    </a>
+
+    <!-- ================= SCRIPTS ================= -->
+    <script>AOS.init();</script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../js/animacion.js/animation.js" id="app-script"></script>
+    <script src="../js/iniciohistorio/boton.js"></script>
+    <script src="js/iniciohistorio/desplazar.js"></script>
+    <script src="js/iniciohistorio/vermas.js"></script>
+    <script src="../js/iniciohistorio/horario.js"></script>
+    <script src="../js/generaljs/carrsel.js"></script>
+    <script src="js/generaljs/headerletras.js"></script>
+    <script src="../js/animacion/animation.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="../js/alertas/alerta.js"></script>
+    <script src="js/bnoticias.js"></script>
+
+
+    </body>
+
 </html>
