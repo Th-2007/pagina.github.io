@@ -5,6 +5,60 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Seleccionar Año - Galería Histórica</title>
   <link rel="stylesheet" href="../css/selector.css">
+  <style>
+    /* Estilo simple para mensaje de error */
+    #errorMessage {
+      color: red;
+      font-weight: bold;
+      margin-top: 15px;
+      display: none;
+      text-align: center;
+    }
+
+    /* Fade out para la transición */
+    .fade-out {
+      opacity: 0;
+      transition: opacity 0.5s;
+    }
+
+    /* Botón "Volver al inicio" en esquina inferior derecha */
+    #backButton {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #0B1F3A;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      cursor: pointer;
+      font-size: 16px;
+      border-radius: 5px;
+      z-index: 1000;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      transition: background-color 0.3s;
+    }
+
+    #backButton:hover {
+      background-color: #142C52;
+    }
+
+    /* Estilo del botón OK */
+    #goButton {
+      background-color: #0B1F3A;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      font-size: 16px;
+      border-radius: 5px;
+      margin-top: 15px;
+      transition: background-color 0.3s;
+    }
+
+    #goButton:hover {
+      background-color: #142C52;
+    }
+  </style>
 </head>
 <body>
 
@@ -14,13 +68,14 @@
   <!-- Contenedor centrado -->
   <div class="center-container">
     <div class="year-display" id="selectedYear">2017</div>
-
     <div class="slider-container">
-      <input type="range" id="yearRange" min="2016" max="2024" value="2017" step="1">
+      <input type="range" id="yearRange" min="2016" max="2025" value="2017" step="1">
     </div>
   </div>
 
   <button id="goButton">OK</button>
+  <div id="errorMessage">Sección no disponible o en mantenimiento</div>
+  <button id="backButton">Volver al inicio</button>
 
   <footer>© Galería Histórica - Colegio José del Rosario Pavón</footer>
 
@@ -28,16 +83,41 @@
     const yearRange = document.getElementById("yearRange");
     const selectedYear = document.getElementById("selectedYear");
     const goButton = document.getElementById("goButton");
+    const backButton = document.getElementById("backButton");
+    const errorMessage = document.getElementById("errorMessage");
 
+    // Actualizar año seleccionado
     yearRange.addEventListener("input", () => {
       selectedYear.textContent = yearRange.value;
+      errorMessage.style.display = "none"; // Ocultar mensaje al cambiar año
     });
 
+    // Redirigir a la página del año seleccionado con fade-out
     goButton.addEventListener("click", () => {
       const year = yearRange.value;
+      const url = `../subpaginas/evoluciondelcolegio/evol${year}.html`;
+
+      fetch(url, { method: "HEAD" })
+        .then(response => {
+          if (response.ok) {
+            document.body.classList.add("fade-out");
+            setTimeout(() => {
+              window.location.href = url;
+            }, 500);
+          } else {
+            errorMessage.style.display = "block";
+          }
+        })
+        .catch(() => {
+          errorMessage.style.display = "block";
+        });
+    });
+
+    // Volver al inicio con fade-out
+    backButton.addEventListener("click", () => {
       document.body.classList.add("fade-out");
       setTimeout(() => {
-        window.location.href = `../subpaginas/evoluciondelcolegio/evol${year}.html`;
+        window.location.href = "http://127.0.0.1:5500/galleria.html#galeria"; // Ajusta la ruta si tu inicio está en otra carpeta
       }, 500);
     });
   </script>
