@@ -69,7 +69,7 @@
   <div class="center-container">
     <div class="year-display" id="selectedYear">2017</div>
     <div class="slider-container">
-      <input type="range" id="yearRange" min="2016" max="2025" value="2017" step="1">
+      <input type="range" id="yearRange" min="2012" max="2025" value="2017" step="1">
     </div>
   </div>
 
@@ -95,7 +95,7 @@
     // Redirigir a la página del año seleccionado con fade-out
     goButton.addEventListener("click", () => {
       const year = yearRange.value;
-      const url = `../subpaginas/desfilepagina/desfile${year}.html`;
+      const url = `../subpaginas/desfilepagina/desfile${year}.html#galeria1`;
 
       fetch(url, { method: "HEAD" })
         .then(response => {
